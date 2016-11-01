@@ -31,9 +31,9 @@ namespace Pokemon_Shuffle_Save_Editor
                 if (((savedata[array] >> Caught.Shift(ind)) & 1) != 1)
                     caught = false;
             }
-            int lev = (BitConverter.ToUInt16(savedata, Level.Ofset(ind)) >> Level.Shift(ind)) & 0xF;
+            int lev = Math.Max((BitConverter.ToUInt16(savedata, Level1.Ofset(ind)) >> Level1.Shift(ind)) & 0xF, (BitConverter.ToUInt16(savedata, Level2.Ofset(ind)) >> Level2.Shift(ind)) & 0x3F);
             lev = (lev == 0) ? 1 : lev;
-            int rml = Math.Min((BitConverter.ToUInt16(savedata, Lollipop.Ofset(ind)) >> Lollipop.Shift(ind)) & 0x3F, 5); //hardcoded 5 as a maximum
+            int rml = (BitConverter.ToUInt16(savedata, Lollipop.Ofset(ind)) >> Lollipop.Shift(ind)) & 0x3F;
             int exp = (BitConverter.ToInt32(savedata, Experience.Ofset(ind)) >> Experience.Shift(ind)) & 0xFFFFFF;
             short stone = (short)((savedata[Mega.Ofset(ind)] >> Mega.Shift(ind)) & 3);  //0 = 00, 1 = X0, 2 = 0Y, 3 = XY
             short speedUpX = (short)(db.HasMega[ind][0] ? (BitConverter.ToInt16(savedata, SpeedUpX.Ofset(ind)) >> SpeedUpX.Shift(ind)) & 0x7F : 0);
@@ -58,25 +58,24 @@ namespace Pokemon_Shuffle_Save_Editor
 
         public static void SetLevel(int ind, int lev = 1, int set_rml = -1, int set_exp = -1)
         {
-            if (savedata != null)
-            {
-                //level patcher
-                lev = (lev < 2) ? 0 : ((lev > 15) ? 15 : lev);    //hardcoded 15 as the max level, change this if ever needed
-                short level = (short)((BitConverter.ToInt16(savedata, Level.Ofset(ind)) & ~(0xF << Level.Shift(ind))) | (lev << Level.Shift(ind)));
-                Array.Copy(BitConverter.GetBytes(level), 0, savedata, Level.Ofset(ind), 2);
+            //level patcher
+            lev = (lev < 2) ? 0 : Math.Min(10 + db.Mons[ind].Item4, lev);    //level capped to 10 + max nb of lollipops for that pokemon
+            short level1 = (short)((BitConverter.ToInt16(savedata, Level1.Ofset(ind)) & ~(0xF << Level1.Shift(ind))) | (Math.Min(lev, 0xF) << Level1.Shift(ind)));
+            Array.Copy(BitConverter.GetBytes(level1), 0, savedata, Level1.Ofset(ind), 2);    //write to original ofsets ( <= 15)
+            short level2 = (short)((BitConverter.ToInt16(savedata, Level2.Ofset(ind)) & ~(0x3F << Level2.Shift(ind))) | ((lev >= 15 ? Math.Min(lev, 0x3F) : 0) << Level2.Shift(ind)));
+            Array.Copy(BitConverter.GetBytes(level2), 0, savedata, Level2.Ofset(ind), 2);    //write to 1.3.25 ofsets ( >= 15, 0 if below)
 
-                //lollipop patcher
-                set_rml = (set_rml < 0) ? ((lev - 10 < 0) ? 0 : (lev - 10)) : set_rml;
-                short numRaiseMaxLevel = (short)((BitConverter.ToInt16(savedata, Lollipop.Ofset(ind)) & ~(0x3F << Lollipop.Shift(ind))) | (set_rml << Lollipop.Shift(ind)));
-                Array.Copy(BitConverter.GetBytes(numRaiseMaxLevel), 0, savedata, Lollipop.Ofset(ind), 2);
+            //lollipop patcher
+            set_rml = (set_rml < 0 || (set_rml < lev - 10) ? ((lev - 10 < 0) ? 0 : lev - 10) : set_rml);
+            short numRaiseMaxLevel = (short)((BitConverter.ToInt16(savedata, Lollipop.Ofset(ind)) & ~(0x3F << Lollipop.Shift(ind))) | (set_rml << Lollipop.Shift(ind)));
+            Array.Copy(BitConverter.GetBytes(numRaiseMaxLevel), 0, savedata, Lollipop.Ofset(ind), 2);
 
-                //experience patcher
-                int entrylen = BitConverter.ToInt32(db.MonLevel, 0x4);
-                byte[] data = db.MonLevel.Skip(0x50 + ((((lev < 2) ? 1 : lev) - 1) * entrylen)).Take(entrylen).ToArray(); //corrected level value, because if it's 0 then it means 1
-                set_exp = (set_exp < 0) ? BitConverter.ToInt32(data, 0x4 * (db.Mons[ind].Item5 - 1)) : set_exp;
-                int exp = (BitConverter.ToInt32(savedata, Experience.Ofset(ind)) & ~(0xFFFFFF << Experience.Shift(ind))) | (set_exp << Experience.Shift(ind));
-                Array.Copy(BitConverter.GetBytes(exp), 0, savedata, Experience.Ofset(ind), 4);
-            }
+            //experience patcher
+            int entrylen = BitConverter.ToInt32(db.MonLevel, 0x4);
+            byte[] data = db.MonLevel.Skip(0x50 + ((((lev < 2) ? 1 : lev) - 1) * entrylen)).Take(entrylen).ToArray(); //corrected level value, because if it's 0 then it means 1
+            set_exp = (set_exp < 0) ? BitConverter.ToInt32(data, 0x4 * (db.Mons[ind].Item5 - 1)) : set_exp;
+            int exp = (BitConverter.ToInt32(savedata, Experience.Ofset(ind)) & ~(0xFFFFFF << Experience.Shift(ind))) | (set_exp << Experience.Shift(ind));
+            Array.Copy(BitConverter.GetBytes(exp), 0, savedata, Experience.Ofset(ind), 4);
         }
 
         public static void SetSkill(int ind, int lvl = 1, int skill = 0)
@@ -406,8 +405,8 @@ namespace Pokemon_Shuffle_Save_Editor
             return (4 + (ind - 1) * 24) % 8;
         }
     }
-    public static class Level
-    {
+    public static class Level1
+    {//"old" offsets, lvl 15 max (0xF), keep saying 15 if level is higher.
         public static int Ofset(int ind)
         {
             return 0x187 + ((ind - 1) * 4 + 1) / 8;
@@ -416,6 +415,18 @@ namespace Pokemon_Shuffle_Save_Editor
         public static int Shift(int ind)
         {
             return ((ind - 1) * 4 + 1) % 8;
+        }
+    }
+    public static class Level2
+    {//"new" 1.3.25 offsets, register level if >= 15 (max 0x3F = 63), don't register lvl 15 mons that were leveled up before the update.
+        public static int Ofset(int ind)
+        {
+            return 0xA61B + ind * 6 / 8;
+        }
+
+        public static int Shift(int ind)
+        {
+            return ind * 6 % 8;
         }
     }
     public static class Lollipop

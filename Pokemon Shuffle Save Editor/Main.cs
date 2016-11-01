@@ -110,7 +110,7 @@ namespace Pokemon_Shuffle_Save_Editor
                     CB_Skill_Init();
                 else
                 {
-                    //Owned Bow Properties
+                    //Owned Box Properties
                     int ind = (int)CB_MonIndex.SelectedValue;
                     ushort set_level = (ushort)(CHK_CaughtMon.Checked ? (NUP_Level.Value == 1 ? 0 : NUP_Level.Value) : 0);
                     ushort set_rml = (ushort)(CHK_CaughtMon.Checked ? NUP_Lollipop.Value : 0);
@@ -125,7 +125,8 @@ namespace Pokemon_Shuffle_Save_Editor
                     SetLevel(ind, set_level, set_rml);
                     SetStone(ind, CHK_MegaX.Checked, CHK_MegaY.Checked);
                     SetSpeedup(ind, (db.HasMega[ind][0] && CHK_CaughtMon.Checked && CHK_MegaX.Checked), (int)NUP_SpeedUpX.Value, (db.HasMega[ind][1] && CHK_CaughtMon.Checked && CHK_MegaY.Checked), (int)NUP_SpeedUpY.Value);
-                    SetSkill(ind, (int)(CHK_CaughtMon.Checked ? NUP_SkillLvl.Value : 1), (int)(CHK_CaughtMon.Checked ? CB_Skill.SelectedValue : 0));
+                    if (!(sender as Control).Name.Equals("CB_Skill"))
+                        SetSkill(ind, (int)(CHK_CaughtMon.Checked ? NUP_SkillLvl.Value : 1), (int)(CHK_CaughtMon.Checked ? CB_Skill.SelectedValue : 0));
                     if (!CHK_CaughtMon.Checked || ((sender as Control).Name.ToLower().Contains("currentskill") && CHK_CurrentSkill.Checked))
                         SetCurrentSkill(ind, CHK_CaughtMon.Checked ? (int)CB_Skill.SelectedValue : 0);
 
@@ -158,7 +159,7 @@ namespace Pokemon_Shuffle_Save_Editor
             CHK_CaughtMon.Checked = GetMon(ind).Caught;
 
             //level view
-            NUP_Lollipop.Maximum = Math.Min(db.Mons[ind].Item4, 5);
+            NUP_Lollipop.Maximum = db.Mons[ind].Item4;
             NUP_Lollipop.Value = GetMon(ind).Lollipops;
             NUP_Level.Maximum = 10 + NUP_Lollipop.Maximum;
             NUP_Level.Value = GetMon(ind).Level;

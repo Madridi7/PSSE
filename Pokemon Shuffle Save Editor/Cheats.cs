@@ -82,11 +82,14 @@ namespace Pokemon_Shuffle_Save_Editor
 
         private void B_LevelMax_Click(object sender, EventArgs e)
         {
-            int value = 15;    //default value
+            int value = 10, lollipops = 10;
+            foreach (Tuple<int, int, bool, int, int, int[], int, Tuple<int, int>> tuple in db.Mons)
+                if (tuple.Item4 > lollipops) { lollipops = tuple.Item4; }
+            value += lollipops;    //default value
             bool boool = false;
             if (ModifierKeys == Keys.Control)
             {
-                using (var form = new NUP_Popup(0, 15, value, "max level"))
+                using (var form = new NUP_Popup(0, value, value, "max level"))
                 {
                     form.ShowDialog();
                     if (form.DialogResult == DialogResult.OK)
@@ -105,7 +108,7 @@ namespace Pokemon_Shuffle_Save_Editor
             if (boool)
                 MessageBox.Show("Everything you've caught is now level " + value + ((value > 10) ? " or below." : "."));
             else
-                MessageBox.Show("Everything you've caught is now level max.");
+                MessageBox.Show("Everything you've caught is now at its maximum level.");
         }
 
         private void B_MaxExcalationBattle_Click(object sender, EventArgs e)

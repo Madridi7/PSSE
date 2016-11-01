@@ -59,39 +59,39 @@ namespace Pokemon_Shuffle_Save_Editor
                 else
                 {
                     files[i] = File.ReadAllBytes(resourcedir + filenames[i]);
-                    switch (i)
-                    {
-                        case 0:
-                            MegaStone = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
+                    //switch (i)
+                    //{
+                    //    case 0:
+                    //        MegaStone = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
 
-                        case 1:
-                            MonData = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
+                    //    case 1:
+                    //        MonData = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
 
-                        case 2:
-                            StagesMain = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
+                    //    case 2:
+                    //        StagesMain = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
 
-                        case 3:
-                            StagesEvent = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
+                    //    case 3:
+                    //        StagesEvent = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
 
-                        case 4:
-                            StagesExpert = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
+                    //    case 4:
+                    //        StagesExpert = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
 
-                        case 5:
-                            MonLevel = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
+                    //    case 5:
+                    //        MonLevel = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
 
-                        case 6:
-                            MonAbility = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
-                        case 7:
-                            MissionCard = File.ReadAllBytes(resourcedir + filenames[i]);
-                            break;
-                    }
+                    //    case 6:
+                    //        MonAbility = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
+                    //    case 7:
+                    //        MissionCard = File.ReadAllBytes(resourcedir + filenames[i]);
+                    //        break;
+                    //}
                 }
             }
             SpeciesList = Properties.Resources.species.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
@@ -128,7 +128,7 @@ namespace Pokemon_Shuffle_Save_Editor
                 byte[] data = MonData.Skip(0x50 + entrylen * i).Take(entrylen).ToArray();
                 bool isMega = i >= MegaStartIndex && i <= MonsList.Count() - 1;
                 int spec = (isMega && i <= MegaStartIndex + Megas.Length - 1)
-                    ? SpeciesList.ToList().IndexOf(MonsList[Megas[i - MegaStartIndex].Item1].Replace("Shiny", "").Replace("Winking", "").Replace("Smiling", "").Replace(" ", "")) //crappy but needed for IndexOf() to find the pokemon's name in specieslist (only adjectives on Megas names matter)
+                    ? SpeciesList.ToList().IndexOf(MonsList[Megas[i - MegaStartIndex].Item1].Substring(0, (MonsList[Megas[i - MegaStartIndex].Item1].LastIndexOf(' ') <= 0) ? MonsList[Megas[i - MegaStartIndex].Item1].Length : MonsList[Megas[i - MegaStartIndex].Item1].LastIndexOf(' ')))
                     : (BitConverter.ToInt32(data, 0xE) >> 6) & 0x7FF;
                 int raiseMaxLevel = (BitConverter.ToInt16(data, 0x4)) & 0x3F;
                 int basePower = (BitConverter.ToInt16(data, 0x3)) & 0x7; //ranges 1-7 for now (30-90 BP), may need an update later on

@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Pokemon_Shuffle_Save_Editor</RootNamespace>
-    <AssemblyName>Pokemon Shuffle Save Editor</AssemblyName>
+    <AssemblyName>PSSE</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -137,17 +137,30 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\bin\megaStone.bin" />
+    <None Include="Resources\bin\megaStone1.bin" />
+    <None Include="Resources\bin\megaStone2.bin" />
     <None Include="Resources\bin\messagePokedex_US.bin" />
+    <None Include="Resources\bin\messagePokedex_US1.bin" />
+    <None Include="Resources\bin\messagePokedex_US2.bin" />
     <None Include="Resources\bin\MissionCard.bin" />
+    <None Include="Resources\bin\MissionCard1.bin" />
+    <None Include="Resources\bin\MissionCard2.bin" />
     <None Include="Resources\bin\PokemonAbility.bin" />
+    <None Include="Resources\bin\PokemonAbility1.bin" />
+    <None Include="Resources\bin\PokemonAbility2.bin" />
     <None Include="Resources\bin\pokemonData.bin" />
+    <None Include="Resources\bin\pokemonData1.bin" />
     <None Include="Resources\bin\pokemonLevel.bin" />
+    <None Include="Resources\bin\pokemonLevel1.bin" />
     <None Include="Resources\bin\stageData.bin" />
+    <None Include="Resources\bin\stageData1.bin" />
     <None Include="Resources\bin\stageDataEvent.bin" />
+    <None Include="Resources\bin\stageDataEvent1.bin" />
     <None Include="Resources\bin\stageDataExtra.bin" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\bin\stageDataExtra1.bin" />
     <None Include="Resources\img\lollipop.png" />
     <Content Include="Resources\img\MegaStone003.png" />
     <Content Include="Resources\img\MegaStone006_X.png" />
