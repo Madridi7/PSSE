@@ -123,6 +123,46 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_006_02 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_006_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_006_02_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_006_02_lo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_006_03 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_006_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_006_03_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_006_03_lo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mega_pokemon_006_lo {
             get {
                 object obj = ResourceManager.GetObject("mega_pokemon_006_lo", resourceCulture);
@@ -403,6 +443,46 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_150_02 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_150_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_150_02_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_150_02_lo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_150_03 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_150_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_150_03_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_150_03_lo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mega_pokemon_150_lo {
             get {
                 object obj = ResourceManager.GetObject("mega_pokemon_150_lo", resourceCulture);
@@ -523,6 +603,26 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_248_01 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_248_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_248_01_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_248_01_lo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mega_pokemon_248_lo {
             get {
                 object obj = ResourceManager.GetObject("mega_pokemon_248_lo", resourceCulture);
@@ -596,6 +696,26 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap mega_pokemon_282 {
             get {
                 object obj = ResourceManager.GetObject("mega_pokemon_282", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_282_01 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_282_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_282_01_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_282_01_lo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -903,6 +1023,26 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_376_01 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_376_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_376_01_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_376_01_lo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mega_pokemon_376_lo {
             get {
                 object obj = ResourceManager.GetObject("mega_pokemon_376_lo", resourceCulture);
@@ -1136,6 +1276,26 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap mega_pokemon_719 {
             get {
                 object obj = ResourceManager.GetObject("mega_pokemon_719", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_719_01 {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_719_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mega_pokemon_719_01_lo {
+            get {
+                object obj = ResourceManager.GetObject("mega_pokemon_719_01_lo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1954,6 +2114,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_006_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_006_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_007 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_007", resourceCulture);
@@ -2094,9 +2264,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_019_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_019_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_020 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_020", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_020_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_020_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2294,6 +2484,286 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_15 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_16 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_17 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_18 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_19 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_20 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_21 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_22 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_23 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_24 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_25 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_26 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_27 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_27", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_28 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_29 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_30 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_31 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_32 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_33 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_34 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_35 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_36 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_37 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_37", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_38 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_39 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_39", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_40 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_41 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_025_42 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_025_42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_026 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_026", resourceCulture);
@@ -2314,6 +2784,26 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_026_011 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_026_011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_026_02 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_026_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_027 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_027", resourceCulture);
@@ -2324,9 +2814,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_027_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_027_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_028 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_028", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_028_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_028_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2444,9 +2954,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_037_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_037_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_038 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_038", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_038_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_038_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2594,9 +3124,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_050_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_050_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_051 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_051", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_051_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_051_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2614,9 +3164,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_052_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_052_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_053 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_053", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_053_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_053_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2834,6 +3404,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_074_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_074_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_075 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_075", resourceCulture);
@@ -2844,9 +3424,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_075_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_075_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_076 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_076", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_076_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_076_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2974,9 +3574,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_088_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_088_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_089 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_089", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_089_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_089_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3037,6 +3657,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_094_01 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_094_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_094_02 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_094_02", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3134,6 +3764,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_103_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_103_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_104 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_104", resourceCulture);
@@ -3147,6 +3787,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_105 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_105", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_105_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_105_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3627,6 +4277,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_150 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_150", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_150_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_150_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -4514,6 +5174,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_202_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_202_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_203 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_203", resourceCulture);
@@ -5014,6 +5684,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_248_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_248_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_249 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_249", resourceCulture);
@@ -5027,6 +5707,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_250 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_250", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_250_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_250_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -5377,6 +6067,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_282 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_282", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_282_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_282_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6154,6 +6854,46 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_351_04 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_351_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_351_05 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_351_05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_351_06 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_351_06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_351_07 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_351_07", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_352 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_352", resourceCulture);
@@ -6424,6 +7164,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_376_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_376_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_377 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_377", resourceCulture);
@@ -6577,6 +7327,36 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_386_03 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_386_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_386_04 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_386_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_386_05 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_386_05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_386_06 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_386_06", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -7354,9 +8134,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_449_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_449_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_450 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_450", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_450_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_450_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -8377,6 +9177,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_521 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_521", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_521_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_521_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -9874,6 +10684,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_648_02 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_648_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_649 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_649", resourceCulture);
@@ -10297,6 +11117,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_666_17 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_666_17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_666_18 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_666_18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -10954,6 +11784,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_701_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_701_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_702 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_702", resourceCulture);
@@ -11204,9 +12044,29 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_716_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_716_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_717 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_717", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_717_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_717_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -11244,9 +12104,39 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pokemon_718_03 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_718_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_718_04 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_718_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pokemon_719 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_719", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_719_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_719_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -11277,6 +12167,846 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         internal static System.Drawing.Bitmap pokemon_721 {
             get {
                 object obj = ResourceManager.GetObject("pokemon_721", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_722 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_722", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_723 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_723", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_724 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_724", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_725 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_725", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_726 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_726", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_727 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_727", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_728 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_728", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_729 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_729", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_730 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_730", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_731 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_731", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_732 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_732", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_733 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_733", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_734 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_734", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_735 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_735", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_736 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_736", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_737 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_737", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_738 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_738", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_739 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_739", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_740 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_740", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_741 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_741", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_741_01 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_741_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_741_02 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_741_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_741_03 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_741_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_742 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_742", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_743 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_743", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_744 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_744", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_745 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_745", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_746 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_746", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_747 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_748 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_748", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_749 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_749", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_750 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_750", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_751 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_751", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_752 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_752", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_753 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_753", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_754 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_754", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_755 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_755", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_756 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_756", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_757 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_757", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_758 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_758", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_759 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_759", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_760 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_760", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_761 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_761", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_762 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_762", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_763 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_763", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_764 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_764", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_765 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_765", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_766 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_766", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_767 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_767", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_768 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_768", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_769 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_769", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_770 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_770", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_771 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_771", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_772 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_772", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_773 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_773", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_774 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_774", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_775 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_775", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_776 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_776", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_777 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_777", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_778 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_778", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_779 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_779", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_780 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_780", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_781 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_781", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_782 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_782", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_783 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_783", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_784 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_784", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_785 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_785", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_786 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_786", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_787 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_787", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_788 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_788", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_789 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_789", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_790 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_790", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_791 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_791", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_792 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_792", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_793 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_793", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_794 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_794", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_795 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_795", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_796 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_796", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_797 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_797", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_798 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_798", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_799 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_799", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_800 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_801 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_801", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokemon_802 {
+            get {
+                object obj = ResourceManager.GetObject("pokemon_802", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

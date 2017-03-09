@@ -561,7 +561,7 @@ Munna
 Musharna
 Pidove
 Tranquill
-Unfezant
+Unfezant Male
 Blitzle
 Zebstrika
 Roggenrola
@@ -866,13 +866,161 @@ Pumpkaboo Smiling
 Gourgeist Smiling
 Zygarde 10% Forme
 Zygarde Complete Forme
----
----
----
----
----
----
----
+Charizard Shiny
+Pikachu Poncho Charizard
+Pikachu Poncho Magikarp
+Pikachu Poncho Gyarados
+Pikachu Poncho Gyarados Shiny
+Pikachu Poncho Ho-Oh
+Pikachu Poncho Lugia
+Pikachu Traditional Male
+Pikachu Traditional Female
+Pikachu Poncho Rayquaza
+Pikachu Poncho Rayquaza Shiny
+Pikachu Smart
+Pikachu W
+Pikachu Hoodie
+Pikachu Chef Traditional
+Pikachu Chef Blue
+Pikachu Chef Red
+Pikachu Party
+Pikachu Hoodie Blue
+Pikachu Present
+Pikachu Entei
+Pikachu Futon
+Pikachu Graduate
+Gengar Shiny
+Mewtwo Shiny
+Wobbuffet Female
+Tyranitar Shiny
+Ho-Oh Shiny
+Gardevoir Shiny
+Castform Fire
+Castform Water
+Castform Wind
+Metagross Shiny
+Deoxys Speed
+Deoxys Defense
+Deoxys Attack
+Hippopotas Female
+Hippowdon Female
+Unfezant Female
+Meloetta Fight
+Vivillon Pokéball
+Hawlucha Shiny
+Xerneas Shiny
+Yveltal Shiny
+Zygarde Core
+Zygarde Cell
+Diancie Shiny
+Rattata Alola
+Raticate Alola
+Pikachu Kanto
+Pikachu Johto
+Pikachu Hoenn
+Pikachu Shinoh
+Pikachu Unova
+Pikachu Kalos
+Raichu Alola
+Sandshrew Alola
+Sandslash Alola
+Vulpix Alola
+Ninetales Alola
+Diglett Alola
+Dugtrio Alola
+Meowth Alola
+Persian Alola
+Geodude Alola
+Graveler Alola
+Grolem Alola
+Grimer Alola
+Muk Alola
+Exeggutor Alola
+Marowak Alola
+Rowlet
+Dartrix
+Decidueye
+Litten
+Torracat
+Incineroar
+Popplio
+Brionne
+Primarina
+Pikipek
+Trumbeak
+Toucannon
+Yungoos
+Gumshoos
+Grubbin
+Charjabug
+Vikavolt
+Crabrawler
+Crabominable
+Oricorio Fire
+Oricorio Electrik
+Oricorio Psychic
+Oricorio Ghost
+Cutiefly
+Ribombee
+Rockruff
+Lycanrock
+Wishiwashi
+Mareanie
+Toxapex
+Mudbray
+Mudsdale
+Dewpider
+Araquanid
+Fomantis
+Lurantis
+Morelul
+Shiinotic
+Salandit
+Salazzla
+Stufful
+Bewear
+Bounsweet
+Steenee
+Tsareena
+Comfey
+Oranguru
+Passimian
+Wimpod
+Golisopod
+Sandygast
+Palossand
+Pyukumuku
+Type: Null
+Silvally
+Minior
+Komala
+Turtonator
+Togedemaru
+Mimikyu
+Bruxish
+Drampa
+Dhelmise
+Jangmo-o
+Hakamo-o
+Kommo-o
+Tapu Koko
+Tapu Lele
+Tapu Bulu
+Tapu Fini
+Cosmog
+Cosmoem
+Solgaleo
+Lunala
+Nihilego
+Buzzwole
+Pheromosa
+Xurkitree
+Celesteela
+Kartana
+Guzzlord
+Necrozma
+Magearna
+Marshadow
 ---
 ---
 ---
@@ -929,9 +1077,17 @@ Mega Abomasnow
 Mega Gallade
 Mega Audino
 Mega Diancie
-Mega Gengar Smiling
+Mega Gengar Shiny
 Mega Gyarados Shiny
 Mega Sableye Costumed
 Mega Glalie Winking
 Mega Rayquaza Shiny
 Mega Audino Winking
+Mega Charizard Shiny X
+Mega Charizard Shiny Y
+Mega Mewtwo Shiny X
+Mega Mewtwo Shiny Y
+Mega Tyranitar Shiny
+Mega Gardevoir Shiny
+Mega Metagross Shiny
+Mega Diancie Shiny

@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.4.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -137,30 +137,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\bin\megaStone.bin" />
-    <None Include="Resources\bin\megaStone1.bin" />
-    <None Include="Resources\bin\megaStone2.bin" />
     <None Include="Resources\bin\messagePokedex_US.bin" />
-    <None Include="Resources\bin\messagePokedex_US1.bin" />
-    <None Include="Resources\bin\messagePokedex_US2.bin" />
     <None Include="Resources\bin\MissionCard.bin" />
-    <None Include="Resources\bin\MissionCard1.bin" />
-    <None Include="Resources\bin\MissionCard2.bin" />
     <None Include="Resources\bin\PokemonAbility.bin" />
-    <None Include="Resources\bin\PokemonAbility1.bin" />
-    <None Include="Resources\bin\PokemonAbility2.bin" />
     <None Include="Resources\bin\pokemonData.bin" />
-    <None Include="Resources\bin\pokemonData1.bin" />
     <None Include="Resources\bin\pokemonLevel.bin" />
-    <None Include="Resources\bin\pokemonLevel1.bin" />
     <None Include="Resources\bin\stageData.bin" />
-    <None Include="Resources\bin\stageData1.bin" />
     <None Include="Resources\bin\stageDataEvent.bin" />
-    <None Include="Resources\bin\stageDataEvent1.bin" />
     <None Include="Resources\bin\stageDataExtra.bin" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
-    <None Include="Resources\bin\stageDataExtra1.bin" />
     <None Include="Resources\img\lollipop.png" />
     <Content Include="Resources\img\MegaStone003.png" />
     <Content Include="Resources\img\MegaStone006_X.png" />
@@ -215,6 +202,10 @@
     <Content Include="Resources\img\mega_pokemon_006.png" />
     <Content Include="Resources\img\mega_pokemon_006_01.png" />
     <Content Include="Resources\img\mega_pokemon_006_01_lo.png" />
+    <None Include="Resources\img\mega_pokemon_006_02.png" />
+    <None Include="Resources\img\mega_pokemon_006_02_lo.png" />
+    <None Include="Resources\img\mega_pokemon_006_03.png" />
+    <None Include="Resources\img\mega_pokemon_006_03_lo.png" />
     <Content Include="Resources\img\mega_pokemon_006_lo.png" />
     <Content Include="Resources\img\mega_pokemon_009.png" />
     <Content Include="Resources\img\mega_pokemon_009_lo.png" />
@@ -243,6 +234,10 @@
     <Content Include="Resources\img\mega_pokemon_150.png" />
     <Content Include="Resources\img\mega_pokemon_150_01.png" />
     <Content Include="Resources\img\mega_pokemon_150_01_lo.png" />
+    <None Include="Resources\img\mega_pokemon_150_02.png" />
+    <None Include="Resources\img\mega_pokemon_150_02_lo.png" />
+    <None Include="Resources\img\mega_pokemon_150_03.png" />
+    <None Include="Resources\img\mega_pokemon_150_03_lo.png" />
     <Content Include="Resources\img\mega_pokemon_150_lo.png" />
     <Content Include="Resources\img\mega_pokemon_181.png" />
     <Content Include="Resources\img\mega_pokemon_181_lo.png" />
@@ -255,6 +250,8 @@
     <Content Include="Resources\img\mega_pokemon_229.png" />
     <Content Include="Resources\img\mega_pokemon_229_lo.png" />
     <Content Include="Resources\img\mega_pokemon_248.png" />
+    <None Include="Resources\img\mega_pokemon_248_01.png" />
+    <None Include="Resources\img\mega_pokemon_248_01_lo.png" />
     <Content Include="Resources\img\mega_pokemon_248_lo.png" />
     <Content Include="Resources\img\mega_pokemon_254.png" />
     <Content Include="Resources\img\mega_pokemon_254_lo.png" />
@@ -263,6 +260,8 @@
     <Content Include="Resources\img\mega_pokemon_260.png" />
     <Content Include="Resources\img\mega_pokemon_260_lo.png" />
     <Content Include="Resources\img\mega_pokemon_282.png" />
+    <None Include="Resources\img\mega_pokemon_282_01.png" />
+    <None Include="Resources\img\mega_pokemon_282_01_lo.png" />
     <Content Include="Resources\img\mega_pokemon_282_lo.png" />
     <Content Include="Resources\img\mega_pokemon_302.png" />
     <None Include="Resources\img\mega_pokemon_302_01.png" />
@@ -293,6 +292,8 @@
     <Content Include="Resources\img\mega_pokemon_373.png" />
     <Content Include="Resources\img\mega_pokemon_373_lo.png" />
     <Content Include="Resources\img\mega_pokemon_376.png" />
+    <None Include="Resources\img\mega_pokemon_376_01.png" />
+    <None Include="Resources\img\mega_pokemon_376_01_lo.png" />
     <Content Include="Resources\img\mega_pokemon_376_lo.png" />
     <Content Include="Resources\img\mega_pokemon_380.png" />
     <Content Include="Resources\img\mega_pokemon_380_lo.png" />
@@ -317,6 +318,8 @@
     <None Include="Resources\img\mega_pokemon_531_01_lo.png" />
     <Content Include="Resources\img\mega_pokemon_531_lo.png" />
     <Content Include="Resources\img\mega_pokemon_719.png" />
+    <None Include="Resources\img\mega_pokemon_719_01.png" />
+    <None Include="Resources\img\mega_pokemon_719_01_lo.png" />
     <Content Include="Resources\img\mega_pokemon_719_lo.png" />
     <None Include="Resources\img\mega_speedup.png" />
     <Content Include="Resources\img\Plate.png" />
@@ -331,6 +334,7 @@
     <None Include="Resources\img\pokemon_004_01.png" />
     <Content Include="Resources\img\pokemon_005.png" />
     <Content Include="Resources\img\pokemon_006.png" />
+    <None Include="Resources\img\pokemon_006_01.png" />
     <Content Include="Resources\img\pokemon_007.png" />
     <None Include="Resources\img\pokemon_007_01.png" />
     <Content Include="Resources\img\pokemon_008.png" />
@@ -345,7 +349,9 @@
     <Content Include="Resources\img\pokemon_017.png" />
     <Content Include="Resources\img\pokemon_018.png" />
     <Content Include="Resources\img\pokemon_019.png" />
+    <None Include="Resources\img\pokemon_019_01.png" />
     <Content Include="Resources\img\pokemon_020.png" />
+    <None Include="Resources\img\pokemon_020_01.png" />
     <Content Include="Resources\img\pokemon_021.png" />
     <Content Include="Resources\img\pokemon_022.png" />
     <Content Include="Resources\img\pokemon_023.png" />
@@ -366,9 +372,41 @@
     <None Include="Resources\img\pokemon_025_13.png" />
     <None Include="Resources\img\pokemon_025_14.png" />
     <None Include="Resources\img\pokemon_026-01.png" />
+    <None Include="Resources\img\pokemon_025_15.png" />
+    <None Include="Resources\img\pokemon_025_16.png" />
+    <None Include="Resources\img\pokemon_025_17.png" />
+    <None Include="Resources\img\pokemon_025_18.png" />
+    <None Include="Resources\img\pokemon_025_19.png" />
+    <None Include="Resources\img\pokemon_025_20.png" />
+    <None Include="Resources\img\pokemon_025_21.png" />
+    <None Include="Resources\img\pokemon_025_22.png" />
+    <None Include="Resources\img\pokemon_025_23.png" />
+    <None Include="Resources\img\pokemon_025_24.png" />
+    <None Include="Resources\img\pokemon_025_25.png" />
+    <None Include="Resources\img\pokemon_025_26.png" />
+    <None Include="Resources\img\pokemon_025_27.png" />
+    <None Include="Resources\img\pokemon_025_28.png" />
+    <None Include="Resources\img\pokemon_025_29.png" />
+    <None Include="Resources\img\pokemon_025_30.png" />
+    <None Include="Resources\img\pokemon_025_31.png" />
+    <None Include="Resources\img\pokemon_025_32.png" />
+    <None Include="Resources\img\pokemon_025_33.png" />
+    <None Include="Resources\img\pokemon_025_34.png" />
+    <None Include="Resources\img\pokemon_025_35.png" />
+    <None Include="Resources\img\pokemon_025_36.png" />
+    <None Include="Resources\img\pokemon_025_37.png" />
+    <None Include="Resources\img\pokemon_025_38.png" />
+    <None Include="Resources\img\pokemon_025_39.png" />
+    <None Include="Resources\img\pokemon_025_40.png" />
+    <None Include="Resources\img\pokemon_025_41.png" />
+    <None Include="Resources\img\pokemon_025_42.png" />
     <Content Include="Resources\img\pokemon_026.png" />
+    <None Include="Resources\img\pokemon_026_01.png" />
+    <None Include="Resources\img\pokemon_026_02.png" />
     <Content Include="Resources\img\pokemon_027.png" />
+    <None Include="Resources\img\pokemon_027_01.png" />
     <Content Include="Resources\img\pokemon_028.png" />
+    <None Include="Resources\img\pokemon_028_01.png" />
     <Content Include="Resources\img\pokemon_029.png" />
     <Content Include="Resources\img\pokemon_030.png" />
     <Content Include="Resources\img\pokemon_031.png" />
@@ -380,7 +418,9 @@
     <Content Include="Resources\img\pokemon_036.png" />
     <None Include="Resources\img\pokemon_036_01.png" />
     <Content Include="Resources\img\pokemon_037.png" />
+    <None Include="Resources\img\pokemon_037_01.png" />
     <Content Include="Resources\img\pokemon_038.png" />
+    <None Include="Resources\img\pokemon_038_01.png" />
     <Content Include="Resources\img\pokemon_039.png" />
     <None Include="Resources\img\pokemon_039_01.png" />
     <Content Include="Resources\img\pokemon_040.png" />
@@ -395,9 +435,13 @@
     <Content Include="Resources\img\pokemon_048.png" />
     <Content Include="Resources\img\pokemon_049.png" />
     <Content Include="Resources\img\pokemon_050.png" />
+    <None Include="Resources\img\pokemon_050_01.png" />
     <Content Include="Resources\img\pokemon_051.png" />
+    <None Include="Resources\img\pokemon_051_01.png" />
     <Content Include="Resources\img\pokemon_052.png" />
+    <None Include="Resources\img\pokemon_052_01.png" />
     <Content Include="Resources\img\pokemon_053.png" />
+    <None Include="Resources\img\pokemon_053_01.png" />
     <Content Include="Resources\img\pokemon_054.png" />
     <Content Include="Resources\img\pokemon_055.png" />
     <Content Include="Resources\img\pokemon_056.png" />
@@ -419,8 +463,11 @@
     <Content Include="Resources\img\pokemon_072.png" />
     <Content Include="Resources\img\pokemon_073.png" />
     <Content Include="Resources\img\pokemon_074.png" />
+    <None Include="Resources\img\pokemon_074_01.png" />
     <Content Include="Resources\img\pokemon_075.png" />
+    <None Include="Resources\img\pokemon_075_01.png" />
     <Content Include="Resources\img\pokemon_076.png" />
+    <None Include="Resources\img\pokemon_076_01.png" />
     <Content Include="Resources\img\pokemon_077.png" />
     <Content Include="Resources\img\pokemon_078.png" />
     <Content Include="Resources\img\pokemon_079.png" />
@@ -433,13 +480,16 @@
     <Content Include="Resources\img\pokemon_086.png" />
     <Content Include="Resources\img\pokemon_087.png" />
     <Content Include="Resources\img\pokemon_088.png" />
+    <None Include="Resources\img\pokemon_088_01.png" />
     <Content Include="Resources\img\pokemon_089.png" />
+    <None Include="Resources\img\pokemon_089_01.png" />
     <Content Include="Resources\img\pokemon_090.png" />
     <Content Include="Resources\img\pokemon_091.png" />
     <Content Include="Resources\img\pokemon_092.png" />
     <Content Include="Resources\img\pokemon_093.png" />
     <Content Include="Resources\img\pokemon_094.png" />
     <None Include="Resources\img\pokemon_094_01.png" />
+    <None Include="Resources\img\pokemon_094_02.png" />
     <Content Include="Resources\img\pokemon_095.png" />
     <Content Include="Resources\img\pokemon_096.png" />
     <Content Include="Resources\img\pokemon_097.png" />
@@ -449,8 +499,10 @@
     <Content Include="Resources\img\pokemon_101.png" />
     <Content Include="Resources\img\pokemon_102.png" />
     <Content Include="Resources\img\pokemon_103.png" />
+    <None Include="Resources\img\pokemon_103_01.png" />
     <Content Include="Resources\img\pokemon_104.png" />
     <Content Include="Resources\img\pokemon_105.png" />
+    <None Include="Resources\img\pokemon_105_01.png" />
     <Content Include="Resources\img\pokemon_106.png" />
     <Content Include="Resources\img\pokemon_107.png" />
     <Content Include="Resources\img\pokemon_108.png" />
@@ -499,6 +551,7 @@
     <Content Include="Resources\img\pokemon_148.png" />
     <Content Include="Resources\img\pokemon_149.png" />
     <Content Include="Resources\img\pokemon_150.png" />
+    <None Include="Resources\img\pokemon_150_01.png" />
     <Content Include="Resources\img\pokemon_151.png" />
     <Content Include="Resources\img\pokemon_152.png" />
     <None Include="Resources\img\pokemon_152_01.png" />
@@ -587,6 +640,7 @@
     <Content Include="Resources\img\pokemon_201_26.png" />
     <Content Include="Resources\img\pokemon_201_27.png" />
     <Content Include="Resources\img\pokemon_202.png" />
+    <None Include="Resources\img\pokemon_202_01.png" />
     <Content Include="Resources\img\pokemon_203.png" />
     <Content Include="Resources\img\pokemon_204.png" />
     <Content Include="Resources\img\pokemon_205.png" />
@@ -637,8 +691,10 @@
     <Content Include="Resources\img\pokemon_246.png" />
     <Content Include="Resources\img\pokemon_247.png" />
     <Content Include="Resources\img\pokemon_248.png" />
+    <None Include="Resources\img\pokemon_248_01.png" />
     <Content Include="Resources\img\pokemon_249.png" />
     <Content Include="Resources\img\pokemon_250.png" />
+    <None Include="Resources\img\pokemon_250_01.png" />
     <Content Include="Resources\img\pokemon_251.png" />
     <Content Include="Resources\img\pokemon_252.png" />
     <None Include="Resources\img\pokemon_252_01.png" />
@@ -674,6 +730,7 @@
     <Content Include="Resources\img\pokemon_280.png" />
     <Content Include="Resources\img\pokemon_281.png" />
     <Content Include="Resources\img\pokemon_282.png" />
+    <None Include="Resources\img\pokemon_282_01.png" />
     <Content Include="Resources\img\pokemon_283.png" />
     <Content Include="Resources\img\pokemon_284.png" />
     <Content Include="Resources\img\pokemon_285.png" />
@@ -751,6 +808,10 @@
     <Content Include="Resources\img\pokemon_351_01.png" />
     <Content Include="Resources\img\pokemon_351_02.png" />
     <Content Include="Resources\img\pokemon_351_03.png" />
+    <None Include="Resources\img\pokemon_351_04.png" />
+    <None Include="Resources\img\pokemon_351_05.png" />
+    <None Include="Resources\img\pokemon_351_06.png" />
+    <None Include="Resources\img\pokemon_351_07.png" />
     <Content Include="Resources\img\pokemon_352.png" />
     <Content Include="Resources\img\pokemon_353.png" />
     <Content Include="Resources\img\pokemon_354.png" />
@@ -778,6 +839,7 @@
     <Content Include="Resources\img\pokemon_374.png" />
     <Content Include="Resources\img\pokemon_375.png" />
     <Content Include="Resources\img\pokemon_376.png" />
+    <None Include="Resources\img\pokemon_376_01.png" />
     <Content Include="Resources\img\pokemon_377.png" />
     <Content Include="Resources\img\pokemon_378.png" />
     <Content Include="Resources\img\pokemon_379.png" />
@@ -794,6 +856,9 @@
     <Content Include="Resources\img\pokemon_386_01.png" />
     <Content Include="Resources\img\pokemon_386_02.png" />
     <Content Include="Resources\img\pokemon_386_03.png" />
+    <None Include="Resources\img\pokemon_386_04.png" />
+    <None Include="Resources\img\pokemon_386_05.png" />
+    <None Include="Resources\img\pokemon_386_06.png" />
     <Content Include="Resources\img\pokemon_387.png" />
     <None Include="Resources\img\pokemon_387_01.png" />
     <Content Include="Resources\img\pokemon_388.png" />
@@ -871,7 +936,9 @@
     <Content Include="Resources\img\pokemon_447.png" />
     <Content Include="Resources\img\pokemon_448.png" />
     <Content Include="Resources\img\pokemon_449.png" />
+    <None Include="Resources\img\pokemon_449_01.png" />
     <Content Include="Resources\img\pokemon_450.png" />
+    <None Include="Resources\img\pokemon_450_01.png" />
     <Content Include="Resources\img\pokemon_451.png" />
     <Content Include="Resources\img\pokemon_452.png" />
     <Content Include="Resources\img\pokemon_453.png" />
@@ -974,6 +1041,7 @@
     <Content Include="Resources\img\pokemon_519.png" />
     <Content Include="Resources\img\pokemon_520.png" />
     <Content Include="Resources\img\pokemon_521.png" />
+    <None Include="Resources\img\pokemon_521_01.png" />
     <Content Include="Resources\img\pokemon_522.png" />
     <Content Include="Resources\img\pokemon_523.png" />
     <Content Include="Resources\img\pokemon_524.png" />
@@ -1123,6 +1191,7 @@
     <Content Include="Resources\img\pokemon_647_01.png" />
     <Content Include="Resources\img\pokemon_648.png" />
     <Content Include="Resources\img\pokemon_648_01.png" />
+    <None Include="Resources\img\pokemon_648_02.png" />
     <Content Include="Resources\img\pokemon_649.png" />
     <Content Include="Resources\img\pokemon_649_01.png" />
     <Content Include="Resources\img\pokemon_649_02.png" />
@@ -1166,6 +1235,7 @@
     <Content Include="Resources\img\pokemon_666_15.png" />
     <Content Include="Resources\img\pokemon_666_16.png" />
     <Content Include="Resources\img\pokemon_666_17.png" />
+    <None Include="Resources\img\pokemon_666_18.png" />
     <Content Include="Resources\img\pokemon_667.png" />
     <Content Include="Resources\img\pokemon_668.png" />
     <Content Include="Resources\img\pokemon_668_01.png" />
@@ -1231,6 +1301,7 @@
     <Content Include="Resources\img\pokemon_699.png" />
     <Content Include="Resources\img\pokemon_700.png" />
     <Content Include="Resources\img\pokemon_701.png" />
+    <None Include="Resources\img\pokemon_701_01.png" />
     <Content Include="Resources\img\pokemon_702.png" />
     <None Include="Resources\img\pokemon_702_01.png" />
     <Content Include="Resources\img\pokemon_703.png" />
@@ -1256,10 +1327,14 @@
     <Content Include="Resources\img\pokemon_714.png" />
     <Content Include="Resources\img\pokemon_715.png" />
     <Content Include="Resources\img\pokemon_716.png" />
+    <None Include="Resources\img\pokemon_716_01.png" />
     <Content Include="Resources\img\pokemon_717.png" />
+    <None Include="Resources\img\pokemon_717_01.png" />
     <Content Include="Resources\img\pokemon_718.png" />
     <None Include="Resources\img\pokemon_718_01.png" />
     <Content Include="Resources\img\pokemon_718_02.png" />
+    <None Include="Resources\img\pokemon_718_03.png" />
+    <None Include="Resources\img\pokemon_718_04.png" />
     <Content Include="Resources\img\pokemon_719.png" />
     <None Include="Resources\img\pokemon_720.png" />
     <None Include="Resources\img\pokemon_720_01.png" />
@@ -1267,8 +1342,92 @@
     <None Include="Resources\img\valid.png" />
     <None Include="Resources\img\warn.png" />
     <None Include="Resources\img\skill.png" />
+    <None Include="Resources\img\pokemon_719_01.png" />
+    <None Include="Resources\img\pokemon_722.png" />
+    <None Include="Resources\img\pokemon_723.png" />
+    <None Include="Resources\img\pokemon_724.png" />
+    <None Include="Resources\img\pokemon_725.png" />
+    <None Include="Resources\img\pokemon_726.png" />
+    <None Include="Resources\img\pokemon_727.png" />
+    <None Include="Resources\img\pokemon_728.png" />
+    <None Include="Resources\img\pokemon_729.png" />
+    <None Include="Resources\img\pokemon_730.png" />
+    <None Include="Resources\img\pokemon_731.png" />
+    <None Include="Resources\img\pokemon_732.png" />
+    <None Include="Resources\img\pokemon_733.png" />
+    <None Include="Resources\img\pokemon_734.png" />
+    <None Include="Resources\img\pokemon_735.png" />
+    <None Include="Resources\img\pokemon_736.png" />
+    <None Include="Resources\img\pokemon_737.png" />
+    <None Include="Resources\img\pokemon_738.png" />
+    <None Include="Resources\img\pokemon_739.png" />
+    <None Include="Resources\img\pokemon_740.png" />
+    <None Include="Resources\img\pokemon_741.png" />
+    <None Include="Resources\img\pokemon_741_01.png" />
+    <None Include="Resources\img\pokemon_741_02.png" />
+    <None Include="Resources\img\pokemon_741_03.png" />
+    <None Include="Resources\img\pokemon_742.png" />
+    <None Include="Resources\img\pokemon_743.png" />
+    <None Include="Resources\img\pokemon_744.png" />
+    <None Include="Resources\img\pokemon_745.png" />
+    <None Include="Resources\img\pokemon_746.png" />
+    <None Include="Resources\img\pokemon_747.png" />
+    <None Include="Resources\img\pokemon_748.png" />
+    <None Include="Resources\img\pokemon_749.png" />
+    <None Include="Resources\img\pokemon_750.png" />
+    <None Include="Resources\img\pokemon_751.png" />
+    <None Include="Resources\img\pokemon_752.png" />
+    <None Include="Resources\img\pokemon_753.png" />
+    <None Include="Resources\img\pokemon_754.png" />
+    <None Include="Resources\img\pokemon_755.png" />
+    <None Include="Resources\img\pokemon_756.png" />
+    <None Include="Resources\img\pokemon_757.png" />
+    <None Include="Resources\img\pokemon_758.png" />
+    <None Include="Resources\img\pokemon_759.png" />
+    <None Include="Resources\img\pokemon_760.png" />
+    <None Include="Resources\img\pokemon_761.png" />
+    <None Include="Resources\img\pokemon_762.png" />
+    <None Include="Resources\img\pokemon_763.png" />
+    <None Include="Resources\img\pokemon_764.png" />
+    <None Include="Resources\img\pokemon_765.png" />
+    <None Include="Resources\img\pokemon_766.png" />
+    <None Include="Resources\img\pokemon_767.png" />
+    <None Include="Resources\img\pokemon_768.png" />
+    <None Include="Resources\img\pokemon_769.png" />
+    <None Include="Resources\img\pokemon_770.png" />
+    <None Include="Resources\img\pokemon_771.png" />
+    <None Include="Resources\img\pokemon_772.png" />
+    <None Include="Resources\img\pokemon_773.png" />
+    <None Include="Resources\img\pokemon_774.png" />
+    <None Include="Resources\img\pokemon_775.png" />
+    <None Include="Resources\img\pokemon_776.png" />
+    <None Include="Resources\img\pokemon_777.png" />
+    <None Include="Resources\img\pokemon_778.png" />
+    <None Include="Resources\img\pokemon_779.png" />
+    <None Include="Resources\img\pokemon_780.png" />
+    <None Include="Resources\img\pokemon_781.png" />
+    <None Include="Resources\img\pokemon_782.png" />
+    <None Include="Resources\img\pokemon_783.png" />
+    <None Include="Resources\img\pokemon_784.png" />
+    <None Include="Resources\img\pokemon_785.png" />
+    <None Include="Resources\img\pokemon_786.png" />
+    <None Include="Resources\img\pokemon_787.png" />
+    <None Include="Resources\img\pokemon_788.png" />
+    <None Include="Resources\img\pokemon_789.png" />
+    <None Include="Resources\img\pokemon_790.png" />
+    <None Include="Resources\img\pokemon_791.png" />
+    <None Include="Resources\img\pokemon_792.png" />
+    <None Include="Resources\img\pokemon_793.png" />
+    <None Include="Resources\img\pokemon_794.png" />
+    <None Include="Resources\img\pokemon_795.png" />
+    <None Include="Resources\img\pokemon_796.png" />
+    <None Include="Resources\img\pokemon_797.png" />
+    <None Include="Resources\img\pokemon_798.png" />
+    <None Include="Resources\img\pokemon_799.png" />
+    <None Include="Resources\img\pokemon_800.png" />
+    <None Include="Resources\img\pokemon_801.png" />
+    <None Include="Resources\img\pokemon_802.png" />
     <Content Include="Resources\txt\mons.txt" />
-    <None Include="Resources\messagePokedex_US.bin" />
     <None Include="Resources\txt\pokathlon.txt" />
     <Content Include="Resources\txt\species.txt" />
   </ItemGroup>

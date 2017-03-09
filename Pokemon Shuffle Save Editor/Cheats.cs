@@ -50,7 +50,7 @@ namespace Pokemon_Shuffle_Save_Editor
             foreach (byte[] stage in new byte[][] { db.StagesMain, db.StagesExpert })
             {
                 int entrylen = BitConverter.ToInt32(stage, 4);
-                for (int i = 0; i < (BitConverter.ToInt32(stage, 0) - 1); i++)
+                for (int i = 0; i < (BitConverter.ToInt32(stage, 0) - ((stage == db.StagesMain) ? 1 : 0)); i++)
                 {
                     byte[] data = stage.Skip(0x50 + i * entrylen).Take(entrylen).ToArray();
                     if ((BitConverter.ToInt16(data, 0x4C) & 0x3FF) != 999)  //checks number of S ranks needed to unlock in order to skip "unreleased" expert stages. Not-expert stages should always return 0.
@@ -230,7 +230,6 @@ namespace Pokemon_Shuffle_Save_Editor
         {
             int value = 3;    //default value
             int j = 0;
-            string str;
             if (ModifierKeys == Keys.Control)
             {
                 using (var form = new NUP_Popup(0, 3, value, "rank"))
@@ -254,29 +253,7 @@ namespace Pokemon_Shuffle_Save_Editor
                 }
                 j++;
             }
-            switch (value)
-            {
-                case 0:
-                    str = "C";
-                    break;
-
-                case 1:
-                    str = "B";
-                    break;
-
-                case 2:
-                    str = "A";
-                    break;
-
-                case 3:
-                    str = "S";
-                    break;
-
-                default:
-                    MessageBox.Show("An error occured. Attempted to set rank to : " + value);
-                    return;
-            }
-            MessageBox.Show("All Completed Normal & Expert stages have been " + str + "-ranked.");
+            MessageBox.Show("All Completed Normal & Expert stages have been " + new string[] { "C", "B", "A", "S"}[value] + "-ranked.");
         }
 
         private void B_StageReset_Click(object sender, EventArgs e)
@@ -411,7 +388,7 @@ namespace Pokemon_Shuffle_Save_Editor
         private void B_Test_Click(object sender, EventArgs e)
         {   //don't bother, testing stuff
             #region catch'em all
-            //for (int i = 1; i < db.MegaStartIndex; i++) //includes 15 reserved slots
+            //for (int i = 1; i < db.MegaStartIndex; i++) 
             //    SetCaught(i, true);
             //MessageBox.Show("All Pokemon are now caught.");
             #endregion
