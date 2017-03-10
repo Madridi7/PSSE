@@ -24,7 +24,7 @@ namespace Pokemon_Shuffle_Save_Editor
             get { return (int)NUP_Opponent.Value; }
         }
 
-        public Pokathlon_Popup(int oValue, int mValue, int sValue, int oMin = 1, int mMin = 0, int sMin = 0, int oMax = 400, int mMax = 99, int sMax = 50)
+        public Pokathlon_Popup(int oValue, int mValue, int sValue, int oMin = 1, int mMin = 0, int sMin = 0, int oMax = 150, int mMax = 99, int sMax = 50)
         {
             InitializeComponent();
             int j = 0;
@@ -58,7 +58,7 @@ namespace Pokemon_Shuffle_Save_Editor
         private void UpdateForm()
         {
             B_Random.Visible = ((int)NUP_Step.Value > 0);
-            PB_Opponent.Image = ResizeImage(GetMonImage(BitConverter.ToInt16(db.StagesMain, 0x50 + BitConverter.ToInt32(db.StagesMain, 0x4) * (int)NUP_Opponent.Value) & 0x3FF), 48, 48);
+            PB_Opponent.Image = ResizeImage(GetMonImage(BitConverter.ToInt16(db.StagesMain, 0x50 + BitConverter.ToInt32(db.StagesMain, 0x4) * (int)NUP_Opponent.Value) & 0x7FF, true), 48, 48);
         }
 
         private void B_OK_Click(object sender, EventArgs e)
@@ -69,17 +69,8 @@ namespace Pokemon_Shuffle_Save_Editor
 
         private void B_Random_Click(object sender, EventArgs e)
         {
-            int min, max;
-            if (ModifierKeys == Keys.Control)
-            {
-                min = (int)NUP_Opponent.Minimum;
-                max = (int)NUP_Opponent.Maximum;
-            }
-            else
-            {
-                min = db.PokathlonRand[(int)NUP_Step.Value - 1][0];
-                max = db.PokathlonRand[(int)NUP_Step.Value - 1][1] + 1; //Random() never equals its max value, hence max +1
-            }
+            int min = (ModifierKeys == Keys.Control) ? (int)NUP_Opponent.Minimum : db.PokathlonRand[(int)NUP_Step.Value - 1][0];
+            int max = (ModifierKeys == Keys.Control) ? (int)NUP_Opponent.Maximum : db.PokathlonRand[(int)NUP_Step.Value - 1][1] + 1; //Random() never equals its max value, hence max +1
             NUP_Opponent.Value = new Random().Next(min, max);
         }
     }

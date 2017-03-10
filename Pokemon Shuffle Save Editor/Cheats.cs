@@ -309,9 +309,9 @@ namespace Pokemon_Shuffle_Save_Editor
                     form.ShowDialog();
                     if (form.DialogResult == DialogResult.OK)
                     {
-                        step = form.retStep;
-                        moves = form.retMoves;
                         opponent = form.retOpponent;
+                        moves = form.retMoves;
+                        step = form.retStep;
                         enabled = form.retEnabled;
                     }
                     else return;
@@ -321,17 +321,18 @@ namespace Pokemon_Shuffle_Save_Editor
             savedata[0xB760] = (byte)step;
             Array.Copy(BitConverter.GetBytes((BitConverter.ToInt16(savedata, 0xB768) & ~(0x7F)) | moves), 0, savedata, 0xB768, 2);
             Array.Copy(BitConverter.GetBytes((BitConverter.ToInt16(savedata, 0xB762) & ~(0x3FF << 6)) | (opponent << 6)), 0, savedata, 0xB762, 2);
-            string name = db.MonsList[BitConverter.ToInt16(db.StagesMain, 0x50 + BitConverter.ToInt32(db.StagesMain, 0x4) * opponent) & 0x3FF];
+            string name = db.MonsList[BitConverter.ToInt16(db.StagesMain, 0x50 + BitConverter.ToInt32(db.StagesMain, 0x4) * opponent) & 0x7FF];
             string str = new string[] { "th", "st", "nd", "rd" }[(!(step > 10 && step < 14) && step % 10 < 4) ? step % 4 : 0];
-            MessageBox.Show((enabled ? "Survival mode enabled.\nYou'll face" : "Survival Mode is disabled.\nYou should have faced") + " survival mode's " + step + str + " step against " + name + " with " + (savedata[0xB768] & 0x7F) + " moves left.");
+            MessageBox.Show((enabled ? "Survival mode enabled.\nYou'll face" : "Survival Mode is disabled.\nYou would have faced") + " survival mode's " + step + str + " step against " + name + " with " + (savedata[0xB768] & 0x7F) + " moves left.");
         }
 
         private void B_Crystal_Hearts_Click(object sender, EventArgs e)
         {
-            bool boool = (ModifierKeys == Keys.Control);
-            Array.Copy(boool ? new byte[6] : new byte[] {0, 0, 0, 0, 0x3F, 0x48 }, 0, savedata, 0xB7FB, 6);
-            string str = boool ? "Crystal hearts disabled." : "Crystal hearts unlocked : You have 7 stock hearts and win 700 coins each time you connect this month.";
-                MessageBox.Show(str + "\n\nWork In Progress, report if something bad happens.");
+            /*this doesn't work*/
+            //bool boool = (ModifierKeys == Keys.Control);
+            //Array.Copy(boool ? new byte[6] : new byte[] {0, 0, 0, 0, 0x3F, 0x48 }, 0, savedata, 0xB7FB, 6);
+            //string str = boool ? "Crystal hearts disabled." : "Crystal hearts unlocked : You have 7 stock hearts and win 700 coins each time you connect this month.";
+            //    MessageBox.Show(str + "\n\nWork In Progress, report if something bad happens.");
         }
 
         private void B_MissionCards_Click(object sender, EventArgs e)
@@ -388,7 +389,7 @@ namespace Pokemon_Shuffle_Save_Editor
         private void B_Test_Click(object sender, EventArgs e)
         {   //don't bother, testing stuff
             #region catch'em all
-            //for (int i = 1; i < db.MegaStartIndex; i++) 
+            //for (int i = 1; i < db.MegaStartIndex; i++)
             //    SetCaught(i, true);
             //MessageBox.Show("All Pokemon are now caught.");
             #endregion
@@ -396,8 +397,7 @@ namespace Pokemon_Shuffle_Save_Editor
             #region get stoned
             //for (int i = 0; i < db.MegaStartIndex; i++)
             //{
-            //    if (db.HasMega[i][0] || db.HasMega[i][1])
-            //        SetStone(i, db.HasMega[i][0], db.HasMega[i][1]);
+            //    SetStone(i, db.HasMega[i][0], db.HasMega[i][1]);
             //}
             //MessageBox.Show("All Mega Stones are now owned.");
             #endregion

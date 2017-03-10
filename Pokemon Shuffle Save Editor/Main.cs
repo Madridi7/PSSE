@@ -167,7 +167,7 @@ namespace Pokemon_Shuffle_Save_Editor
             //Skill level
             CHK_CurrentSkill.Checked = (GetMon(ind).CurrentSkill == (int)CB_Skill.SelectedValue);
             NUP_SkillLvl.Value = GetMon(ind).SkillLevel[(int)CB_Skill.SelectedValue];
-            toolTip1.SetToolTip(CB_Skill, db.SkillsTextList[db.Mons[ind].Item6[(int)CB_Skill.SelectedValue] - 1]);
+            toolTip1.SetToolTip(L_Skill, db.SkillsTextList[db.Mons[ind].Item6[(int)CB_Skill.SelectedValue] - 1]);
 
             //Speedup values
             if (db.MegaList.IndexOf(ind) != -1) //temporary fix while there are still some mega forms missing in megastone.bin
@@ -188,6 +188,7 @@ namespace Pokemon_Shuffle_Save_Editor
             L_Level.Visible = L_Skill.Visible = NUP_Level.Visible = PB_Skill.Visible = NUP_SkillLvl.Visible = CB_Skill.Visible = CHK_CaughtMon.Checked;
             PB_Lollipop.Visible = NUP_Lollipop.Visible = (CHK_CaughtMon.Checked && NUP_Lollipop.Maximum != 0);
             CHK_CurrentSkill.Visible = (CHK_CaughtMon.Checked && db.Mons[ind].Rest.Item2 > 1);
+            CB_Skill.Enabled = (db.Mons[ind].Rest.Item2 > 1);
             PB_Mon.Image = GetCaughtImage(ind, CHK_CaughtMon.Checked);
             PB_MegaX.Visible = CHK_MegaX.Visible = db.HasMega[ind][0];
             PB_MegaY.Visible = CHK_MegaY.Visible = db.HasMega[ind][1];
@@ -249,7 +250,7 @@ namespace Pokemon_Shuffle_Save_Editor
                 else break;
                 GetRankImage(lbl, GetStage(ind, type).Rank, GetStage(ind, type).Completed);
                 (nup as NumericUpDown).Value = GetStage(ind, type).Score;
-                (pb as PictureBox).Image = GetStageImage(BitConverter.ToInt16(stage, 0x50 + BitConverter.ToInt32(stage, 0x4) * ((type == 0) ? ind + 1 : ind)) & 0x3FF, type);
+                (pb as PictureBox).Image = GetStageImage(BitConverter.ToInt16(stage, 0x50 + BitConverter.ToInt32(stage, 0x4) * ((type == 0) ? ind + 1 : ind)) & 0x7FF, type);
                 //(pb as PictureBox).Image = GetCompletedImage(BitConverter.ToInt16(stage, 0x50 + BitConverter.ToInt32(stage, 0x4) * ((type == 0) ? ind + 1 : ind)) & 0x3FF, type, (type == 0) ? (GetStage(ind, type).Completed || overrideHS) : true);
             }
             PB_override.Image = overrideHS ? new Bitmap((Image)Properties.Resources.ResourceManager.GetObject("warn")) : new Bitmap((Image)Properties.Resources.ResourceManager.GetObject("valid"));
@@ -359,65 +360,56 @@ namespace Pokemon_Shuffle_Save_Editor
             int i, ind, max;
             if ((sender as Control).Name.Contains("Main"))
             {
-                i = 1;
+                i = 0;
                 ind = (int)NUP_MainIndex.Value - 1;
                 max = (int)NUP_MainIndex.Maximum;
             }
             else if ((sender as Control).Name.Contains("Expert"))
             {
-                i = 2;
+                i = 1;
                 ind = (int)NUP_ExpertIndex.Value - 1;
                 max = (int)NUP_ExpertIndex.Maximum;
             }
             else if ((sender as Control).Name.Contains("Event"))
             {
-                i = 3;
+                i = 2;
                 ind = (int)NUP_EventIndex.Value;
                 max = (int)NUP_EventIndex.Maximum + 1;
             }
             else return;
-            if ((e as MouseEventArgs).Button == MouseButtons.Left)    //Left Click
+            if ((e as MouseEventArgs).Button == MouseButtons.Left)    //Left Click = circle ranks down
             {
-                if (GetStage(ind, i - 1).Completed) //is completed
+                if (GetStage(ind, i).Completed)
                 {
-                    if (GetStage(ind, i - 1).Rank > 0 && GetStage(ind, i - 1).Rank < 4) //is rank != C
-                        SetRank(ind, i - 1, GetStage(ind, i - 1).Rank - 1);   //minus 1 rank
-                    else //is rank = C or unknown
-                    {
-                        SetRank(ind, i - 1, 3);  //rank S
-                        PatchScore(ind, i - 1);
-                    }
+                    SetRank(ind, i, (GetStage(ind, i).Rank + 3) % 4);
+                    if (GetStage(ind, i).Rank == 3) { PatchScore(ind, i); }
                 }
                 //Nothing happens if uncompleted
             }
-            if ((e as MouseEventArgs).Button == System.Windows.Forms.MouseButtons.Right)   //Right Click
+            if ((e as MouseEventArgs).Button == System.Windows.Forms.MouseButtons.Right)   //Right Click = (un)completed
             {
-                SetStage(ind, i - 1, !GetStage(ind, i - 1).Completed);    //invert completed state
-                if (GetStage(ind, i - 1).Completed) //is completed (was uncompleted)
-                {
-                    if (i == 1 && !overrideHS) //Main stages
-                    {
-                        for (int j = ind; j >= 0; j--)
-                        {
-                            SetStage(j, i - 1, true); //completed for every previous stage
-                            PatchScore(j, i - 1);
-                        }
-                    }
-                    SetRank(ind, i - 1, 3);  //rank S
-                    PatchScore(ind, i - 1);
-                }
-                else //is uncompleted (was completed)
-                {
-                    if (i == 1 && !overrideHS) //Main stages
-                    {
-                        for (int j = ind; j < max; j++) //revert every next stage to default
-                        {
-                            SetStage(j, i - 1);
-                            SetRank(j, i - 1, 0);
-                            SetScore(j, i - 1, 0);
-                        }
-                    }
-                }
+                SetStage(ind, i, !GetStage(ind, i).Completed);    //invert completed state
+                SetRank(ind, i, GetStage(ind, i).Completed ? 3 : 0);  //rank S or C
+                PatchScore(ind, i);
+                #region needs better implementation idea
+                //if (GetStage(ind, i).Completed && i == 0 && !overrideHS)
+                //{
+                //    for (int j = 0; j < ind; j++) //mark every previous stage as completed
+                //    {
+                //        SetStage(j, i, true);
+                //        PatchScore(j, i);
+                //    }
+                //}
+                //else if (i == 0 && !overrideHS)
+                //{
+                //    for (int j = ind; j < max; j++) //mark every next stage as uncompleted
+                //    {
+                //        SetStage(j, i);
+                //        SetRank(j, i, 0);
+                //        SetScore(j, i, 0);
+                //    }
+                //}
+                #endregion
             }
             updating = true;
             Parse();

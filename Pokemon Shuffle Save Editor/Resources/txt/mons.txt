@@ -1077,7 +1077,7 @@ Mega Abomasnow
 Mega Gallade
 Mega Audino
 Mega Diancie
-Mega Gengar Shiny
+Mega Gengar Smiling
 Mega Gyarados Shiny
 Mega Sableye Costumed
 Mega Glalie Winking
@@ -1085,6 +1085,7 @@ Mega Rayquaza Shiny
 Mega Audino Winking
 Mega Charizard Shiny X
 Mega Charizard Shiny Y
+Mega Gengar Shiny
 Mega Mewtwo Shiny X
 Mega Mewtwo Shiny Y
 Mega Tyranitar Shiny

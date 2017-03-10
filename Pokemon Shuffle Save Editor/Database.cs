@@ -150,7 +150,7 @@ namespace Pokemon_Shuffle_Save_Editor
                     Missions[i][j] = BitConverter.ToInt16(data, 0x8 + 2 * j) != 0;
             }
 
-            //dictionnary
+            //dictionnary, this is some really bad code here
             byte[] HexValue = Properties.Resources.messagePokedex_US;
             string StrValue = "";
             List<string> List = new List<string>();

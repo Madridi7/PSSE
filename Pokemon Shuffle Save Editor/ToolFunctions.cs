@@ -209,30 +209,11 @@ namespace Pokemon_Shuffle_Save_Editor
         }
 
         public static void PatchScore(int ind, int type)
-        {
-            byte[] stage;
-            int index = ind;
-            switch (type)
-            {
-                case 0:
-                    stage = db.StagesMain;
-                    index = (ind + 1);
-                    break;
-
-                case 1:
-                    stage = db.StagesExpert;
-                    break;
-
-                case 2:
-                    stage = db.StagesEvent;
-                    break;
-
-                default:
-                    return;
-            }
+        {  
+            byte[] stage = new byte[][] { db.StagesMain, db.StagesExpert, db.StagesEvent}[type];
             int entrylen = BitConverter.ToInt32(stage, 0x4);
-            byte[] data = stage.Skip(0x50 + index * entrylen).Take(entrylen).ToArray();
-            SetScore(ind, type, Math.Max((ulong)GetStage(ind, type).Score, (BitConverter.ToUInt64(data, 0x4) & 0xFFFFFFFF) + (ulong)(Math.Min(7000, ((GetStage(ind, type).Rank > 0) ? ((BitConverter.ToInt16(data, 0x30 + GetStage(ind, type).Rank - 1) >> 4) & 0xFF) : 0) * 500)))); //score = Max(current_highscore, hitpoints + minimum_bonus_points (a.k.a min moves left times 500, capped at 7000))
+            byte[] data = stage.Skip(0x50 + (ind + ((type == 0) ? 1 : 0)) * entrylen).Take(entrylen).ToArray();
+            SetScore(ind, type, Math.Max((ulong)GetStage(ind, type).Score, (BitConverter.ToUInt64(data, 0x4) & 0xFFFFFF) + (ulong)(Math.Min(7000, ((GetStage(ind, type).Rank > 0) ? ((BitConverter.ToInt16(data, 0x30 + GetStage(ind, type).Rank - 1) >> 4) & 0xFF) : 0) * 500)))); //score = Max(current_highscore, hitpoints + minimum_bonus_points (a.k.a min moves left times 500, capped at 7000))
         }
 
         public static void SetExcalationStep(int step = 1)
@@ -254,8 +235,8 @@ namespace Pokemon_Shuffle_Save_Editor
 
         public static void SetScore(int ind, int type, ulong newScore = 0)
         {
-            ulong score = (ulong)((BitConverter.ToUInt64(savedata, Score.Ofset(ind, type)) & (uint)(~(0xFFFFFF << Score.Shift(ind, type)))) | (newScore << Score.Shift(ind, type)));
-            Array.Copy(BitConverter.GetBytes(score), 0, savedata, Score.Ofset(ind, type), 8);
+            ulong score = (ulong)((BitConverter.ToUInt32(savedata, Score.Ofset(ind, type)) & (uint)(~(0xFFFFFF << Score.Shift(ind, type)))) | (newScore << Score.Shift(ind, type)));
+            Array.Copy(BitConverter.GetBytes(score), 0, savedata, Score.Ofset(ind, type), 4);
         }
 
         public static void SetStage(int ind, int type, bool completed = false)
@@ -307,7 +288,7 @@ namespace Pokemon_Shuffle_Save_Editor
             return bmp;
         }
 
-        public static Bitmap GetStageImage(int ind, int type)
+        public static Bitmap GetStageImage(int ind, int type = 0)
         {
             Bitmap bmp = new Bitmap(64, 80);
             using (Graphics g = Graphics.FromImage(bmp))
@@ -322,7 +303,7 @@ namespace Pokemon_Shuffle_Save_Editor
             return bmp;
         }
 
-        public static Bitmap GetMonImage(int ind)
+        public static Bitmap GetMonImage(int ind, bool boool = false)
         {
             string imgname = string.Empty;
             int mon_num = db.Mons[ind].Item1, form = db.Mons[ind].Item2;
@@ -335,7 +316,7 @@ namespace Pokemon_Shuffle_Save_Editor
             imgname += "pokemon_" + mon_num.ToString("000");
             if (form > 0 && mon_num > 0)
                 imgname += "_" + form.ToString("00");
-            if (mega)
+            if (mega && !boool)
                 imgname += "_lo";
             return new Bitmap((Image)Properties.Resources.ResourceManager.GetObject(imgname));
         }
