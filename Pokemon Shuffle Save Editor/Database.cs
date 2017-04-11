@@ -156,15 +156,22 @@ namespace Pokemon_Shuffle_Save_Editor
             List<string> List = new List<string>();
             for (int i = 0; i < HexValue.Length; i += 2)
             {
-                if (BitConverter.ToChar(HexValue, i) == '\0' && StrValue != "" && !(StrValue.EndsWith("\u0001ă\u0001\u0003\u0003慮敭") || StrValue.EndsWith("\u0001ă\u0001\u0003\u0005敭慧慎敭")))
+                if (BitConverter.ToChar(HexValue, i) == '\0' && !(StrValue.EndsWith("\u0001ă\u0001\u0003\u0003慮敭") || StrValue.EndsWith("\u0001ă\u0001\u0003\u0005敭慧慎敭")))
                 {
-                    List.Add(StrValue.Replace("\u0001ă\u0001\u0003\u0003慮敭\0", "[name]").Replace("\u0001ă\u0001\u0003\u0005敭慧慎敭\0", "[name]"));
+                    List.Add((StrValue != "") ? StrValue.Replace("\u0001ă\u0001\u0003\u0003慮敭\0", "[name]").Replace("\u0001ă\u0001\u0003\u0005敭慧慎敭\0", "[name]") : "Placeholder");
                     StrValue = "";
                 }
                 else StrValue += BitConverter.ToChar(HexValue, i);
             }
-            SkillsList = List.Skip(List.IndexOf("Opportunist")).Take(List.IndexOf("Attacks can occasionally deal\ngreater damage than usual.") - List.IndexOf("Opportunist")).ToArray();
-            SkillsTextList = List.Skip(List.IndexOf("Attacks can occasionally deal\ngreater damage than usual.")).Take(List.IndexOf("Attacks can occasionally deal\ngreater damage than usual.") - List.IndexOf("Opportunist")).ToArray();
+            int a = List.IndexOf("Opportunist"), b = List.IndexOf("Rarely, attacks can deal\ngreater damage than usual."), c = List.IndexOf("Big Wave"), d = List.IndexOf("Increases damage done by\nany Water types in a combo.");
+            string[] s1 = List.Skip(a).Take(b - a).ToArray(), s2 = List.Skip(c).Take(d - c).ToArray(), Skills = new string[s1.Length + s2.Length];
+            string[] st1 = List.Skip(b).Take(b - a).ToArray(), st2 = List.Skip(d).Take(d - c).ToArray(), SkillsT = new string[st1.Length + st2.Length];
+            s1.CopyTo(Skills, 0);
+            s2.CopyTo(Skills, s1.Length);
+            SkillsList = Skills;
+            st1.CopyTo(SkillsT, 0);
+            st2.CopyTo(SkillsT, s1.Length);
+            SkillsTextList = SkillsT;
         }
     }
 }
