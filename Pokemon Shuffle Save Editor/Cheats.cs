@@ -67,14 +67,15 @@ namespace Pokemon_Shuffle_Save_Editor
         private void B_CaughtObtainables_Click(object sender, EventArgs e)
         {
             for (int i = 1; i < db.MegaStartIndex; i++)
-                SetCaught(i, (db.Mons[i].Rest.Item1 != 999) && ((db.Mons[i].Item5 != 1) || (db.Mons[i].Item6[0] != 1) || (db.Mons[i].Item7 != 0))); //((displayed number isn't 999) && (at least 1 of these isn't "default" : base power, talent, type))
+                SetCaught(i, ((db.Mons[i].Item5 != 1) || (db.Mons[i].Item6 != new int[] { 1, 0, 0, 0, 0 }) || (db.Mons[i].Item7 != 0)) && (db.Mons[i].Rest.Item1 != 999)); //displayed number isn't 999 & at least 1 of these isn't "default" : base power, talent, type
             int stagelen = BitConverter.ToInt32(db.StagesMain, 0x4);
-            foreach (byte[] stage in new byte[][] { db.StagesMain, db.StagesExpert })
-            {
+            foreach (byte[] stage in new byte[][] { db.StagesMain, db.StagesExpert }) //also catches all Pokemons from Main or Expert stages (excluding Mega), because previous algorythm would skip legit Pokemons like Happiny (number isn't 999 but stats do match defaults).
+            {                                                                         //any Event-only Pokemon with such stats would still be missing but that's unlikely to ever happen.
                 for (int i = 1; i < BitConverter.ToInt32(stage, 0); i++)
                 {
-                    int ind = BitConverter.ToUInt16(stage, 0x50 + stagelen * (i)) & 0x3FF;
-                    SetCaught(ind, true);
+                    int ind = BitConverter.ToUInt16(stage, 0x50 + stagelen * (i)) & 0x7FF;
+                    if (!db.Mons[ind].Item3)
+                        SetCaught(ind, true);
                 }
             }
             MessageBox.Show("You now own all obtainable pokemons.");
