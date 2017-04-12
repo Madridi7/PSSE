@@ -79,7 +79,6 @@
             this.PB_Mon = new System.Windows.Forms.PictureBox();
             this.CHK_CurrentSkill = new System.Windows.Forms.CheckBox();
             this.GB_Resources = new System.Windows.Forms.GroupBox();
-            this.ItemsGrid = new Pokemon_Shuffle_Save_Editor.TabbedPropertyGrid();
             this.NUP_Jewels = new System.Windows.Forms.NumericUpDown();
             this.NUP_Coins = new System.Windows.Forms.NumericUpDown();
             this.NUP_Hearts = new System.Windows.Forms.NumericUpDown();
@@ -92,6 +91,29 @@
             this.PB_Team3 = new System.Windows.Forms.PictureBox();
             this.PB_Team4 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.GB_Party = new System.Windows.Forms.GroupBox();
+            this.PB_Skill1 = new System.Windows.Forms.PictureBox();
+            this.NUP_Skill1 = new System.Windows.Forms.NumericUpDown();
+            this.PB_Skill2 = new System.Windows.Forms.PictureBox();
+            this.NUP_Skill2 = new System.Windows.Forms.NumericUpDown();
+            this.PB_Skill3 = new System.Windows.Forms.PictureBox();
+            this.NUP_Skill3 = new System.Windows.Forms.NumericUpDown();
+            this.L_Skill5 = new System.Windows.Forms.Label();
+            this.PB_Skill5 = new System.Windows.Forms.PictureBox();
+            this.L_Skill4 = new System.Windows.Forms.Label();
+            this.PB_Skill4 = new System.Windows.Forms.PictureBox();
+            this.L_Skill3 = new System.Windows.Forms.Label();
+            this.L_Skill2 = new System.Windows.Forms.Label();
+            this.L_Skill1 = new System.Windows.Forms.Label();
+            this.RB_Skill5 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill4 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill3 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill2 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill1 = new System.Windows.Forms.RadioButton();
+            this.NUP_Skill4 = new System.Windows.Forms.NumericUpDown();
+            this.NUP_Skill5 = new System.Windows.Forms.NumericUpDown();
+            this.TLP_Skills = new System.Windows.Forms.TableLayoutPanel();
+            this.ItemsGrid = new Pokemon_Shuffle_Save_Editor.TabbedPropertyGrid();
             this.GB_HighScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_override)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_EventScore)).BeginInit();
@@ -124,13 +146,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team4)).BeginInit();
+            this.GB_Party.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).BeginInit();
+            this.TLP_Skills.SuspendLayout();
             this.SuspendLayout();
             // 
             // B_Open
             // 
             this.B_Open.Location = new System.Drawing.Point(12, 38);
             this.B_Open.Name = "B_Open";
-            this.B_Open.Size = new System.Drawing.Size(228, 32);
+            this.B_Open.Size = new System.Drawing.Size(127, 32);
             this.B_Open.TabIndex = 1;
             this.B_Open.Text = "Open savedata.bin";
             this.B_Open.UseVisualStyleBackColor = true;
@@ -141,7 +175,7 @@
             this.TB_FilePath.Location = new System.Drawing.Point(12, 12);
             this.TB_FilePath.Name = "TB_FilePath";
             this.TB_FilePath.ReadOnly = true;
-            this.TB_FilePath.Size = new System.Drawing.Size(228, 20);
+            this.TB_FilePath.Size = new System.Drawing.Size(242, 20);
             this.TB_FilePath.TabIndex = 0;
             this.TB_FilePath.TabStop = false;
             this.TB_FilePath.DoubleClick += new System.EventHandler(this.TB_Filepath_DoubleClick);
@@ -151,7 +185,7 @@
             this.B_Save.Enabled = false;
             this.B_Save.Location = new System.Drawing.Point(12, 76);
             this.B_Save.Name = "B_Save";
-            this.B_Save.Size = new System.Drawing.Size(228, 32);
+            this.B_Save.Size = new System.Drawing.Size(127, 32);
             this.B_Save.TabIndex = 2;
             this.B_Save.Text = "Save savedata.bin";
             this.B_Save.UseVisualStyleBackColor = true;
@@ -159,7 +193,6 @@
             // 
             // GB_HighScore
             // 
-            this.GB_HighScore.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.GB_HighScore.Controls.Add(this.PB_override);
             this.GB_HighScore.Controls.Add(this.L_RankEv);
             this.GB_HighScore.Controls.Add(this.L_RankEx);
@@ -183,9 +216,9 @@
             this.GB_HighScore.Controls.Add(this.PB_Expert);
             this.GB_HighScore.Controls.Add(this.PB_Main);
             this.GB_HighScore.Enabled = false;
-            this.GB_HighScore.Location = new System.Drawing.Point(12, 447);
+            this.GB_HighScore.Location = new System.Drawing.Point(12, 457);
             this.GB_HighScore.Name = "GB_HighScore";
-            this.GB_HighScore.Size = new System.Drawing.Size(493, 118);
+            this.GB_HighScore.Size = new System.Drawing.Size(501, 118);
             this.GB_HighScore.TabIndex = 6;
             this.GB_HighScore.TabStop = false;
             this.GB_HighScore.Text = "High-Scores";
@@ -451,9 +484,9 @@
             this.GB_Caught.Controls.Add(this.PB_Mon);
             this.GB_Caught.Controls.Add(this.CHK_CurrentSkill);
             this.GB_Caught.Enabled = false;
-            this.GB_Caught.Location = new System.Drawing.Point(12, 168);
+            this.GB_Caught.Location = new System.Drawing.Point(12, 197);
             this.GB_Caught.Name = "GB_Caught";
-            this.GB_Caught.Size = new System.Drawing.Size(228, 220);
+            this.GB_Caught.Size = new System.Drawing.Size(242, 254);
             this.GB_Caught.TabIndex = 3;
             this.GB_Caught.TabStop = false;
             this.GB_Caught.Text = "Owned Pokemon";
@@ -551,7 +584,7 @@
             // 
             // PB_SpeedUpY
             // 
-            this.PB_SpeedUpY.Location = new System.Drawing.Point(198, 133);
+            this.PB_SpeedUpY.Location = new System.Drawing.Point(202, 123);
             this.PB_SpeedUpY.Name = "PB_SpeedUpY";
             this.PB_SpeedUpY.Size = new System.Drawing.Size(24, 24);
             this.PB_SpeedUpY.TabIndex = 27;
@@ -561,7 +594,7 @@
             // 
             // PB_SpeedUpX
             // 
-            this.PB_SpeedUpX.Location = new System.Drawing.Point(198, 85);
+            this.PB_SpeedUpX.Location = new System.Drawing.Point(202, 75);
             this.PB_SpeedUpX.Name = "PB_SpeedUpX";
             this.PB_SpeedUpX.Size = new System.Drawing.Size(24, 24);
             this.PB_SpeedUpX.TabIndex = 26;
@@ -571,7 +604,7 @@
             // 
             // NUP_SpeedUpY
             // 
-            this.NUP_SpeedUpY.Location = new System.Drawing.Point(160, 135);
+            this.NUP_SpeedUpY.Location = new System.Drawing.Point(164, 125);
             this.NUP_SpeedUpY.Maximum = new decimal(new int[] {
             127,
             0,
@@ -585,7 +618,7 @@
             // 
             // NUP_SpeedUpX
             // 
-            this.NUP_SpeedUpX.Location = new System.Drawing.Point(160, 87);
+            this.NUP_SpeedUpX.Location = new System.Drawing.Point(164, 77);
             this.NUP_SpeedUpX.Maximum = new decimal(new int[] {
             127,
             0,
@@ -599,7 +632,7 @@
             // 
             // PB_MegaX
             // 
-            this.PB_MegaX.Location = new System.Drawing.Point(160, 65);
+            this.PB_MegaX.Location = new System.Drawing.Point(164, 55);
             this.PB_MegaX.Name = "PB_MegaX";
             this.PB_MegaX.Size = new System.Drawing.Size(16, 16);
             this.PB_MegaX.TabIndex = 23;
@@ -608,7 +641,7 @@
             // 
             // PB_MegaY
             // 
-            this.PB_MegaY.Location = new System.Drawing.Point(160, 113);
+            this.PB_MegaY.Location = new System.Drawing.Point(164, 103);
             this.PB_MegaY.Name = "PB_MegaY";
             this.PB_MegaY.Size = new System.Drawing.Size(16, 16);
             this.PB_MegaY.TabIndex = 22;
@@ -618,7 +651,7 @@
             // CHK_MegaX
             // 
             this.CHK_MegaX.AutoSize = true;
-            this.CHK_MegaX.Location = new System.Drawing.Point(182, 67);
+            this.CHK_MegaX.Location = new System.Drawing.Point(186, 57);
             this.CHK_MegaX.Name = "CHK_MegaX";
             this.CHK_MegaX.Size = new System.Drawing.Size(15, 14);
             this.CHK_MegaX.TabIndex = 37;
@@ -630,7 +663,7 @@
             // 
             this.CHK_MegaY.AutoSize = true;
             this.CHK_MegaY.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CHK_MegaY.Location = new System.Drawing.Point(182, 115);
+            this.CHK_MegaY.Location = new System.Drawing.Point(186, 105);
             this.CHK_MegaY.Name = "CHK_MegaY";
             this.CHK_MegaY.Size = new System.Drawing.Size(15, 14);
             this.CHK_MegaY.TabIndex = 39;
@@ -707,6 +740,7 @@
             // 
             // GB_Resources
             // 
+            this.GB_Resources.Controls.Add(this.TLP_Skills);
             this.GB_Resources.Controls.Add(this.ItemsGrid);
             this.GB_Resources.Controls.Add(this.NUP_Jewels);
             this.GB_Resources.Controls.Add(this.NUP_Coins);
@@ -715,61 +749,12 @@
             this.GB_Resources.Controls.Add(this.L_Coins);
             this.GB_Resources.Controls.Add(this.L_Hearts);
             this.GB_Resources.Enabled = false;
-            this.GB_Resources.Location = new System.Drawing.Point(252, 6);
+            this.GB_Resources.Location = new System.Drawing.Point(260, 12);
             this.GB_Resources.Name = "GB_Resources";
             this.GB_Resources.Size = new System.Drawing.Size(253, 439);
             this.GB_Resources.TabIndex = 5;
             this.GB_Resources.TabStop = false;
             this.GB_Resources.Text = "Resources";
-            // 
-            // ItemsGrid
-            // 
-            this.ItemsGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ItemsGrid.Location = new System.Drawing.Point(6, 65);
-            this.ItemsGrid.Name = "ItemsGrid";
-            shuffleItems1.AttackUp = 0;
-            shuffleItems1.Complexity = 0;
-            shuffleItems1.Disruption = 0;
-            shuffleItems1.Enchantments = new int[] {
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0};
-            shuffleItems1.Experience = 0;
-            shuffleItems1.ExperienceBoostL = 0;
-            shuffleItems1.ExperienceBoostM = 0;
-            shuffleItems1.ExperienceBoostS = 0;
-            shuffleItems1.Items = new int[] {
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0};
-            shuffleItems1.LevelUp = 0;
-            shuffleItems1.MegaSpeedup = 0;
-            shuffleItems1.MegaStart = 0;
-            shuffleItems1.Moves = 0;
-            shuffleItems1.RaiseMaxLevel = 0;
-            shuffleItems1.SkillBoosterL = 0;
-            shuffleItems1.SkillBoosterM = 0;
-            shuffleItems1.SkillBoosterS = 0;
-            shuffleItems1.SkillSwap = 0;
-            shuffleItems1.Time = 0;
-            this.ItemsGrid.SelectedObject = shuffleItems1;
-            this.ItemsGrid.Size = new System.Drawing.Size(241, 369);
-            this.ItemsGrid.TabIndex = 54;
-            this.ItemsGrid.ToolbarVisible = false;
-            this.ItemsGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.UpdateProperty);
-            this.ItemsGrid.EnabledChanged += new System.EventHandler(this.ItemsGrid_EnabledChanged);
-            this.ItemsGrid.Enter += new System.EventHandler(this.ItemsGrid_Enter);
             // 
             // NUP_Jewels
             // 
@@ -841,9 +826,9 @@
             // B_CheatsForm
             // 
             this.B_CheatsForm.Enabled = false;
-            this.B_CheatsForm.Location = new System.Drawing.Point(12, 394);
+            this.B_CheatsForm.Location = new System.Drawing.Point(145, 51);
             this.B_CheatsForm.Name = "B_CheatsForm";
-            this.B_CheatsForm.Size = new System.Drawing.Size(121, 47);
+            this.B_CheatsForm.Size = new System.Drawing.Size(109, 47);
             this.B_CheatsForm.TabIndex = 4;
             this.B_CheatsForm.Text = "Bulk Edits";
             this.B_CheatsForm.UseVisualStyleBackColor = true;
@@ -851,7 +836,7 @@
             // 
             // PB_Team1
             // 
-            this.PB_Team1.Location = new System.Drawing.Point(12, 114);
+            this.PB_Team1.Location = new System.Drawing.Point(6, 19);
             this.PB_Team1.Name = "PB_Team1";
             this.PB_Team1.Size = new System.Drawing.Size(48, 48);
             this.PB_Team1.TabIndex = 28;
@@ -860,7 +845,7 @@
             // 
             // PB_Team2
             // 
-            this.PB_Team2.Location = new System.Drawing.Point(72, 114);
+            this.PB_Team2.Location = new System.Drawing.Point(66, 19);
             this.PB_Team2.Name = "PB_Team2";
             this.PB_Team2.Size = new System.Drawing.Size(48, 48);
             this.PB_Team2.TabIndex = 29;
@@ -869,7 +854,7 @@
             // 
             // PB_Team3
             // 
-            this.PB_Team3.Location = new System.Drawing.Point(132, 114);
+            this.PB_Team3.Location = new System.Drawing.Point(126, 19);
             this.PB_Team3.Name = "PB_Team3";
             this.PB_Team3.Size = new System.Drawing.Size(48, 48);
             this.PB_Team3.TabIndex = 30;
@@ -878,7 +863,7 @@
             // 
             // PB_Team4
             // 
-            this.PB_Team4.Location = new System.Drawing.Point(192, 114);
+            this.PB_Team4.Location = new System.Drawing.Point(186, 19);
             this.PB_Team4.Name = "PB_Team4";
             this.PB_Team4.Size = new System.Drawing.Size(48, 48);
             this.PB_Team4.TabIndex = 31;
@@ -894,16 +879,408 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Skill description";
             // 
+            // GB_Party
+            // 
+            this.GB_Party.Controls.Add(this.PB_Team1);
+            this.GB_Party.Controls.Add(this.PB_Team4);
+            this.GB_Party.Controls.Add(this.PB_Team2);
+            this.GB_Party.Controls.Add(this.PB_Team3);
+            this.GB_Party.Location = new System.Drawing.Point(12, 115);
+            this.GB_Party.Name = "GB_Party";
+            this.GB_Party.Size = new System.Drawing.Size(242, 76);
+            this.GB_Party.TabIndex = 32;
+            this.GB_Party.TabStop = false;
+            this.GB_Party.Text = "Active Party";
+            // 
+            // PB_Skill1
+            // 
+            this.PB_Skill1.Location = new System.Drawing.Point(62, 3);
+            this.PB_Skill1.Name = "PB_Skill1";
+            this.PB_Skill1.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill1.TabIndex = 71;
+            this.PB_Skill1.TabStop = false;
+            // 
+            // NUP_Skill1
+            // 
+            this.NUP_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill1.Location = new System.Drawing.Point(23, 3);
+            this.NUP_Skill1.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill1.Name = "NUP_Skill1";
+            this.NUP_Skill1.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill1.TabIndex = 39;
+            this.NUP_Skill1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // PB_Skill2
+            // 
+            this.PB_Skill2.Location = new System.Drawing.Point(62, 33);
+            this.PB_Skill2.Name = "PB_Skill2";
+            this.PB_Skill2.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill2.TabIndex = 72;
+            this.PB_Skill2.TabStop = false;
+            // 
+            // NUP_Skill2
+            // 
+            this.NUP_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill2.Location = new System.Drawing.Point(23, 33);
+            this.NUP_Skill2.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill2.Name = "NUP_Skill2";
+            this.NUP_Skill2.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill2.TabIndex = 40;
+            this.NUP_Skill2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // PB_Skill3
+            // 
+            this.PB_Skill3.Location = new System.Drawing.Point(62, 63);
+            this.PB_Skill3.Name = "PB_Skill3";
+            this.PB_Skill3.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill3.TabIndex = 73;
+            this.PB_Skill3.TabStop = false;
+            // 
+            // NUP_Skill3
+            // 
+            this.NUP_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill3.Location = new System.Drawing.Point(23, 63);
+            this.NUP_Skill3.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill3.Name = "NUP_Skill3";
+            this.NUP_Skill3.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill3.TabIndex = 37;
+            this.NUP_Skill3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // L_Skill5
+            // 
+            this.L_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill5.AutoSize = true;
+            this.L_Skill5.Location = new System.Drawing.Point(92, 120);
+            this.L_Skill5.Name = "L_Skill5";
+            this.L_Skill5.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill5.TabIndex = 9;
+            this.L_Skill5.Text = "Skill";
+            this.L_Skill5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PB_Skill5
+            // 
+            this.PB_Skill5.Location = new System.Drawing.Point(62, 123);
+            this.PB_Skill5.Name = "PB_Skill5";
+            this.PB_Skill5.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill5.TabIndex = 75;
+            this.PB_Skill5.TabStop = false;
+            // 
+            // L_Skill4
+            // 
+            this.L_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill4.AutoSize = true;
+            this.L_Skill4.Location = new System.Drawing.Point(92, 90);
+            this.L_Skill4.Name = "L_Skill4";
+            this.L_Skill4.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill4.TabIndex = 8;
+            this.L_Skill4.Text = "Skill";
+            this.L_Skill4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PB_Skill4
+            // 
+            this.PB_Skill4.Location = new System.Drawing.Point(62, 93);
+            this.PB_Skill4.Name = "PB_Skill4";
+            this.PB_Skill4.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill4.TabIndex = 74;
+            this.PB_Skill4.TabStop = false;
+            // 
+            // L_Skill3
+            // 
+            this.L_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill3.AutoSize = true;
+            this.L_Skill3.Location = new System.Drawing.Point(92, 60);
+            this.L_Skill3.Name = "L_Skill3";
+            this.L_Skill3.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill3.TabIndex = 7;
+            this.L_Skill3.Text = "Skill";
+            this.L_Skill3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // L_Skill2
+            // 
+            this.L_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill2.AutoSize = true;
+            this.L_Skill2.Location = new System.Drawing.Point(92, 30);
+            this.L_Skill2.Name = "L_Skill2";
+            this.L_Skill2.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill2.TabIndex = 6;
+            this.L_Skill2.Text = "Skill";
+            this.L_Skill2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // L_Skill1
+            // 
+            this.L_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill1.AutoSize = true;
+            this.L_Skill1.Location = new System.Drawing.Point(92, 0);
+            this.L_Skill1.Name = "L_Skill1";
+            this.L_Skill1.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill1.TabIndex = 5;
+            this.L_Skill1.Text = "Skill";
+            this.L_Skill1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RB_Skill5
+            // 
+            this.RB_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill5.AutoSize = true;
+            this.RB_Skill5.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill5.Location = new System.Drawing.Point(3, 123);
+            this.RB_Skill5.Name = "RB_Skill5";
+            this.RB_Skill5.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill5.TabIndex = 4;
+            this.RB_Skill5.TabStop = true;
+            this.RB_Skill5.UseVisualStyleBackColor = true;
+            // 
+            // RB_Skill4
+            // 
+            this.RB_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill4.AutoSize = true;
+            this.RB_Skill4.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill4.Location = new System.Drawing.Point(3, 93);
+            this.RB_Skill4.Name = "RB_Skill4";
+            this.RB_Skill4.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill4.TabIndex = 3;
+            this.RB_Skill4.TabStop = true;
+            this.RB_Skill4.UseVisualStyleBackColor = true;
+            // 
+            // RB_Skill3
+            // 
+            this.RB_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill3.AutoSize = true;
+            this.RB_Skill3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill3.Location = new System.Drawing.Point(3, 63);
+            this.RB_Skill3.Name = "RB_Skill3";
+            this.RB_Skill3.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill3.TabIndex = 2;
+            this.RB_Skill3.TabStop = true;
+            this.RB_Skill3.UseVisualStyleBackColor = true;
+            // 
+            // RB_Skill2
+            // 
+            this.RB_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill2.AutoSize = true;
+            this.RB_Skill2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill2.Location = new System.Drawing.Point(3, 33);
+            this.RB_Skill2.Name = "RB_Skill2";
+            this.RB_Skill2.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill2.TabIndex = 1;
+            this.RB_Skill2.TabStop = true;
+            this.RB_Skill2.UseVisualStyleBackColor = true;
+            // 
+            // RB_Skill1
+            // 
+            this.RB_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill1.AutoSize = true;
+            this.RB_Skill1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill1.Location = new System.Drawing.Point(3, 3);
+            this.RB_Skill1.Name = "RB_Skill1";
+            this.RB_Skill1.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill1.TabIndex = 0;
+            this.RB_Skill1.TabStop = true;
+            this.RB_Skill1.UseVisualStyleBackColor = true;
+            // 
+            // NUP_Skill4
+            // 
+            this.NUP_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill4.Location = new System.Drawing.Point(23, 93);
+            this.NUP_Skill4.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill4.Name = "NUP_Skill4";
+            this.NUP_Skill4.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill4.TabIndex = 38;
+            this.NUP_Skill4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // NUP_Skill5
+            // 
+            this.NUP_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill5.Location = new System.Drawing.Point(23, 123);
+            this.NUP_Skill5.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill5.Name = "NUP_Skill5";
+            this.NUP_Skill5.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill5.TabIndex = 41;
+            this.NUP_Skill5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // TLP_Skills
+            // 
+            this.TLP_Skills.ColumnCount = 4;
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.Controls.Add(this.NUP_Skill5, 1, 4);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill4, 1, 3);
+            this.TLP_Skills.Controls.Add(this.RB_Skill2, 0, 1);
+            this.TLP_Skills.Controls.Add(this.RB_Skill3, 0, 2);
+            this.TLP_Skills.Controls.Add(this.RB_Skill4, 0, 3);
+            this.TLP_Skills.Controls.Add(this.RB_Skill5, 0, 4);
+            this.TLP_Skills.Controls.Add(this.L_Skill1, 3, 0);
+            this.TLP_Skills.Controls.Add(this.L_Skill2, 3, 1);
+            this.TLP_Skills.Controls.Add(this.L_Skill3, 3, 2);
+            this.TLP_Skills.Controls.Add(this.PB_Skill4, 2, 3);
+            this.TLP_Skills.Controls.Add(this.L_Skill4, 3, 3);
+            this.TLP_Skills.Controls.Add(this.PB_Skill5, 2, 4);
+            this.TLP_Skills.Controls.Add(this.L_Skill5, 3, 4);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill3, 1, 2);
+            this.TLP_Skills.Controls.Add(this.PB_Skill3, 2, 2);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill2, 1, 1);
+            this.TLP_Skills.Controls.Add(this.PB_Skill2, 2, 1);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill1, 1, 0);
+            this.TLP_Skills.Controls.Add(this.PB_Skill1, 2, 0);
+            this.TLP_Skills.Controls.Add(this.RB_Skill1, 0, 0);
+            this.TLP_Skills.Location = new System.Drawing.Point(11, 260);
+            this.TLP_Skills.Name = "TLP_Skills";
+            this.TLP_Skills.RowCount = 5;
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.Size = new System.Drawing.Size(228, 150);
+            this.TLP_Skills.TabIndex = 55;
+            // 
+            // ItemsGrid
+            // 
+            this.ItemsGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ItemsGrid.Location = new System.Drawing.Point(6, 65);
+            this.ItemsGrid.Name = "ItemsGrid";
+            shuffleItems1.AttackUp = 0;
+            shuffleItems1.Complexity = 0;
+            shuffleItems1.Disruption = 0;
+            shuffleItems1.Enchantments = new int[] {
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0};
+            shuffleItems1.Experience = 0;
+            shuffleItems1.ExperienceBoostL = 0;
+            shuffleItems1.ExperienceBoostM = 0;
+            shuffleItems1.ExperienceBoostS = 0;
+            shuffleItems1.Items = new int[] {
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0};
+            shuffleItems1.LevelUp = 0;
+            shuffleItems1.MegaSpeedup = 0;
+            shuffleItems1.MegaStart = 0;
+            shuffleItems1.Moves = 0;
+            shuffleItems1.RaiseMaxLevel = 0;
+            shuffleItems1.SkillBoosterL = 0;
+            shuffleItems1.SkillBoosterM = 0;
+            shuffleItems1.SkillBoosterS = 0;
+            shuffleItems1.SkillSwap = 0;
+            shuffleItems1.Time = 0;
+            this.ItemsGrid.SelectedObject = shuffleItems1;
+            this.ItemsGrid.Size = new System.Drawing.Size(241, 369);
+            this.ItemsGrid.TabIndex = 54;
+            this.ItemsGrid.ToolbarVisible = false;
+            this.ItemsGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.UpdateProperty);
+            this.ItemsGrid.EnabledChanged += new System.EventHandler(this.ItemsGrid_EnabledChanged);
+            this.ItemsGrid.Enter += new System.EventHandler(this.ItemsGrid_Enter);
+            // 
             // Main
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 577);
-            this.Controls.Add(this.PB_Team4);
-            this.Controls.Add(this.PB_Team3);
-            this.Controls.Add(this.PB_Team2);
-            this.Controls.Add(this.PB_Team1);
+            this.ClientSize = new System.Drawing.Size(523, 581);
+            this.Controls.Add(this.GB_Party);
             this.Controls.Add(this.B_CheatsForm);
             this.Controls.Add(this.GB_Resources);
             this.Controls.Add(this.GB_Caught);
@@ -913,8 +1290,8 @@
             this.Controls.Add(this.B_Open);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(533, 616);
-            this.MinimumSize = new System.Drawing.Size(533, 616);
+            this.MaximumSize = new System.Drawing.Size(539, 620);
+            this.MinimumSize = new System.Drawing.Size(539, 620);
             this.Name = "Main";
             this.Text = "Pokemon Shuffle Save Editor";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Main_DragDrop);
@@ -954,6 +1331,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team4)).EndInit();
+            this.GB_Party.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).EndInit();
+            this.TLP_Skills.ResumeLayout(false);
+            this.TLP_Skills.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1022,6 +1412,28 @@
         private System.Windows.Forms.ComboBox CB_Skill;
         private System.Windows.Forms.CheckBox CHK_CurrentSkill;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.GroupBox GB_Party;
+        private System.Windows.Forms.TableLayoutPanel TLP_Skills;
+        private System.Windows.Forms.NumericUpDown NUP_Skill5;
+        private System.Windows.Forms.NumericUpDown NUP_Skill4;
+        private System.Windows.Forms.RadioButton RB_Skill1;
+        private System.Windows.Forms.RadioButton RB_Skill2;
+        private System.Windows.Forms.RadioButton RB_Skill3;
+        private System.Windows.Forms.RadioButton RB_Skill4;
+        private System.Windows.Forms.RadioButton RB_Skill5;
+        private System.Windows.Forms.Label L_Skill1;
+        private System.Windows.Forms.Label L_Skill2;
+        private System.Windows.Forms.Label L_Skill3;
+        private System.Windows.Forms.PictureBox PB_Skill4;
+        private System.Windows.Forms.Label L_Skill4;
+        private System.Windows.Forms.PictureBox PB_Skill5;
+        private System.Windows.Forms.Label L_Skill5;
+        private System.Windows.Forms.NumericUpDown NUP_Skill3;
+        private System.Windows.Forms.PictureBox PB_Skill3;
+        private System.Windows.Forms.NumericUpDown NUP_Skill2;
+        private System.Windows.Forms.PictureBox PB_Skill2;
+        private System.Windows.Forms.NumericUpDown NUP_Skill1;
+        private System.Windows.Forms.PictureBox PB_Skill1;
     }
 }
 

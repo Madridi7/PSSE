@@ -39,7 +39,7 @@ namespace Pokemon_Shuffle_Save_Editor
             short speedUpX = (short)(db.HasMega[ind][0] ? (BitConverter.ToInt16(savedata, SpeedUpX.Ofset(ind)) >> SpeedUpX.Shift(ind)) & 0x7F : 0);
             short speedUpY = (short)(db.HasMega[ind][1] ? (BitConverter.ToInt32(savedata, SpeedUpY.Ofset(ind)) >> SpeedUpY.Shift(ind)) & 0x7F : 0);
             short selSkill = (short)((BitConverter.ToInt16(savedata, CurrentSkill.Ofset(ind)) >> CurrentSkill.Shift(ind)) & 0x7);
-            int[] skillLvl = new int[8], skillExp = new int[8];
+            int[] skillLvl = new int[5], skillExp = new int[5];
             for (int i = 0; i < db.Rest[ind].Item2; i++)
             {
                 int sLv = (BitConverter.ToInt16(savedata, SkillLevel.Ofset(ind, i)) >> SkillLevel.Shift(ind)) & 0x7;

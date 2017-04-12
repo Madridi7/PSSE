@@ -44,7 +44,7 @@ namespace Pokemon_Shuffle_Save_Editor
             PB_Main.Image = PB_Event.Image = PB_Expert.Image = GetStageImage(0, 0);
             PB_Team1.Image = PB_Team2.Image = PB_Team3.Image = PB_Team4.Image = ResizeImage(GetMonImage(0), 48, 48);
             PB_Lollipop.Image = new Bitmap(ResizeImage((Image)Properties.Resources.ResourceManager.GetObject("lollipop"), 24, 24));
-            PB_Skill.Image = new Bitmap(ResizeImage((Image)Properties.Resources.ResourceManager.GetObject("skill"), 24, 24));
+            PB_Skill.Image = PB_Skill1.Image = PB_Skill2.Image = PB_Skill3.Image = PB_Skill4.Image = PB_Skill5.Image = new Bitmap(ResizeImage((Image)Properties.Resources.ResourceManager.GetObject("skill"), 24, 24));
             PB_Lollipop.Visible = PB_Skill.Visible = false;
             NUP_MainIndex.Maximum = BitConverter.ToInt32(db.StagesMain, 0) - 1;
             NUP_ExpertIndex.Maximum = BitConverter.ToInt32(db.StagesExpert, 0);
@@ -148,11 +148,11 @@ namespace Pokemon_Shuffle_Save_Editor
             int ind = (int)CB_MonIndex.SelectedValue;
 
             //team preview
-            int j = 1;
+            int k = 1;
             foreach (PictureBox pb in new[] { PB_Team1, PB_Team2, PB_Team3, PB_Team4 })
             {
-                pb.Image = GetTeamImage(GetTeam(j), (ltir == j));
-                j++;
+                pb.Image = GetTeamImage(GetTeam(k), (ltir == k));
+                k++;
             }
 
             //caught CHK
@@ -168,6 +168,21 @@ namespace Pokemon_Shuffle_Save_Editor
             CHK_CurrentSkill.Checked = (GetMon(ind).CurrentSkill == (int)CB_Skill.SelectedValue);
             NUP_SkillLvl.Value = GetMon(ind).SkillLevel[(int)CB_Skill.SelectedValue];
             toolTip1.SetToolTip(L_Skill, db.SkillsTextList[db.Mons[ind].Item6[(int)CB_Skill.SelectedValue] - 1]);
+
+            for (int i = 0; i < TLP_Skills.ColumnCount; i++)
+            {
+                for (int j = 0; j < TLP_Skills.RowCount; j++)
+                {
+                    if (TLP_Skills.GetControlFromPosition(i, j) is RadioButton)
+                        (TLP_Skills.GetControlFromPosition(i, j) as RadioButton).Checked = (GetMon(ind).CurrentSkill == j);
+                    else if (TLP_Skills.GetControlFromPosition(i, j) is Label)
+                        (TLP_Skills.GetControlFromPosition(i, j) as Label).Text = (db.Mons[(int)CB_MonIndex.SelectedValue].Item6[j] != 0 || j == 0) ? db.SkillsList[db.Mons[(int)CB_MonIndex.SelectedValue].Item6[j] - 1] : "";
+                    else if (TLP_Skills.GetControlFromPosition(i, j) is NumericUpDown)
+                        (TLP_Skills.GetControlFromPosition(i, j) as NumericUpDown).Value = Math.Max(GetMon(ind).SkillLevel[j], 1);
+
+                    (TLP_Skills.GetControlFromPosition(i, j) as Control).Visible = (j < db.Mons[ind].Rest.Item2);
+                }
+            }
 
             //Speedup values
             if (db.MegaList.IndexOf(ind) != -1) //temporary fix while there are still some mega forms missing in megastone.bin
@@ -200,6 +215,8 @@ namespace Pokemon_Shuffle_Save_Editor
             NUP_SpeedUpY.Visible = PB_SpeedUpY.Visible = CHK_CaughtMon.Checked && CHK_MegaY.Visible && CHK_MegaY.Checked; //Else NUP_SpeedUpY appears if the next mega in terms of offsets has been obtained
             PB_SpeedUpX.Image = db.HasMega[ind][0] ? new Bitmap(ResizeImage((Image)Properties.Resources.ResourceManager.GetObject("mega_speedup"), 24, 24)) : new Bitmap(16, 16);
             PB_SpeedUpY.Image = db.HasMega[ind][1] ? new Bitmap(ResizeImage((Image)Properties.Resources.ResourceManager.GetObject("mega_speedup"), 24, 24)) : new Bitmap(16, 16);
+
+
 
             #endregion Visibility            
         }
