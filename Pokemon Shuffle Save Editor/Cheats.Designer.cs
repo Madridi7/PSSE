@@ -46,7 +46,6 @@
             this.B_MaxTalent = new System.Windows.Forms.Button();
             this.B_Test = new System.Windows.Forms.Button();
             this.B_PokathlonStep = new System.Windows.Forms.Button();
-            this.B_Crystal_Hearts = new System.Windows.Forms.Button();
             this.B_MissionCards = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,7 +79,7 @@
             this.B_MaxResources.TabIndex = 7;
             this.B_MaxResources.Text = "(Maximum) Resources";
             this.toolTip1.SetToolTip(this.B_MaxResources, "Will give you 99 stock hearts, 99.999 coins, 150 jewels, 99 of all \"in-battle\" it" +
-        "ems\r\n& 99 of all \"enhancements\" items.");
+        "ems\r\n& 99 of all \"enhancements\" items.\r\n\r\nCtrl+Clic to set them all to 0.");
             this.B_MaxResources.UseVisualStyleBackColor = true;
             this.B_MaxResources.Click += new System.EventHandler(this.B_MaxResources_Click);
             // 
@@ -212,7 +211,7 @@
             // 
             // B_Test
             // 
-            this.B_Test.Location = new System.Drawing.Point(229, 170);
+            this.B_Test.Location = new System.Drawing.Point(119, 185);
             this.B_Test.Name = "B_Test";
             this.B_Test.Size = new System.Drawing.Size(65, 23);
             this.B_Test.TabIndex = 51;
@@ -235,18 +234,6 @@
         "es you wish.");
             this.B_PokathlonStep.UseVisualStyleBackColor = true;
             this.B_PokathlonStep.Click += new System.EventHandler(this.B_PokathlonStep_Click);
-            // 
-            // B_Crystal_Hearts
-            // 
-            this.B_Crystal_Hearts.Location = new System.Drawing.Point(156, 169);
-            this.B_Crystal_Hearts.Name = "B_Crystal_Hearts";
-            this.B_Crystal_Hearts.Size = new System.Drawing.Size(138, 23);
-            this.B_Crystal_Hearts.TabIndex = 50;
-            this.B_Crystal_Hearts.Text = "WIP crystal hearts";
-            this.toolTip1.SetToolTip(this.B_Crystal_Hearts, resources.GetString("B_Crystal_Hearts.ToolTip"));
-            this.B_Crystal_Hearts.UseVisualStyleBackColor = true;
-            this.B_Crystal_Hearts.Visible = false;
-            this.B_Crystal_Hearts.Click += new System.EventHandler(this.B_Crystal_Hearts_Click);
             // 
             // B_MissionCards
             // 
@@ -281,7 +268,6 @@
             this.Controls.Add(this.B_MaxResources);
             this.Controls.Add(this.B_CaughtObtainables);
             this.Controls.Add(this.B_LevelMax);
-            this.Controls.Add(this.B_Crystal_Hearts);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -314,7 +300,6 @@
         private System.Windows.Forms.Button B_MaxTalent;
         private System.Windows.Forms.Button B_Test;
         private System.Windows.Forms.Button B_PokathlonStep;
-        private System.Windows.Forms.Button B_Crystal_Hearts;
         private System.Windows.Forms.Button B_MissionCards;
     }
 }

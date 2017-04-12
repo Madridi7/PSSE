@@ -118,7 +118,7 @@ namespace Pokemon_Shuffle_Save_Editor
                 int j = 0, skillCount = 0;
                 foreach (int adr in skillsadr)
                 {
-                    skill[j] = data[adr] & 0x7F; //ranges 1-~100 for now ("Opportunist" to "Transform"), ordered list in MESSAGE_XX/message_PokedexXX.bin
+                    skill[j] = data[adr] & 0x7F; //ranges 1-~130 for now, ordered list in MESSAGE_XX/message_PokedexXX.bin ("Opportunist" to "Transform" then a bunch more with a lot of placeholders)
                     if (skill[j] != 0) { skillCount++; }
                     j++;
                 }

@@ -221,12 +221,6 @@ namespace Pokemon_Shuffle_Save_Editor
             MessageBox.Show("All pokemons have been uncaught, reset to level 1 & lost their Mega Stones, speedups or lollipops.\n\nEither reset stages too or make sure to catch at least Espurr, Bulbasaur, Squirtle & Charmander manually.");
         }
 
-        private void B_ResourcesReset_Click(object sender, EventArgs e)
-        {
-            SetResources();
-            MessageBox.Show("Deleted all stock hearts, coins, jewels and Items.");
-        }
-
         private void B_SRankCompleted_Click(object sender, EventArgs e)
         {
             int value = 3;    //default value
@@ -327,15 +321,6 @@ namespace Pokemon_Shuffle_Save_Editor
             MessageBox.Show((enabled ? "Survival mode enabled.\nYou'll face" : "Survival Mode is disabled.\nYou would have faced") + " survival mode's " + step + str + " step against " + name + " with " + (savedata[0xB768] & 0x7F) + " moves left.");
         }
 
-        private void B_Crystal_Hearts_Click(object sender, EventArgs e)
-        {
-            /*this doesn't work*/
-            //bool boool = (ModifierKeys == Keys.Control);
-            //Array.Copy(boool ? new byte[6] : new byte[] {0, 0, 0, 0, 0x3F, 0x48 }, 0, savedata, 0xB7FB, 6);
-            //string str = boool ? "Crystal hearts disabled." : "Crystal hearts unlocked : You have 7 stock hearts and win 700 coins each time you connect this month.";
-            //    MessageBox.Show(str + "\n\nWork In Progress, report if something bad happens.");
-        }
-
         private void B_MissionCards_Click(object sender, EventArgs e)
         {
             bool[][] missions = db.Missions;    //default values
@@ -401,6 +386,14 @@ namespace Pokemon_Shuffle_Save_Editor
             //    SetStone(i, db.HasMega[i][0], db.HasMega[i][1]);
             //}
             //MessageBox.Show("All Mega Stones are now owned.");
+            #endregion
+
+            #region crystal meth
+            /*this doesn't work*/
+            //bool boool = (ModifierKeys == Keys.Control);
+            //Array.Copy(boool ? new byte[6] : new byte[] {0, 0, 0, 0, 0x3F, 0x48 }, 0, savedata, 0xB7FB, 6);
+            //string str = boool ? "Crystal hearts disabled." : "Crystal hearts unlocked : You have 7 stock hearts and win 700 coins each time you connect this month.";
+            //    MessageBox.Show(str + "\n\nWork In Progress, report if something bad happens.");
             #endregion
 
             #region Skill+-dropping stages research
