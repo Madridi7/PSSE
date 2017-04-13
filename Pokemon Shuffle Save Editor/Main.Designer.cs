@@ -58,23 +58,6 @@
             this.PB_Expert = new System.Windows.Forms.PictureBox();
             this.PB_Main = new System.Windows.Forms.PictureBox();
             this.GB_Caught = new System.Windows.Forms.GroupBox();
-            this.L_Skill = new System.Windows.Forms.Label();
-            this.PB_Lollipop = new System.Windows.Forms.PictureBox();
-            this.NUP_Lollipop = new System.Windows.Forms.NumericUpDown();
-            this.L_Level = new System.Windows.Forms.Label();
-            this.PB_SpeedUpY = new System.Windows.Forms.PictureBox();
-            this.PB_SpeedUpX = new System.Windows.Forms.PictureBox();
-            this.NUP_SpeedUpY = new System.Windows.Forms.NumericUpDown();
-            this.NUP_SpeedUpX = new System.Windows.Forms.NumericUpDown();
-            this.PB_MegaX = new System.Windows.Forms.PictureBox();
-            this.PB_MegaY = new System.Windows.Forms.PictureBox();
-            this.CHK_MegaX = new System.Windows.Forms.CheckBox();
-            this.CHK_MegaY = new System.Windows.Forms.CheckBox();
-            this.NUP_Level = new System.Windows.Forms.NumericUpDown();
-            this.CHK_CaughtMon = new System.Windows.Forms.CheckBox();
-            this.CB_MonIndex = new System.Windows.Forms.ComboBox();
-            this.PB_Mon = new System.Windows.Forms.PictureBox();
-            this.GB_Resources = new System.Windows.Forms.GroupBox();
             this.TLP_Skills = new System.Windows.Forms.TableLayoutPanel();
             this.NUP_Skill5 = new System.Windows.Forms.NumericUpDown();
             this.NUP_Skill4 = new System.Windows.Forms.NumericUpDown();
@@ -91,6 +74,25 @@
             this.L_Skill3 = new System.Windows.Forms.Label();
             this.L_Skill4 = new System.Windows.Forms.Label();
             this.L_Skill5 = new System.Windows.Forms.Label();
+            this.L_Skill = new System.Windows.Forms.Label();
+            this.PB_Skill = new System.Windows.Forms.PictureBox();
+            this.PB_Lollipop = new System.Windows.Forms.PictureBox();
+            this.NUP_Lollipop = new System.Windows.Forms.NumericUpDown();
+            this.L_Level = new System.Windows.Forms.Label();
+            this.PB_SpeedUpY = new System.Windows.Forms.PictureBox();
+            this.PB_SpeedUpX = new System.Windows.Forms.PictureBox();
+            this.NUP_SpeedUpY = new System.Windows.Forms.NumericUpDown();
+            this.NUP_SpeedUpX = new System.Windows.Forms.NumericUpDown();
+            this.PB_MegaX = new System.Windows.Forms.PictureBox();
+            this.PB_MegaY = new System.Windows.Forms.PictureBox();
+            this.CHK_MegaX = new System.Windows.Forms.CheckBox();
+            this.CHK_MegaY = new System.Windows.Forms.CheckBox();
+            this.NUP_Level = new System.Windows.Forms.NumericUpDown();
+            this.CHK_CaughtMon = new System.Windows.Forms.CheckBox();
+            this.CB_MonIndex = new System.Windows.Forms.ComboBox();
+            this.PB_Mon = new System.Windows.Forms.PictureBox();
+            this.GB_Resources = new System.Windows.Forms.GroupBox();
+            this.ItemsGrid = new Pokemon_Shuffle_Save_Editor.TabbedPropertyGrid();
             this.NUP_Jewels = new System.Windows.Forms.NumericUpDown();
             this.NUP_Coins = new System.Windows.Forms.NumericUpDown();
             this.NUP_Hearts = new System.Windows.Forms.NumericUpDown();
@@ -104,8 +106,6 @@
             this.PB_Team4 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.GB_Party = new System.Windows.Forms.GroupBox();
-            this.PB_Skill = new System.Windows.Forms.PictureBox();
-            this.ItemsGrid = new Pokemon_Shuffle_Save_Editor.TabbedPropertyGrid();
             this.GB_HighScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_override)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_EventScore)).BeginInit();
@@ -118,6 +118,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Expert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).BeginInit();
             this.GB_Caught.SuspendLayout();
+            this.TLP_Skills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lollipop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Lollipop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_SpeedUpY)).BeginInit();
@@ -129,12 +136,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Mon)).BeginInit();
             this.GB_Resources.SuspendLayout();
-            this.TLP_Skills.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Jewels)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Coins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Hearts)).BeginInit();
@@ -143,7 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team4)).BeginInit();
             this.GB_Party.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).BeginInit();
             this.SuspendLayout();
             // 
             // B_Open
@@ -475,210 +475,6 @@
             this.GB_Caught.TabStop = false;
             this.GB_Caught.Text = "Owned Pokemon";
             // 
-            // L_Skill
-            // 
-            this.L_Skill.AutoSize = true;
-            this.L_Skill.Location = new System.Drawing.Point(36, 144);
-            this.L_Skill.Name = "L_Skill";
-            this.L_Skill.Size = new System.Drawing.Size(37, 13);
-            this.L_Skill.TabIndex = 71;
-            this.L_Skill.Text = "Skills :";
-            this.L_Skill.Visible = false;
-            // 
-            // PB_Lollipop
-            // 
-            this.PB_Lollipop.Location = new System.Drawing.Point(64, 110);
-            this.PB_Lollipop.Name = "PB_Lollipop";
-            this.PB_Lollipop.Size = new System.Drawing.Size(24, 24);
-            this.PB_Lollipop.TabIndex = 68;
-            this.PB_Lollipop.TabStop = false;
-            this.PB_Lollipop.Visible = false;
-            this.PB_Lollipop.Click += new System.EventHandler(this.PB_Owned_Click);
-            // 
-            // NUP_Lollipop
-            // 
-            this.NUP_Lollipop.Location = new System.Drawing.Point(94, 112);
-            this.NUP_Lollipop.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.NUP_Lollipop.Name = "NUP_Lollipop";
-            this.NUP_Lollipop.Size = new System.Drawing.Size(33, 20);
-            this.NUP_Lollipop.TabIndex = 33;
-            this.NUP_Lollipop.Visible = false;
-            this.NUP_Lollipop.ValueChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // L_Level
-            // 
-            this.L_Level.AutoSize = true;
-            this.L_Level.Location = new System.Drawing.Point(6, 96);
-            this.L_Level.Name = "L_Level";
-            this.L_Level.Size = new System.Drawing.Size(36, 13);
-            this.L_Level.TabIndex = 32;
-            this.L_Level.Text = "Level:";
-            this.L_Level.Visible = false;
-            // 
-            // PB_SpeedUpY
-            // 
-            this.PB_SpeedUpY.Location = new System.Drawing.Point(202, 123);
-            this.PB_SpeedUpY.Name = "PB_SpeedUpY";
-            this.PB_SpeedUpY.Size = new System.Drawing.Size(24, 24);
-            this.PB_SpeedUpY.TabIndex = 27;
-            this.PB_SpeedUpY.TabStop = false;
-            this.PB_SpeedUpY.Visible = false;
-            this.PB_SpeedUpY.Click += new System.EventHandler(this.PB_Owned_Click);
-            // 
-            // PB_SpeedUpX
-            // 
-            this.PB_SpeedUpX.Location = new System.Drawing.Point(202, 75);
-            this.PB_SpeedUpX.Name = "PB_SpeedUpX";
-            this.PB_SpeedUpX.Size = new System.Drawing.Size(24, 24);
-            this.PB_SpeedUpX.TabIndex = 26;
-            this.PB_SpeedUpX.TabStop = false;
-            this.PB_SpeedUpX.Visible = false;
-            this.PB_SpeedUpX.Click += new System.EventHandler(this.PB_Owned_Click);
-            // 
-            // NUP_SpeedUpY
-            // 
-            this.NUP_SpeedUpY.Location = new System.Drawing.Point(164, 125);
-            this.NUP_SpeedUpY.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.NUP_SpeedUpY.Name = "NUP_SpeedUpY";
-            this.NUP_SpeedUpY.Size = new System.Drawing.Size(37, 20);
-            this.NUP_SpeedUpY.TabIndex = 40;
-            this.NUP_SpeedUpY.Visible = false;
-            this.NUP_SpeedUpY.ValueChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // NUP_SpeedUpX
-            // 
-            this.NUP_SpeedUpX.Location = new System.Drawing.Point(164, 77);
-            this.NUP_SpeedUpX.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.NUP_SpeedUpX.Name = "NUP_SpeedUpX";
-            this.NUP_SpeedUpX.Size = new System.Drawing.Size(37, 20);
-            this.NUP_SpeedUpX.TabIndex = 38;
-            this.NUP_SpeedUpX.Visible = false;
-            this.NUP_SpeedUpX.ValueChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // PB_MegaX
-            // 
-            this.PB_MegaX.Location = new System.Drawing.Point(164, 55);
-            this.PB_MegaX.Name = "PB_MegaX";
-            this.PB_MegaX.Size = new System.Drawing.Size(16, 16);
-            this.PB_MegaX.TabIndex = 23;
-            this.PB_MegaX.TabStop = false;
-            this.PB_MegaX.Visible = false;
-            // 
-            // PB_MegaY
-            // 
-            this.PB_MegaY.Location = new System.Drawing.Point(164, 103);
-            this.PB_MegaY.Name = "PB_MegaY";
-            this.PB_MegaY.Size = new System.Drawing.Size(16, 16);
-            this.PB_MegaY.TabIndex = 22;
-            this.PB_MegaY.TabStop = false;
-            this.PB_MegaY.Visible = false;
-            // 
-            // CHK_MegaX
-            // 
-            this.CHK_MegaX.AutoSize = true;
-            this.CHK_MegaX.Location = new System.Drawing.Point(186, 57);
-            this.CHK_MegaX.Name = "CHK_MegaX";
-            this.CHK_MegaX.Size = new System.Drawing.Size(15, 14);
-            this.CHK_MegaX.TabIndex = 37;
-            this.CHK_MegaX.UseVisualStyleBackColor = true;
-            this.CHK_MegaX.Visible = false;
-            this.CHK_MegaX.CheckedChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // CHK_MegaY
-            // 
-            this.CHK_MegaY.AutoSize = true;
-            this.CHK_MegaY.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CHK_MegaY.Location = new System.Drawing.Point(186, 105);
-            this.CHK_MegaY.Name = "CHK_MegaY";
-            this.CHK_MegaY.Size = new System.Drawing.Size(15, 14);
-            this.CHK_MegaY.TabIndex = 39;
-            this.CHK_MegaY.UseVisualStyleBackColor = true;
-            this.CHK_MegaY.Visible = false;
-            this.CHK_MegaY.CheckedChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // NUP_Level
-            // 
-            this.NUP_Level.Location = new System.Drawing.Point(6, 112);
-            this.NUP_Level.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.NUP_Level.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Level.Name = "NUP_Level";
-            this.NUP_Level.Size = new System.Drawing.Size(52, 20);
-            this.NUP_Level.TabIndex = 32;
-            this.NUP_Level.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Level.Visible = false;
-            this.NUP_Level.ValueChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // CHK_CaughtMon
-            // 
-            this.CHK_CaughtMon.AutoSize = true;
-            this.CHK_CaughtMon.Location = new System.Drawing.Point(88, 56);
-            this.CHK_CaughtMon.Name = "CHK_CaughtMon";
-            this.CHK_CaughtMon.Size = new System.Drawing.Size(60, 17);
-            this.CHK_CaughtMon.TabIndex = 31;
-            this.CHK_CaughtMon.Text = "Caught";
-            this.CHK_CaughtMon.UseVisualStyleBackColor = true;
-            this.CHK_CaughtMon.CheckedChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // CB_MonIndex
-            // 
-            this.CB_MonIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CB_MonIndex.FormattingEnabled = true;
-            this.CB_MonIndex.Location = new System.Drawing.Point(88, 29);
-            this.CB_MonIndex.Name = "CB_MonIndex";
-            this.CB_MonIndex.Size = new System.Drawing.Size(121, 21);
-            this.CB_MonIndex.TabIndex = 30;
-            this.CB_MonIndex.SelectedValueChanged += new System.EventHandler(this.UpdateForm);
-            // 
-            // PB_Mon
-            // 
-            this.PB_Mon.Location = new System.Drawing.Point(6, 29);
-            this.PB_Mon.Name = "PB_Mon";
-            this.PB_Mon.Size = new System.Drawing.Size(64, 64);
-            this.PB_Mon.TabIndex = 15;
-            this.PB_Mon.TabStop = false;
-            this.PB_Mon.Click += new System.EventHandler(this.PB_Owned_Click);
-            // 
-            // GB_Resources
-            // 
-            this.GB_Resources.Controls.Add(this.ItemsGrid);
-            this.GB_Resources.Controls.Add(this.NUP_Jewels);
-            this.GB_Resources.Controls.Add(this.NUP_Coins);
-            this.GB_Resources.Controls.Add(this.NUP_Hearts);
-            this.GB_Resources.Controls.Add(this.L_Jewels);
-            this.GB_Resources.Controls.Add(this.L_Coins);
-            this.GB_Resources.Controls.Add(this.L_Hearts);
-            this.GB_Resources.Enabled = false;
-            this.GB_Resources.Location = new System.Drawing.Point(260, 12);
-            this.GB_Resources.Name = "GB_Resources";
-            this.GB_Resources.Size = new System.Drawing.Size(253, 439);
-            this.GB_Resources.TabIndex = 5;
-            this.GB_Resources.TabStop = false;
-            this.GB_Resources.Text = "Resources";
-            // 
             // TLP_Skills
             // 
             this.TLP_Skills.ColumnCount = 3;
@@ -976,6 +772,269 @@
             this.L_Skill5.Text = "Skill";
             this.L_Skill5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // L_Skill
+            // 
+            this.L_Skill.AutoSize = true;
+            this.L_Skill.Location = new System.Drawing.Point(36, 144);
+            this.L_Skill.Name = "L_Skill";
+            this.L_Skill.Size = new System.Drawing.Size(37, 13);
+            this.L_Skill.TabIndex = 71;
+            this.L_Skill.Text = "Skills :";
+            this.L_Skill.Visible = false;
+            // 
+            // PB_Skill
+            // 
+            this.PB_Skill.Location = new System.Drawing.Point(6, 138);
+            this.PB_Skill.Name = "PB_Skill";
+            this.PB_Skill.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill.TabIndex = 70;
+            this.PB_Skill.TabStop = false;
+            this.PB_Skill.Visible = false;
+            this.PB_Skill.Click += new System.EventHandler(this.PB_Owned_Click);
+            // 
+            // PB_Lollipop
+            // 
+            this.PB_Lollipop.Location = new System.Drawing.Point(64, 110);
+            this.PB_Lollipop.Name = "PB_Lollipop";
+            this.PB_Lollipop.Size = new System.Drawing.Size(24, 24);
+            this.PB_Lollipop.TabIndex = 68;
+            this.PB_Lollipop.TabStop = false;
+            this.PB_Lollipop.Visible = false;
+            this.PB_Lollipop.Click += new System.EventHandler(this.PB_Owned_Click);
+            // 
+            // NUP_Lollipop
+            // 
+            this.NUP_Lollipop.Location = new System.Drawing.Point(94, 112);
+            this.NUP_Lollipop.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.NUP_Lollipop.Name = "NUP_Lollipop";
+            this.NUP_Lollipop.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Lollipop.TabIndex = 33;
+            this.NUP_Lollipop.Visible = false;
+            this.NUP_Lollipop.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // L_Level
+            // 
+            this.L_Level.AutoSize = true;
+            this.L_Level.Location = new System.Drawing.Point(6, 96);
+            this.L_Level.Name = "L_Level";
+            this.L_Level.Size = new System.Drawing.Size(36, 13);
+            this.L_Level.TabIndex = 32;
+            this.L_Level.Text = "Level:";
+            this.L_Level.Visible = false;
+            // 
+            // PB_SpeedUpY
+            // 
+            this.PB_SpeedUpY.Location = new System.Drawing.Point(202, 123);
+            this.PB_SpeedUpY.Name = "PB_SpeedUpY";
+            this.PB_SpeedUpY.Size = new System.Drawing.Size(24, 24);
+            this.PB_SpeedUpY.TabIndex = 27;
+            this.PB_SpeedUpY.TabStop = false;
+            this.PB_SpeedUpY.Visible = false;
+            this.PB_SpeedUpY.Click += new System.EventHandler(this.PB_Owned_Click);
+            // 
+            // PB_SpeedUpX
+            // 
+            this.PB_SpeedUpX.Location = new System.Drawing.Point(202, 75);
+            this.PB_SpeedUpX.Name = "PB_SpeedUpX";
+            this.PB_SpeedUpX.Size = new System.Drawing.Size(24, 24);
+            this.PB_SpeedUpX.TabIndex = 26;
+            this.PB_SpeedUpX.TabStop = false;
+            this.PB_SpeedUpX.Visible = false;
+            this.PB_SpeedUpX.Click += new System.EventHandler(this.PB_Owned_Click);
+            // 
+            // NUP_SpeedUpY
+            // 
+            this.NUP_SpeedUpY.Location = new System.Drawing.Point(164, 125);
+            this.NUP_SpeedUpY.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.NUP_SpeedUpY.Name = "NUP_SpeedUpY";
+            this.NUP_SpeedUpY.Size = new System.Drawing.Size(37, 20);
+            this.NUP_SpeedUpY.TabIndex = 40;
+            this.NUP_SpeedUpY.Visible = false;
+            this.NUP_SpeedUpY.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // NUP_SpeedUpX
+            // 
+            this.NUP_SpeedUpX.Location = new System.Drawing.Point(164, 77);
+            this.NUP_SpeedUpX.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.NUP_SpeedUpX.Name = "NUP_SpeedUpX";
+            this.NUP_SpeedUpX.Size = new System.Drawing.Size(37, 20);
+            this.NUP_SpeedUpX.TabIndex = 38;
+            this.NUP_SpeedUpX.Visible = false;
+            this.NUP_SpeedUpX.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // PB_MegaX
+            // 
+            this.PB_MegaX.Location = new System.Drawing.Point(164, 55);
+            this.PB_MegaX.Name = "PB_MegaX";
+            this.PB_MegaX.Size = new System.Drawing.Size(16, 16);
+            this.PB_MegaX.TabIndex = 23;
+            this.PB_MegaX.TabStop = false;
+            this.PB_MegaX.Visible = false;
+            // 
+            // PB_MegaY
+            // 
+            this.PB_MegaY.Location = new System.Drawing.Point(164, 103);
+            this.PB_MegaY.Name = "PB_MegaY";
+            this.PB_MegaY.Size = new System.Drawing.Size(16, 16);
+            this.PB_MegaY.TabIndex = 22;
+            this.PB_MegaY.TabStop = false;
+            this.PB_MegaY.Visible = false;
+            // 
+            // CHK_MegaX
+            // 
+            this.CHK_MegaX.AutoSize = true;
+            this.CHK_MegaX.Location = new System.Drawing.Point(186, 57);
+            this.CHK_MegaX.Name = "CHK_MegaX";
+            this.CHK_MegaX.Size = new System.Drawing.Size(15, 14);
+            this.CHK_MegaX.TabIndex = 37;
+            this.CHK_MegaX.UseVisualStyleBackColor = true;
+            this.CHK_MegaX.Visible = false;
+            this.CHK_MegaX.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // CHK_MegaY
+            // 
+            this.CHK_MegaY.AutoSize = true;
+            this.CHK_MegaY.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CHK_MegaY.Location = new System.Drawing.Point(186, 105);
+            this.CHK_MegaY.Name = "CHK_MegaY";
+            this.CHK_MegaY.Size = new System.Drawing.Size(15, 14);
+            this.CHK_MegaY.TabIndex = 39;
+            this.CHK_MegaY.UseVisualStyleBackColor = true;
+            this.CHK_MegaY.Visible = false;
+            this.CHK_MegaY.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // NUP_Level
+            // 
+            this.NUP_Level.Location = new System.Drawing.Point(6, 112);
+            this.NUP_Level.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.NUP_Level.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Level.Name = "NUP_Level";
+            this.NUP_Level.Size = new System.Drawing.Size(52, 20);
+            this.NUP_Level.TabIndex = 32;
+            this.NUP_Level.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Level.Visible = false;
+            this.NUP_Level.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // CHK_CaughtMon
+            // 
+            this.CHK_CaughtMon.AutoSize = true;
+            this.CHK_CaughtMon.Location = new System.Drawing.Point(88, 56);
+            this.CHK_CaughtMon.Name = "CHK_CaughtMon";
+            this.CHK_CaughtMon.Size = new System.Drawing.Size(60, 17);
+            this.CHK_CaughtMon.TabIndex = 31;
+            this.CHK_CaughtMon.Text = "Caught";
+            this.CHK_CaughtMon.UseVisualStyleBackColor = true;
+            this.CHK_CaughtMon.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // CB_MonIndex
+            // 
+            this.CB_MonIndex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_MonIndex.FormattingEnabled = true;
+            this.CB_MonIndex.Location = new System.Drawing.Point(88, 29);
+            this.CB_MonIndex.Name = "CB_MonIndex";
+            this.CB_MonIndex.Size = new System.Drawing.Size(121, 21);
+            this.CB_MonIndex.TabIndex = 30;
+            this.CB_MonIndex.SelectedValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // PB_Mon
+            // 
+            this.PB_Mon.Location = new System.Drawing.Point(6, 29);
+            this.PB_Mon.Name = "PB_Mon";
+            this.PB_Mon.Size = new System.Drawing.Size(64, 64);
+            this.PB_Mon.TabIndex = 15;
+            this.PB_Mon.TabStop = false;
+            this.PB_Mon.Click += new System.EventHandler(this.PB_Owned_Click);
+            // 
+            // GB_Resources
+            // 
+            this.GB_Resources.Controls.Add(this.ItemsGrid);
+            this.GB_Resources.Controls.Add(this.NUP_Jewels);
+            this.GB_Resources.Controls.Add(this.NUP_Coins);
+            this.GB_Resources.Controls.Add(this.NUP_Hearts);
+            this.GB_Resources.Controls.Add(this.L_Jewels);
+            this.GB_Resources.Controls.Add(this.L_Coins);
+            this.GB_Resources.Controls.Add(this.L_Hearts);
+            this.GB_Resources.Enabled = false;
+            this.GB_Resources.Location = new System.Drawing.Point(260, 12);
+            this.GB_Resources.Name = "GB_Resources";
+            this.GB_Resources.Size = new System.Drawing.Size(253, 439);
+            this.GB_Resources.TabIndex = 5;
+            this.GB_Resources.TabStop = false;
+            this.GB_Resources.Text = "Resources";
+            // 
+            // ItemsGrid
+            // 
+            this.ItemsGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ItemsGrid.Location = new System.Drawing.Point(6, 65);
+            this.ItemsGrid.Name = "ItemsGrid";
+            shuffleItems1.AttackUp = 0;
+            shuffleItems1.Complexity = 0;
+            shuffleItems1.Disruption = 0;
+            shuffleItems1.Enchantments = new int[] {
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0};
+            shuffleItems1.Experience = 0;
+            shuffleItems1.ExperienceBoostL = 0;
+            shuffleItems1.ExperienceBoostM = 0;
+            shuffleItems1.ExperienceBoostS = 0;
+            shuffleItems1.Items = new int[] {
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0};
+            shuffleItems1.LevelUp = 0;
+            shuffleItems1.MegaSpeedup = 0;
+            shuffleItems1.MegaStart = 0;
+            shuffleItems1.Moves = 0;
+            shuffleItems1.RaiseMaxLevel = 0;
+            shuffleItems1.SkillBoosterL = 0;
+            shuffleItems1.SkillBoosterM = 0;
+            shuffleItems1.SkillBoosterS = 0;
+            shuffleItems1.SkillSwap = 0;
+            shuffleItems1.Time = 0;
+            this.ItemsGrid.SelectedObject = shuffleItems1;
+            this.ItemsGrid.Size = new System.Drawing.Size(241, 369);
+            this.ItemsGrid.TabIndex = 54;
+            this.ItemsGrid.ToolbarVisible = false;
+            this.ItemsGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.UpdateProperty);
+            this.ItemsGrid.EnabledChanged += new System.EventHandler(this.ItemsGrid_EnabledChanged);
+            this.ItemsGrid.Enter += new System.EventHandler(this.ItemsGrid_Enter);
+            // 
             // NUP_Jewels
             // 
             this.NUP_Jewels.Location = new System.Drawing.Point(187, 39);
@@ -1112,65 +1171,6 @@
             this.GB_Party.TabStop = false;
             this.GB_Party.Text = "Active Party";
             // 
-            // PB_Skill
-            // 
-            this.PB_Skill.Location = new System.Drawing.Point(6, 138);
-            this.PB_Skill.Name = "PB_Skill";
-            this.PB_Skill.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill.TabIndex = 70;
-            this.PB_Skill.TabStop = false;
-            this.PB_Skill.Visible = false;
-            this.PB_Skill.Click += new System.EventHandler(this.PB_Owned_Click);
-            // 
-            // ItemsGrid
-            // 
-            this.ItemsGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ItemsGrid.Location = new System.Drawing.Point(6, 65);
-            this.ItemsGrid.Name = "ItemsGrid";
-            shuffleItems1.AttackUp = 0;
-            shuffleItems1.Complexity = 0;
-            shuffleItems1.Disruption = 0;
-            shuffleItems1.Enchantments = new int[] {
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0};
-            shuffleItems1.Experience = 0;
-            shuffleItems1.ExperienceBoostL = 0;
-            shuffleItems1.ExperienceBoostM = 0;
-            shuffleItems1.ExperienceBoostS = 0;
-            shuffleItems1.Items = new int[] {
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0};
-            shuffleItems1.LevelUp = 0;
-            shuffleItems1.MegaSpeedup = 0;
-            shuffleItems1.MegaStart = 0;
-            shuffleItems1.Moves = 0;
-            shuffleItems1.RaiseMaxLevel = 0;
-            shuffleItems1.SkillBoosterL = 0;
-            shuffleItems1.SkillBoosterM = 0;
-            shuffleItems1.SkillBoosterS = 0;
-            shuffleItems1.SkillSwap = 0;
-            shuffleItems1.Time = 0;
-            this.ItemsGrid.SelectedObject = shuffleItems1;
-            this.ItemsGrid.Size = new System.Drawing.Size(241, 369);
-            this.ItemsGrid.TabIndex = 54;
-            this.ItemsGrid.ToolbarVisible = false;
-            this.ItemsGrid.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.UpdateProperty);
-            this.ItemsGrid.EnabledChanged += new System.EventHandler(this.ItemsGrid_EnabledChanged);
-            this.ItemsGrid.Enter += new System.EventHandler(this.ItemsGrid_Enter);
-            // 
             // Main
             // 
             this.AllowDrop = true;
@@ -1207,6 +1207,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).EndInit();
             this.GB_Caught.ResumeLayout(false);
             this.GB_Caught.PerformLayout();
+            this.TLP_Skills.ResumeLayout(false);
+            this.TLP_Skills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lollipop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Lollipop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_SpeedUpY)).EndInit();
@@ -1219,13 +1227,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Mon)).EndInit();
             this.GB_Resources.ResumeLayout(false);
             this.GB_Resources.PerformLayout();
-            this.TLP_Skills.ResumeLayout(false);
-            this.TLP_Skills.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Jewels)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Coins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Hearts)).EndInit();
@@ -1234,7 +1235,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team4)).EndInit();
             this.GB_Party.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

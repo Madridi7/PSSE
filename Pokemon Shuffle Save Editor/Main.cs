@@ -122,7 +122,7 @@ namespace Pokemon_Shuffle_Save_Editor
                         else if (TLP_Skills.GetControlFromPosition(i, j) is NumericUpDown)
                             slvl = (int)(TLP_Skills.GetControlFromPosition(i, j) as NumericUpDown).Value;
                     }
-                    SetSkill(ind, j, slvl, iscurrent);
+                    SetSkill(ind, j, (GetMon(ind).Caught) ? slvl : 1, iscurrent);
                 }
 
                 //Stages Box Properties
@@ -173,7 +173,7 @@ namespace Pokemon_Shuffle_Save_Editor
                     else if (TLP_Skills.GetControlFromPosition(i, j) is NumericUpDown)
                         (TLP_Skills.GetControlFromPosition(i, j) as NumericUpDown).Value = Math.Max(GetMon(ind).SkillLevel[j], 1);
 
-                    (TLP_Skills.GetControlFromPosition(i, j) as Control).Visible = (j < db.Mons[ind].Rest.Item2); //visibility stuff for convenience
+                    (TLP_Skills.GetControlFromPosition(i, j) as Control).Visible = (GetMon((int)CB_MonIndex.SelectedValue).Caught && j < db.Mons[ind].Rest.Item2); //visibility stuff for convenience
                 }
             }
 
