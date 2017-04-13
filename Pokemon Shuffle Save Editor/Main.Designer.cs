@@ -58,10 +58,7 @@
             this.PB_Expert = new System.Windows.Forms.PictureBox();
             this.PB_Main = new System.Windows.Forms.PictureBox();
             this.GB_Caught = new System.Windows.Forms.GroupBox();
-            this.CB_Skill = new System.Windows.Forms.ComboBox();
             this.L_Skill = new System.Windows.Forms.Label();
-            this.PB_Skill = new System.Windows.Forms.PictureBox();
-            this.NUP_SkillLvl = new System.Windows.Forms.NumericUpDown();
             this.PB_Lollipop = new System.Windows.Forms.PictureBox();
             this.NUP_Lollipop = new System.Windows.Forms.NumericUpDown();
             this.L_Level = new System.Windows.Forms.Label();
@@ -77,8 +74,23 @@
             this.CHK_CaughtMon = new System.Windows.Forms.CheckBox();
             this.CB_MonIndex = new System.Windows.Forms.ComboBox();
             this.PB_Mon = new System.Windows.Forms.PictureBox();
-            this.CHK_CurrentSkill = new System.Windows.Forms.CheckBox();
             this.GB_Resources = new System.Windows.Forms.GroupBox();
+            this.TLP_Skills = new System.Windows.Forms.TableLayoutPanel();
+            this.NUP_Skill5 = new System.Windows.Forms.NumericUpDown();
+            this.NUP_Skill4 = new System.Windows.Forms.NumericUpDown();
+            this.RB_Skill2 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill3 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill4 = new System.Windows.Forms.RadioButton();
+            this.RB_Skill5 = new System.Windows.Forms.RadioButton();
+            this.NUP_Skill3 = new System.Windows.Forms.NumericUpDown();
+            this.NUP_Skill2 = new System.Windows.Forms.NumericUpDown();
+            this.NUP_Skill1 = new System.Windows.Forms.NumericUpDown();
+            this.RB_Skill1 = new System.Windows.Forms.RadioButton();
+            this.L_Skill1 = new System.Windows.Forms.Label();
+            this.L_Skill2 = new System.Windows.Forms.Label();
+            this.L_Skill3 = new System.Windows.Forms.Label();
+            this.L_Skill4 = new System.Windows.Forms.Label();
+            this.L_Skill5 = new System.Windows.Forms.Label();
             this.NUP_Jewels = new System.Windows.Forms.NumericUpDown();
             this.NUP_Coins = new System.Windows.Forms.NumericUpDown();
             this.NUP_Hearts = new System.Windows.Forms.NumericUpDown();
@@ -92,27 +104,7 @@
             this.PB_Team4 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.GB_Party = new System.Windows.Forms.GroupBox();
-            this.PB_Skill1 = new System.Windows.Forms.PictureBox();
-            this.NUP_Skill1 = new System.Windows.Forms.NumericUpDown();
-            this.PB_Skill2 = new System.Windows.Forms.PictureBox();
-            this.NUP_Skill2 = new System.Windows.Forms.NumericUpDown();
-            this.PB_Skill3 = new System.Windows.Forms.PictureBox();
-            this.NUP_Skill3 = new System.Windows.Forms.NumericUpDown();
-            this.L_Skill5 = new System.Windows.Forms.Label();
-            this.PB_Skill5 = new System.Windows.Forms.PictureBox();
-            this.L_Skill4 = new System.Windows.Forms.Label();
-            this.PB_Skill4 = new System.Windows.Forms.PictureBox();
-            this.L_Skill3 = new System.Windows.Forms.Label();
-            this.L_Skill2 = new System.Windows.Forms.Label();
-            this.L_Skill1 = new System.Windows.Forms.Label();
-            this.RB_Skill5 = new System.Windows.Forms.RadioButton();
-            this.RB_Skill4 = new System.Windows.Forms.RadioButton();
-            this.RB_Skill3 = new System.Windows.Forms.RadioButton();
-            this.RB_Skill2 = new System.Windows.Forms.RadioButton();
-            this.RB_Skill1 = new System.Windows.Forms.RadioButton();
-            this.NUP_Skill4 = new System.Windows.Forms.NumericUpDown();
-            this.NUP_Skill5 = new System.Windows.Forms.NumericUpDown();
-            this.TLP_Skills = new System.Windows.Forms.TableLayoutPanel();
+            this.PB_Skill = new System.Windows.Forms.PictureBox();
             this.ItemsGrid = new Pokemon_Shuffle_Save_Editor.TabbedPropertyGrid();
             this.GB_HighScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_override)).BeginInit();
@@ -126,8 +118,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Expert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).BeginInit();
             this.GB_Caught.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_SkillLvl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lollipop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Lollipop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_SpeedUpY)).BeginInit();
@@ -139,6 +129,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Mon)).BeginInit();
             this.GB_Resources.SuspendLayout();
+            this.TLP_Skills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Jewels)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Coins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Hearts)).BeginInit();
@@ -147,24 +143,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team4)).BeginInit();
             this.GB_Party.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).BeginInit();
-            this.TLP_Skills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).BeginInit();
             this.SuspendLayout();
             // 
             // B_Open
             // 
             this.B_Open.Location = new System.Drawing.Point(12, 38);
             this.B_Open.Name = "B_Open";
-            this.B_Open.Size = new System.Drawing.Size(127, 32);
+            this.B_Open.Size = new System.Drawing.Size(242, 32);
             this.B_Open.TabIndex = 1;
             this.B_Open.Text = "Open savedata.bin";
             this.B_Open.UseVisualStyleBackColor = true;
@@ -185,7 +171,7 @@
             this.B_Save.Enabled = false;
             this.B_Save.Location = new System.Drawing.Point(12, 76);
             this.B_Save.Name = "B_Save";
-            this.B_Save.Size = new System.Drawing.Size(127, 32);
+            this.B_Save.Size = new System.Drawing.Size(242, 32);
             this.B_Save.TabIndex = 2;
             this.B_Save.Text = "Save savedata.bin";
             this.B_Save.UseVisualStyleBackColor = true;
@@ -216,7 +202,7 @@
             this.GB_HighScore.Controls.Add(this.PB_Expert);
             this.GB_HighScore.Controls.Add(this.PB_Main);
             this.GB_HighScore.Enabled = false;
-            this.GB_HighScore.Location = new System.Drawing.Point(12, 457);
+            this.GB_HighScore.Location = new System.Drawing.Point(12, 530);
             this.GB_HighScore.Name = "GB_HighScore";
             this.GB_HighScore.Size = new System.Drawing.Size(501, 118);
             this.GB_HighScore.TabIndex = 6;
@@ -463,10 +449,9 @@
             // 
             // GB_Caught
             // 
-            this.GB_Caught.Controls.Add(this.CB_Skill);
+            this.GB_Caught.Controls.Add(this.TLP_Skills);
             this.GB_Caught.Controls.Add(this.L_Skill);
             this.GB_Caught.Controls.Add(this.PB_Skill);
-            this.GB_Caught.Controls.Add(this.NUP_SkillLvl);
             this.GB_Caught.Controls.Add(this.PB_Lollipop);
             this.GB_Caught.Controls.Add(this.NUP_Lollipop);
             this.GB_Caught.Controls.Add(this.L_Level);
@@ -482,71 +467,23 @@
             this.GB_Caught.Controls.Add(this.CHK_CaughtMon);
             this.GB_Caught.Controls.Add(this.CB_MonIndex);
             this.GB_Caught.Controls.Add(this.PB_Mon);
-            this.GB_Caught.Controls.Add(this.CHK_CurrentSkill);
             this.GB_Caught.Enabled = false;
             this.GB_Caught.Location = new System.Drawing.Point(12, 197);
             this.GB_Caught.Name = "GB_Caught";
-            this.GB_Caught.Size = new System.Drawing.Size(242, 254);
+            this.GB_Caught.Size = new System.Drawing.Size(242, 327);
             this.GB_Caught.TabIndex = 3;
             this.GB_Caught.TabStop = false;
             this.GB_Caught.Text = "Owned Pokemon";
             // 
-            // CB_Skill
-            // 
-            this.CB_Skill.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CB_Skill.FormattingEnabled = true;
-            this.CB_Skill.Location = new System.Drawing.Point(6, 151);
-            this.CB_Skill.Name = "CB_Skill";
-            this.CB_Skill.Size = new System.Drawing.Size(121, 21);
-            this.CB_Skill.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.CB_Skill, "Default text");
-            this.CB_Skill.Visible = false;
-            this.CB_Skill.SelectedValueChanged += new System.EventHandler(this.UpdateForm);
-            // 
             // L_Skill
             // 
             this.L_Skill.AutoSize = true;
-            this.L_Skill.Location = new System.Drawing.Point(6, 135);
+            this.L_Skill.Location = new System.Drawing.Point(36, 144);
             this.L_Skill.Name = "L_Skill";
-            this.L_Skill.Size = new System.Drawing.Size(32, 13);
+            this.L_Skill.Size = new System.Drawing.Size(37, 13);
             this.L_Skill.TabIndex = 71;
-            this.L_Skill.Text = "Skill :";
-            this.toolTip1.SetToolTip(this.L_Skill, "Default Text");
+            this.L_Skill.Text = "Skills :";
             this.L_Skill.Visible = false;
-            // 
-            // PB_Skill
-            // 
-            this.PB_Skill.Location = new System.Drawing.Point(64, 179);
-            this.PB_Skill.Name = "PB_Skill";
-            this.PB_Skill.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill.TabIndex = 70;
-            this.PB_Skill.TabStop = false;
-            this.PB_Skill.Visible = false;
-            this.PB_Skill.Click += new System.EventHandler(this.PB_Owned_Click);
-            // 
-            // NUP_SkillLvl
-            // 
-            this.NUP_SkillLvl.Location = new System.Drawing.Point(94, 181);
-            this.NUP_SkillLvl.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NUP_SkillLvl.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_SkillLvl.Name = "NUP_SkillLvl";
-            this.NUP_SkillLvl.Size = new System.Drawing.Size(33, 20);
-            this.NUP_SkillLvl.TabIndex = 36;
-            this.NUP_SkillLvl.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_SkillLvl.Visible = false;
-            this.NUP_SkillLvl.ValueChanged += new System.EventHandler(this.UpdateForm);
             // 
             // PB_Lollipop
             // 
@@ -725,22 +662,8 @@
             this.PB_Mon.TabStop = false;
             this.PB_Mon.Click += new System.EventHandler(this.PB_Owned_Click);
             // 
-            // CHK_CurrentSkill
-            // 
-            this.CHK_CurrentSkill.AutoSize = true;
-            this.CHK_CurrentSkill.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CHK_CurrentSkill.Location = new System.Drawing.Point(6, 182);
-            this.CHK_CurrentSkill.Name = "CHK_CurrentSkill";
-            this.CHK_CurrentSkill.Size = new System.Drawing.Size(60, 17);
-            this.CHK_CurrentSkill.TabIndex = 35;
-            this.CHK_CurrentSkill.Text = "Current";
-            this.CHK_CurrentSkill.UseVisualStyleBackColor = true;
-            this.CHK_CurrentSkill.Visible = false;
-            this.CHK_CurrentSkill.CheckedChanged += new System.EventHandler(this.UpdateForm);
-            // 
             // GB_Resources
             // 
-            this.GB_Resources.Controls.Add(this.TLP_Skills);
             this.GB_Resources.Controls.Add(this.ItemsGrid);
             this.GB_Resources.Controls.Add(this.NUP_Jewels);
             this.GB_Resources.Controls.Add(this.NUP_Coins);
@@ -755,6 +678,303 @@
             this.GB_Resources.TabIndex = 5;
             this.GB_Resources.TabStop = false;
             this.GB_Resources.Text = "Resources";
+            // 
+            // TLP_Skills
+            // 
+            this.TLP_Skills.ColumnCount = 3;
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TLP_Skills.Controls.Add(this.NUP_Skill5, 1, 4);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill4, 1, 3);
+            this.TLP_Skills.Controls.Add(this.RB_Skill2, 0, 1);
+            this.TLP_Skills.Controls.Add(this.RB_Skill3, 0, 2);
+            this.TLP_Skills.Controls.Add(this.RB_Skill4, 0, 3);
+            this.TLP_Skills.Controls.Add(this.RB_Skill5, 0, 4);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill3, 1, 2);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill2, 1, 1);
+            this.TLP_Skills.Controls.Add(this.NUP_Skill1, 1, 0);
+            this.TLP_Skills.Controls.Add(this.RB_Skill1, 0, 0);
+            this.TLP_Skills.Controls.Add(this.L_Skill1, 2, 0);
+            this.TLP_Skills.Controls.Add(this.L_Skill2, 2, 1);
+            this.TLP_Skills.Controls.Add(this.L_Skill3, 2, 2);
+            this.TLP_Skills.Controls.Add(this.L_Skill4, 2, 3);
+            this.TLP_Skills.Controls.Add(this.L_Skill5, 2, 4);
+            this.TLP_Skills.Location = new System.Drawing.Point(6, 168);
+            this.TLP_Skills.Name = "TLP_Skills";
+            this.TLP_Skills.RowCount = 5;
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TLP_Skills.Size = new System.Drawing.Size(230, 150);
+            this.TLP_Skills.TabIndex = 55;
+            // 
+            // NUP_Skill5
+            // 
+            this.NUP_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill5.Location = new System.Drawing.Point(23, 123);
+            this.NUP_Skill5.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill5.Name = "NUP_Skill5";
+            this.NUP_Skill5.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill5.TabIndex = 41;
+            this.NUP_Skill5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill5.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // NUP_Skill4
+            // 
+            this.NUP_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill4.Location = new System.Drawing.Point(23, 93);
+            this.NUP_Skill4.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill4.Name = "NUP_Skill4";
+            this.NUP_Skill4.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill4.TabIndex = 38;
+            this.NUP_Skill4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill4.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // RB_Skill2
+            // 
+            this.RB_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill2.AutoSize = true;
+            this.RB_Skill2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill2.Location = new System.Drawing.Point(3, 33);
+            this.RB_Skill2.Name = "RB_Skill2";
+            this.RB_Skill2.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill2.TabIndex = 1;
+            this.RB_Skill2.TabStop = true;
+            this.RB_Skill2.UseVisualStyleBackColor = true;
+            this.RB_Skill2.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // RB_Skill3
+            // 
+            this.RB_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill3.AutoSize = true;
+            this.RB_Skill3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill3.Location = new System.Drawing.Point(3, 63);
+            this.RB_Skill3.Name = "RB_Skill3";
+            this.RB_Skill3.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill3.TabIndex = 2;
+            this.RB_Skill3.TabStop = true;
+            this.RB_Skill3.UseVisualStyleBackColor = true;
+            this.RB_Skill3.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // RB_Skill4
+            // 
+            this.RB_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill4.AutoSize = true;
+            this.RB_Skill4.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill4.Location = new System.Drawing.Point(3, 93);
+            this.RB_Skill4.Name = "RB_Skill4";
+            this.RB_Skill4.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill4.TabIndex = 3;
+            this.RB_Skill4.TabStop = true;
+            this.RB_Skill4.UseVisualStyleBackColor = true;
+            this.RB_Skill4.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // RB_Skill5
+            // 
+            this.RB_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill5.AutoSize = true;
+            this.RB_Skill5.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill5.Location = new System.Drawing.Point(3, 123);
+            this.RB_Skill5.Name = "RB_Skill5";
+            this.RB_Skill5.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill5.TabIndex = 4;
+            this.RB_Skill5.TabStop = true;
+            this.RB_Skill5.UseVisualStyleBackColor = true;
+            this.RB_Skill5.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // NUP_Skill3
+            // 
+            this.NUP_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill3.Location = new System.Drawing.Point(23, 63);
+            this.NUP_Skill3.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill3.Name = "NUP_Skill3";
+            this.NUP_Skill3.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill3.TabIndex = 37;
+            this.NUP_Skill3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill3.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // NUP_Skill2
+            // 
+            this.NUP_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill2.Location = new System.Drawing.Point(23, 33);
+            this.NUP_Skill2.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill2.Name = "NUP_Skill2";
+            this.NUP_Skill2.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill2.TabIndex = 40;
+            this.NUP_Skill2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill2.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // NUP_Skill1
+            // 
+            this.NUP_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NUP_Skill1.Location = new System.Drawing.Point(23, 3);
+            this.NUP_Skill1.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUP_Skill1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill1.Name = "NUP_Skill1";
+            this.NUP_Skill1.Size = new System.Drawing.Size(33, 20);
+            this.NUP_Skill1.TabIndex = 39;
+            this.NUP_Skill1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUP_Skill1.ValueChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // RB_Skill1
+            // 
+            this.RB_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RB_Skill1.AutoSize = true;
+            this.RB_Skill1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RB_Skill1.Location = new System.Drawing.Point(3, 3);
+            this.RB_Skill1.Name = "RB_Skill1";
+            this.RB_Skill1.Size = new System.Drawing.Size(14, 24);
+            this.RB_Skill1.TabIndex = 0;
+            this.RB_Skill1.TabStop = true;
+            this.RB_Skill1.UseVisualStyleBackColor = true;
+            this.RB_Skill1.CheckedChanged += new System.EventHandler(this.UpdateForm);
+            // 
+            // L_Skill1
+            // 
+            this.L_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill1.AutoSize = true;
+            this.L_Skill1.Location = new System.Drawing.Point(62, 0);
+            this.L_Skill1.Name = "L_Skill1";
+            this.L_Skill1.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill1.TabIndex = 5;
+            this.L_Skill1.Text = "Skill";
+            this.L_Skill1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // L_Skill2
+            // 
+            this.L_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill2.AutoSize = true;
+            this.L_Skill2.Location = new System.Drawing.Point(62, 30);
+            this.L_Skill2.Name = "L_Skill2";
+            this.L_Skill2.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill2.TabIndex = 6;
+            this.L_Skill2.Text = "Skill";
+            this.L_Skill2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // L_Skill3
+            // 
+            this.L_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill3.AutoSize = true;
+            this.L_Skill3.Location = new System.Drawing.Point(62, 60);
+            this.L_Skill3.Name = "L_Skill3";
+            this.L_Skill3.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill3.TabIndex = 7;
+            this.L_Skill3.Text = "Skill";
+            this.L_Skill3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // L_Skill4
+            // 
+            this.L_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill4.AutoSize = true;
+            this.L_Skill4.Location = new System.Drawing.Point(62, 90);
+            this.L_Skill4.Name = "L_Skill4";
+            this.L_Skill4.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill4.TabIndex = 8;
+            this.L_Skill4.Text = "Skill";
+            this.L_Skill4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // L_Skill5
+            // 
+            this.L_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.L_Skill5.AutoSize = true;
+            this.L_Skill5.Location = new System.Drawing.Point(62, 120);
+            this.L_Skill5.Name = "L_Skill5";
+            this.L_Skill5.Size = new System.Drawing.Size(26, 30);
+            this.L_Skill5.TabIndex = 9;
+            this.L_Skill5.Text = "Skill";
+            this.L_Skill5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NUP_Jewels
             // 
@@ -826,9 +1046,9 @@
             // B_CheatsForm
             // 
             this.B_CheatsForm.Enabled = false;
-            this.B_CheatsForm.Location = new System.Drawing.Point(145, 51);
+            this.B_CheatsForm.Location = new System.Drawing.Point(283, 465);
             this.B_CheatsForm.Name = "B_CheatsForm";
-            this.B_CheatsForm.Size = new System.Drawing.Size(109, 47);
+            this.B_CheatsForm.Size = new System.Drawing.Size(203, 47);
             this.B_CheatsForm.TabIndex = 4;
             this.B_CheatsForm.Text = "Bulk Edits";
             this.B_CheatsForm.UseVisualStyleBackColor = true;
@@ -892,338 +1112,15 @@
             this.GB_Party.TabStop = false;
             this.GB_Party.Text = "Active Party";
             // 
-            // PB_Skill1
+            // PB_Skill
             // 
-            this.PB_Skill1.Location = new System.Drawing.Point(62, 3);
-            this.PB_Skill1.Name = "PB_Skill1";
-            this.PB_Skill1.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill1.TabIndex = 71;
-            this.PB_Skill1.TabStop = false;
-            // 
-            // NUP_Skill1
-            // 
-            this.NUP_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NUP_Skill1.Location = new System.Drawing.Point(23, 3);
-            this.NUP_Skill1.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NUP_Skill1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Skill1.Name = "NUP_Skill1";
-            this.NUP_Skill1.Size = new System.Drawing.Size(33, 20);
-            this.NUP_Skill1.TabIndex = 39;
-            this.NUP_Skill1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // PB_Skill2
-            // 
-            this.PB_Skill2.Location = new System.Drawing.Point(62, 33);
-            this.PB_Skill2.Name = "PB_Skill2";
-            this.PB_Skill2.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill2.TabIndex = 72;
-            this.PB_Skill2.TabStop = false;
-            // 
-            // NUP_Skill2
-            // 
-            this.NUP_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NUP_Skill2.Location = new System.Drawing.Point(23, 33);
-            this.NUP_Skill2.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NUP_Skill2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Skill2.Name = "NUP_Skill2";
-            this.NUP_Skill2.Size = new System.Drawing.Size(33, 20);
-            this.NUP_Skill2.TabIndex = 40;
-            this.NUP_Skill2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // PB_Skill3
-            // 
-            this.PB_Skill3.Location = new System.Drawing.Point(62, 63);
-            this.PB_Skill3.Name = "PB_Skill3";
-            this.PB_Skill3.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill3.TabIndex = 73;
-            this.PB_Skill3.TabStop = false;
-            // 
-            // NUP_Skill3
-            // 
-            this.NUP_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NUP_Skill3.Location = new System.Drawing.Point(23, 63);
-            this.NUP_Skill3.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NUP_Skill3.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Skill3.Name = "NUP_Skill3";
-            this.NUP_Skill3.Size = new System.Drawing.Size(33, 20);
-            this.NUP_Skill3.TabIndex = 37;
-            this.NUP_Skill3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // L_Skill5
-            // 
-            this.L_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.L_Skill5.AutoSize = true;
-            this.L_Skill5.Location = new System.Drawing.Point(92, 120);
-            this.L_Skill5.Name = "L_Skill5";
-            this.L_Skill5.Size = new System.Drawing.Size(26, 30);
-            this.L_Skill5.TabIndex = 9;
-            this.L_Skill5.Text = "Skill";
-            this.L_Skill5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PB_Skill5
-            // 
-            this.PB_Skill5.Location = new System.Drawing.Point(62, 123);
-            this.PB_Skill5.Name = "PB_Skill5";
-            this.PB_Skill5.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill5.TabIndex = 75;
-            this.PB_Skill5.TabStop = false;
-            // 
-            // L_Skill4
-            // 
-            this.L_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.L_Skill4.AutoSize = true;
-            this.L_Skill4.Location = new System.Drawing.Point(92, 90);
-            this.L_Skill4.Name = "L_Skill4";
-            this.L_Skill4.Size = new System.Drawing.Size(26, 30);
-            this.L_Skill4.TabIndex = 8;
-            this.L_Skill4.Text = "Skill";
-            this.L_Skill4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PB_Skill4
-            // 
-            this.PB_Skill4.Location = new System.Drawing.Point(62, 93);
-            this.PB_Skill4.Name = "PB_Skill4";
-            this.PB_Skill4.Size = new System.Drawing.Size(24, 24);
-            this.PB_Skill4.TabIndex = 74;
-            this.PB_Skill4.TabStop = false;
-            // 
-            // L_Skill3
-            // 
-            this.L_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.L_Skill3.AutoSize = true;
-            this.L_Skill3.Location = new System.Drawing.Point(92, 60);
-            this.L_Skill3.Name = "L_Skill3";
-            this.L_Skill3.Size = new System.Drawing.Size(26, 30);
-            this.L_Skill3.TabIndex = 7;
-            this.L_Skill3.Text = "Skill";
-            this.L_Skill3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // L_Skill2
-            // 
-            this.L_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.L_Skill2.AutoSize = true;
-            this.L_Skill2.Location = new System.Drawing.Point(92, 30);
-            this.L_Skill2.Name = "L_Skill2";
-            this.L_Skill2.Size = new System.Drawing.Size(26, 30);
-            this.L_Skill2.TabIndex = 6;
-            this.L_Skill2.Text = "Skill";
-            this.L_Skill2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // L_Skill1
-            // 
-            this.L_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.L_Skill1.AutoSize = true;
-            this.L_Skill1.Location = new System.Drawing.Point(92, 0);
-            this.L_Skill1.Name = "L_Skill1";
-            this.L_Skill1.Size = new System.Drawing.Size(26, 30);
-            this.L_Skill1.TabIndex = 5;
-            this.L_Skill1.Text = "Skill";
-            this.L_Skill1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RB_Skill5
-            // 
-            this.RB_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RB_Skill5.AutoSize = true;
-            this.RB_Skill5.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RB_Skill5.Location = new System.Drawing.Point(3, 123);
-            this.RB_Skill5.Name = "RB_Skill5";
-            this.RB_Skill5.Size = new System.Drawing.Size(14, 24);
-            this.RB_Skill5.TabIndex = 4;
-            this.RB_Skill5.TabStop = true;
-            this.RB_Skill5.UseVisualStyleBackColor = true;
-            // 
-            // RB_Skill4
-            // 
-            this.RB_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RB_Skill4.AutoSize = true;
-            this.RB_Skill4.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RB_Skill4.Location = new System.Drawing.Point(3, 93);
-            this.RB_Skill4.Name = "RB_Skill4";
-            this.RB_Skill4.Size = new System.Drawing.Size(14, 24);
-            this.RB_Skill4.TabIndex = 3;
-            this.RB_Skill4.TabStop = true;
-            this.RB_Skill4.UseVisualStyleBackColor = true;
-            // 
-            // RB_Skill3
-            // 
-            this.RB_Skill3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RB_Skill3.AutoSize = true;
-            this.RB_Skill3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RB_Skill3.Location = new System.Drawing.Point(3, 63);
-            this.RB_Skill3.Name = "RB_Skill3";
-            this.RB_Skill3.Size = new System.Drawing.Size(14, 24);
-            this.RB_Skill3.TabIndex = 2;
-            this.RB_Skill3.TabStop = true;
-            this.RB_Skill3.UseVisualStyleBackColor = true;
-            // 
-            // RB_Skill2
-            // 
-            this.RB_Skill2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RB_Skill2.AutoSize = true;
-            this.RB_Skill2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RB_Skill2.Location = new System.Drawing.Point(3, 33);
-            this.RB_Skill2.Name = "RB_Skill2";
-            this.RB_Skill2.Size = new System.Drawing.Size(14, 24);
-            this.RB_Skill2.TabIndex = 1;
-            this.RB_Skill2.TabStop = true;
-            this.RB_Skill2.UseVisualStyleBackColor = true;
-            // 
-            // RB_Skill1
-            // 
-            this.RB_Skill1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RB_Skill1.AutoSize = true;
-            this.RB_Skill1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RB_Skill1.Location = new System.Drawing.Point(3, 3);
-            this.RB_Skill1.Name = "RB_Skill1";
-            this.RB_Skill1.Size = new System.Drawing.Size(14, 24);
-            this.RB_Skill1.TabIndex = 0;
-            this.RB_Skill1.TabStop = true;
-            this.RB_Skill1.UseVisualStyleBackColor = true;
-            // 
-            // NUP_Skill4
-            // 
-            this.NUP_Skill4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NUP_Skill4.Location = new System.Drawing.Point(23, 93);
-            this.NUP_Skill4.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NUP_Skill4.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Skill4.Name = "NUP_Skill4";
-            this.NUP_Skill4.Size = new System.Drawing.Size(33, 20);
-            this.NUP_Skill4.TabIndex = 38;
-            this.NUP_Skill4.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // NUP_Skill5
-            // 
-            this.NUP_Skill5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NUP_Skill5.Location = new System.Drawing.Point(23, 123);
-            this.NUP_Skill5.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NUP_Skill5.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NUP_Skill5.Name = "NUP_Skill5";
-            this.NUP_Skill5.Size = new System.Drawing.Size(33, 20);
-            this.NUP_Skill5.TabIndex = 41;
-            this.NUP_Skill5.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // TLP_Skills
-            // 
-            this.TLP_Skills.ColumnCount = 4;
-            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.TLP_Skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.TLP_Skills.Controls.Add(this.NUP_Skill5, 1, 4);
-            this.TLP_Skills.Controls.Add(this.NUP_Skill4, 1, 3);
-            this.TLP_Skills.Controls.Add(this.RB_Skill2, 0, 1);
-            this.TLP_Skills.Controls.Add(this.RB_Skill3, 0, 2);
-            this.TLP_Skills.Controls.Add(this.RB_Skill4, 0, 3);
-            this.TLP_Skills.Controls.Add(this.RB_Skill5, 0, 4);
-            this.TLP_Skills.Controls.Add(this.L_Skill1, 3, 0);
-            this.TLP_Skills.Controls.Add(this.L_Skill2, 3, 1);
-            this.TLP_Skills.Controls.Add(this.L_Skill3, 3, 2);
-            this.TLP_Skills.Controls.Add(this.PB_Skill4, 2, 3);
-            this.TLP_Skills.Controls.Add(this.L_Skill4, 3, 3);
-            this.TLP_Skills.Controls.Add(this.PB_Skill5, 2, 4);
-            this.TLP_Skills.Controls.Add(this.L_Skill5, 3, 4);
-            this.TLP_Skills.Controls.Add(this.NUP_Skill3, 1, 2);
-            this.TLP_Skills.Controls.Add(this.PB_Skill3, 2, 2);
-            this.TLP_Skills.Controls.Add(this.NUP_Skill2, 1, 1);
-            this.TLP_Skills.Controls.Add(this.PB_Skill2, 2, 1);
-            this.TLP_Skills.Controls.Add(this.NUP_Skill1, 1, 0);
-            this.TLP_Skills.Controls.Add(this.PB_Skill1, 2, 0);
-            this.TLP_Skills.Controls.Add(this.RB_Skill1, 0, 0);
-            this.TLP_Skills.Location = new System.Drawing.Point(11, 260);
-            this.TLP_Skills.Name = "TLP_Skills";
-            this.TLP_Skills.RowCount = 5;
-            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.TLP_Skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.TLP_Skills.Size = new System.Drawing.Size(228, 150);
-            this.TLP_Skills.TabIndex = 55;
+            this.PB_Skill.Location = new System.Drawing.Point(6, 138);
+            this.PB_Skill.Name = "PB_Skill";
+            this.PB_Skill.Size = new System.Drawing.Size(24, 24);
+            this.PB_Skill.TabIndex = 70;
+            this.PB_Skill.TabStop = false;
+            this.PB_Skill.Visible = false;
+            this.PB_Skill.Click += new System.EventHandler(this.PB_Owned_Click);
             // 
             // ItemsGrid
             // 
@@ -1279,7 +1176,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 581);
+            this.ClientSize = new System.Drawing.Size(523, 651);
             this.Controls.Add(this.GB_Party);
             this.Controls.Add(this.B_CheatsForm);
             this.Controls.Add(this.GB_Resources);
@@ -1290,8 +1187,8 @@
             this.Controls.Add(this.B_Open);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(539, 620);
-            this.MinimumSize = new System.Drawing.Size(539, 620);
+            this.MaximumSize = new System.Drawing.Size(539, 690);
+            this.MinimumSize = new System.Drawing.Size(539, 690);
             this.Name = "Main";
             this.Text = "Pokemon Shuffle Save Editor";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Main_DragDrop);
@@ -1310,8 +1207,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Main)).EndInit();
             this.GB_Caught.ResumeLayout(false);
             this.GB_Caught.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_SkillLvl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Lollipop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Lollipop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_SpeedUpY)).EndInit();
@@ -1324,6 +1219,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Mon)).EndInit();
             this.GB_Resources.ResumeLayout(false);
             this.GB_Resources.PerformLayout();
+            this.TLP_Skills.ResumeLayout(false);
+            this.TLP_Skills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Jewels)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Coins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_Hearts)).EndInit();
@@ -1332,18 +1234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Team4)).EndInit();
             this.GB_Party.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NUP_Skill5)).EndInit();
-            this.TLP_Skills.ResumeLayout(false);
-            this.TLP_Skills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Skill)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1406,11 +1297,7 @@
         private System.Windows.Forms.NumericUpDown NUP_Lollipop;
         private System.Windows.Forms.Label L_Level;
         private System.Windows.Forms.PictureBox PB_override;
-        private System.Windows.Forms.PictureBox PB_Skill;
-        private System.Windows.Forms.NumericUpDown NUP_SkillLvl;
         private System.Windows.Forms.Label L_Skill;
-        private System.Windows.Forms.ComboBox CB_Skill;
-        private System.Windows.Forms.CheckBox CHK_CurrentSkill;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox GB_Party;
         private System.Windows.Forms.TableLayoutPanel TLP_Skills;
@@ -1424,16 +1311,12 @@
         private System.Windows.Forms.Label L_Skill1;
         private System.Windows.Forms.Label L_Skill2;
         private System.Windows.Forms.Label L_Skill3;
-        private System.Windows.Forms.PictureBox PB_Skill4;
         private System.Windows.Forms.Label L_Skill4;
-        private System.Windows.Forms.PictureBox PB_Skill5;
         private System.Windows.Forms.Label L_Skill5;
         private System.Windows.Forms.NumericUpDown NUP_Skill3;
-        private System.Windows.Forms.PictureBox PB_Skill3;
         private System.Windows.Forms.NumericUpDown NUP_Skill2;
-        private System.Windows.Forms.PictureBox PB_Skill2;
         private System.Windows.Forms.NumericUpDown NUP_Skill1;
-        private System.Windows.Forms.PictureBox PB_Skill1;
+        private System.Windows.Forms.PictureBox PB_Skill;
     }
 }
 

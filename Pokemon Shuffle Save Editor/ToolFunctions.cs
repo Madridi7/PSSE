@@ -78,24 +78,26 @@ namespace Pokemon_Shuffle_Save_Editor
             Array.Copy(BitConverter.GetBytes(exp), 0, savedata, Experience.Ofset(ind), 4);
         }
 
-        public static void SetSkill(int ind, int lvl = 1, int skill = 0)
+        public static void SetSkill(int ind, int skind = 0, int lvl = 1, bool current = false)
         {
             //level
             lvl = (lvl < 2) ? 0 : ((lvl > 5) ? 5 : lvl);    //hardcoded skill level to be 5 max
-            int skilllvl = BitConverter.ToInt16(savedata, SkillLevel.Ofset(ind, skill));
+            skind = (skind < 0) ? 0 : ((skind > 4) ? 4 : skind); //hardcoded 5 skills maximum
+            int skilllvl = BitConverter.ToInt16(savedata, SkillLevel.Ofset(ind, skind));
             skilllvl = (skilllvl & ~(0x7 << SkillLevel.Shift(ind))) | (lvl << SkillLevel.Shift(ind));
-            Array.Copy(BitConverter.GetBytes(skilllvl), 0, savedata, SkillLevel.Ofset(ind, skill), 2);
+            Array.Copy(BitConverter.GetBytes(skilllvl), 0, savedata, SkillLevel.Ofset(ind, skind), 2);
 
             //exp
             int entrylen = BitConverter.ToInt32(db.MonAbility, 0x4);
-            savedata[SkillExp.Ofset(ind, skill)] = (lvl < 2) ? (byte)0 : db.MonAbility.Skip(0x50 + db.Mons[ind].Item6[skill] * entrylen).Take(entrylen).ToArray()[0x1A + lvl];
-        }
+            savedata[SkillExp.Ofset(ind, skind)] = (lvl < 2) ? (byte)0 : db.MonAbility.Skip(0x50 + db.Mons[ind].Item6[skind] * entrylen).Take(entrylen).ToArray()[0x1A + lvl];
 
-        public static void SetCurrentSkill(int ind, int skill = 0)
-        {
-            int selskill = BitConverter.ToInt16(savedata, CurrentSkill.Ofset(ind));
-            selskill = (selskill & ~(0x7 << CurrentSkill.Shift(ind))) | (skill << CurrentSkill.Shift(ind));
-            Array.Copy(BitConverter.GetBytes(selskill), 0, savedata, CurrentSkill.Ofset(ind), 2);
+            //current
+            if (current)
+            {
+                int selskill = BitConverter.ToInt16(savedata, CurrentSkill.Ofset(ind));
+                selskill = (selskill & ~(0x7 << CurrentSkill.Shift(ind))) | (skind << CurrentSkill.Shift(ind));
+                Array.Copy(BitConverter.GetBytes(selskill), 0, savedata, CurrentSkill.Ofset(ind), 2);
+            }
         }
 
         public static void SetSpeedup(int ind, bool X = false, int suX = 0, bool Y = false, int suY = 0)
