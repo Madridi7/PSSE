@@ -158,7 +158,7 @@ namespace Pokemon_Shuffle_Save_Editor
             {
                 if (BitConverter.ToChar(HexValue, i) == '\0' && !(StrValue.EndsWith("\u0001ă\u0001\u0003\u0003慮敭") || StrValue.EndsWith("\u0001ă\u0001\u0003\u0005敭慧慎敭")))
                 {
-                    List.Add((StrValue != "") ? StrValue.Replace("\u0001ă\u0001\u0003\u0003慮敭\0", "[name]").Replace("\u0001ă\u0001\u0003\u0005敭慧慎敭\0", "[name]") : "Placeholder");
+                    List.Add((StrValue != "") ? StrValue.Replace("\u0001ă\u0001\u0003\u0003慮敭\0", "[name]").Replace("\u0001ă\u0001\u0003\u0005敭慧慎敭\0", "[name]") : "-Placeholder-");
                     StrValue = "";
                 }
                 else StrValue += BitConverter.ToChar(HexValue, i);

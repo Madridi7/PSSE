@@ -932,7 +932,7 @@ Meowth Alola
 Persian Alola
 Geodude Alola
 Graveler Alola
-Grolem Alola
+Golem Alola
 Grimer Alola
 Muk Alola
 Exeggutor Alola
