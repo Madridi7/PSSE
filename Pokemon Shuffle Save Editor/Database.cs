@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Pokemon_Shuffle_Save_Editor
 {
@@ -68,8 +69,43 @@ namespace Pokemon_Shuffle_Save_Editor
                 for (int i = 0; i < files.Length; i++)
                 {
                     if (File.Exists(resourcedir + filenames[i]))
+                    {
                         files[i] = File.ReadAllBytes(resourcedir + filenames[i]);
-                }
+                        switch (i) //don't forget that part or resources files won't override Database files, add an entry if a file is added above
+                        {
+                            case 0:
+                                MegaStone = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 1:
+                                MonData = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 2:
+                                StagesMain = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 3:
+                                StagesEvent = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 4:
+                                StagesExpert = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 5:
+                                MonLevel = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 6:
+                                MonAbility = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+                            case 7:
+                                MissionCard = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+                        }
+                    }
+                };
             }
 
             //txt init
@@ -125,7 +161,7 @@ namespace Pokemon_Shuffle_Save_Editor
                 skillCount = Math.Max(skillCount, 1);
                 int type = (BitConverter.ToInt16(data, 0x01) >> 3) & 0x1F; //ranges 0-17 (normal - fairy) (https://gbatemp.net/threads/psse-pokemon-shuffle-save-editor.396499/page-33#post-6278446)
                 int index = (BitConverter.ToInt16(data, 0)) & 0x3FF; //ranges 1-999, it's the number you can see on the team selection menu
-                Rest[i] = new Tuple<int, int>(index, skillCount); //Mons has more than 7 arguments so 8th one and beyond must be included in another Tuple
+                Rest[i] = new Tuple<int, int>(index, skillCount); //Mons has more than 7 arguments so 8th one and beyond have to be included in another Tuple
                 Mons[i] = new Tuple<int, int, bool, int, int, int[], int, Tuple<int, int>>(spec, Forms[spec], isMega, raiseMaxLevel, basePower, skill, type, Rest[i]);
                 Forms[spec]++;
             }

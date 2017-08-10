@@ -551,6 +551,27 @@ namespace Pokemon_Shuffle_Save_Editor
             else if (lastkeys == (Keys.Tab | Keys.Shift)) { ItemsGrid.SelectedGridItem = ItemsGrid.EnumerateAllItems().Last(); }
         }
 
+        private void B_resources_Click(object sender, EventArgs e)
+        {
+            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin" };
+            string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
+            string blabla = (Directory.Exists(resourcedir) ? "A \"resources\" folder has been found" : "No resources folder found.\nCreate a new folder in the same directory as PSSE and name it exactly \"resources\".");
+
+            if (Directory.Exists(resourcedir))
+            {
+                string found = null;
+                for (int i = 0; i < 8; i++)
+                {
+                    if (File.Exists(resourcedir + filenames[i]))
+                        found += (filenames[i] + "\n");
+                }
+                blabla += (found != null) ? ".\n\nFiles found :\n" + found : ", but it looks empty.";
+            }
+            MessageBox.Show(blabla + "\n\nPlease check PSSE's Wiki on Github for more informations.");
+            db = new Database();
+            Parse();
+        }
+
         private void UpdateProperty(object s, PropertyValueChangedEventArgs e)
         {
             UpdateForm(s, e);

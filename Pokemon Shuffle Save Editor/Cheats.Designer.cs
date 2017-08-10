@@ -216,8 +216,8 @@
             this.B_Test.Size = new System.Drawing.Size(65, 23);
             this.B_Test.TabIndex = 51;
             this.B_Test.Text = "Test stuff";
-            this.toolTip1.SetToolTip(this.B_Test, "Used w/ B_Test_Click event to search for the \"skill+ drop\" flags in stagedata(s)." +
-        "bin");
+            this.toolTip1.SetToolTip(this.B_Test, "Used w/ B_Test_Click event for various stuff.\r\nYou shouldn\'t see this unless you " +
+        "specifically wanted to.\r\nIn case no one told you today : You\'re awesome !");
             this.B_Test.UseVisualStyleBackColor = true;
             this.B_Test.Visible = false;
             this.B_Test.Click += new System.EventHandler(this.B_Test_Click);

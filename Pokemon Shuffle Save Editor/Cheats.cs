@@ -199,8 +199,8 @@ namespace Pokemon_Shuffle_Save_Editor
                 if (GetMon(i).Caught)
                 {
                     for (int j = 0; j < db.Rest[i].Item2; j++)
-                        SetSkill(i, value, j);
-                }                    
+                        SetSkill(i, j, value);
+                }
             }
             MessageBox.Show("Every pokemon that you have caught now has all its skills powered to level " + value + " !");
         }
