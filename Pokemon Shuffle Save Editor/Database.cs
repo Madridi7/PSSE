@@ -18,6 +18,7 @@ namespace Pokemon_Shuffle_Save_Editor
         public byte[] StagesExpert { get; private set; }
         public byte[] StagesMain { get; private set; }
         public byte[] MissionCard { get; private set; }
+        public byte[] MessageDex { get; private set; }
 
         public bool[][] HasMega { get; private set; }   // [X][0] = X, [X][1] = Y
         public int[] Forms { get; private set; }
@@ -38,7 +39,7 @@ namespace Pokemon_Shuffle_Save_Editor
 
         #endregion Properties
 
-        public Database()
+        public Database(bool shwmsg = false)
         {            
             //bin init
             MegaStone = Properties.Resources.megaStone;
@@ -49,10 +50,13 @@ namespace Pokemon_Shuffle_Save_Editor
             StagesMain = Properties.Resources.stageData;
             StagesEvent = Properties.Resources.stageDataEvent;
             StagesExpert = Properties.Resources.stageDataExtra;
-            byte[][] files = { MegaStone, MonData, StagesMain, StagesEvent, StagesExpert, MonLevel, MonAbility, MissionCard };
-            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin" };
+            MessageDex = Properties.Resources.messagePokedex_US;
+
+            //resources override
+            byte[][] files = { MegaStone, MonData, StagesMain, StagesEvent, StagesExpert, MonLevel, MonAbility, MissionCard, MessageDex };
+            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin" };
             string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
-            #region old "resource" code 
+            #region old code 
             //I don't want PSSE to populate the resource folder by itself anymore but it could still be handy
             //if (!Directory.Exists(resourcedir))
             //    Directory.CreateDirectory(resourcedir);
@@ -64,49 +68,21 @@ namespace Pokemon_Shuffle_Save_Editor
             //        files[i] = File.ReadAllBytes(resourcedir + filenames[i]);
             //}
             #endregion
+            string blabla = (Directory.Exists(resourcedir) ? "A \"resources\" folder has been found" : "No resources folder found.\nCreate a new folder in the same directory as PSSE and name it exactly \"resources\".");
+
             if (Directory.Exists(resourcedir))
             {
+                string found = null;
                 for (int i = 0; i < files.Length; i++)
                 {
                     if (File.Exists(resourcedir + filenames[i]))
-                    {
-                        files[i] = File.ReadAllBytes(resourcedir + filenames[i]);
-                        switch (i) //don't forget that part or resources files won't override Database files, add an entry if a file is added above
-                        {
-                            case 0:
-                                MegaStone = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-
-                            case 1:
-                                MonData = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-
-                            case 2:
-                                StagesMain = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-
-                            case 3:
-                                StagesEvent = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-
-                            case 4:
-                                StagesExpert = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-
-                            case 5:
-                                MonLevel = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-
-                            case 6:
-                                MonAbility = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-                            case 7:
-                                MissionCard = File.ReadAllBytes(resourcedir + filenames[i]);
-                                break;
-                        }
-                    }
-                };
+                        found += (filenames[i] + "\n\t");
+                }
+                blabla += (found != null) ? ".\n\nFiles found :\n\t" + found : ", but it looks empty.";
             }
+            if (shwmsg)
+                MessageBox.Show(blabla + "\nPlease check PSSE's Wiki on Github for more informations.");
+            else blabla = null;
 
             //txt init
             SpeciesList = Properties.Resources.species.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
@@ -187,17 +163,17 @@ namespace Pokemon_Shuffle_Save_Editor
             }
 
             //dictionnary, this is some really bad code here
-            byte[] HexValue = Properties.Resources.messagePokedex_US;
-            string StrValue = "";
+            
+            string StrValue = null;
             List<string> List = new List<string>();
-            for (int i = 0; i < HexValue.Length; i += 2)
+            for (int i = 0; i < MessageDex.Length; i += 2)
             {
-                if (BitConverter.ToChar(HexValue, i) == '\0' && !(StrValue.EndsWith("\u0001ă\u0001\u0003\u0003慮敭") || StrValue.EndsWith("\u0001ă\u0001\u0003\u0005敭慧慎敭")))
+                if (BitConverter.ToChar(MessageDex, i) == '\0' && !(StrValue.EndsWith("\u0001ă\u0001\u0003\u0003慮敭") || StrValue.EndsWith("\u0001ă\u0001\u0003\u0005敭慧慎敭")))
                 {
                     List.Add((StrValue != "") ? StrValue.Replace("\u0001ă\u0001\u0003\u0003慮敭\0", "[name]").Replace("\u0001ă\u0001\u0003\u0005敭慧慎敭\0", "[name]") : "-Placeholder-");
                     StrValue = "";
                 }
-                else StrValue += BitConverter.ToChar(HexValue, i);
+                else StrValue += BitConverter.ToChar(MessageDex, i);
             }
             int a = List.IndexOf("Opportunist"), b = List.IndexOf("Rarely, attacks can deal\ngreater damage than usual."), c = List.IndexOf("Big Wave"), d = List.IndexOf("Increases damage done by\nany Water types in a combo.");
             string[] s1 = List.Skip(a).Take(b - a).ToArray(), s2 = List.Skip(c).Take(d - c).ToArray(), Skills = new string[s1.Length + s2.Length];
