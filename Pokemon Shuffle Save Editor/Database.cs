@@ -76,7 +76,45 @@ namespace Pokemon_Shuffle_Save_Editor
                 for (int i = 0; i < files.Length; i++)
                 {
                     if (File.Exists(resourcedir + filenames[i]))
+                    {
                         found += (filenames[i] + "\n\t");
+                        switch (i) //don't forget that part or resources files won't override Database files, add an entry if a file is added above
+                        {
+                            case 0:
+                                MegaStone = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 1:
+                                MonData = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 2:
+                                StagesMain = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 3:
+                                StagesEvent = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 4:
+                                StagesExpert = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 5:
+                                MonLevel = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+
+                            case 6:
+                                MonAbility = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+                            case 7:
+                                MissionCard = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+                            case 8:
+                                MessageDex = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+                        }
+                    }
                 }
                 blabla += (found != null) ? ".\n\nFiles found :\n\t" + found : ", but it looks empty.";
             }
