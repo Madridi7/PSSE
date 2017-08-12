@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Pokemon_Shuffle_Save_Editor
@@ -56,18 +57,6 @@ namespace Pokemon_Shuffle_Save_Editor
             byte[][] files = { MegaStone, MonData, StagesMain, StagesEvent, StagesExpert, MonLevel, MonAbility, MissionCard, MessageDex };
             string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin" };
             string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
-            #region old code 
-            //I don't want PSSE to populate the resource folder by itself anymore but it could still be handy
-            //if (!Directory.Exists(resourcedir))
-            //    Directory.CreateDirectory(resourcedir);
-            //for (int i = 0; i < files.Length; i++)
-            //{
-            //    if (!File.Exists(resourcedir + filenames[i]))
-            //        File.WriteAllBytes(resourcedir + filenames[i], files[i]);
-            //    else
-            //        files[i] = File.ReadAllBytes(resourcedir + filenames[i]);
-            //}
-            #endregion
             string blabla = (Directory.Exists(resourcedir) ? "A \"resources\" folder has been found" : "No resources folder found.\nCreate a new folder in the same directory as PSSE and name it exactly \"resources\".");
 
             if (Directory.Exists(resourcedir))
@@ -77,7 +66,6 @@ namespace Pokemon_Shuffle_Save_Editor
                 {
                     if (File.Exists(resourcedir + filenames[i]))
                     {
-                        found += (filenames[i] + "\n\t");
                         switch (i) //don't forget that part or resources files won't override Database files, add an entry if a file is added above
                         {
                             case 0:
@@ -114,6 +102,7 @@ namespace Pokemon_Shuffle_Save_Editor
                                 MessageDex = File.ReadAllBytes(resourcedir + filenames[i]);
                                 break;
                         }
+                        found += (filenames[i] + "\n\t");
                     }
                 }
                 blabla += (found != null) ? ".\n\nFiles found :\n\t" + found : ", but it looks empty.";
@@ -200,22 +189,25 @@ namespace Pokemon_Shuffle_Save_Editor
                     Missions[i][j] = BitConverter.ToInt16(data, 0x8 + 2 * j) != 0;
             }
 
-            //dictionnary, this is some really bad code here
-            
-            string StrValue = null;
-            List<string> List = new List<string>();
-            for (int i = 0; i < MessageDex.Length; i += 2)
+            //dictionnary (new)
+            string temp = Encoding.Unicode.GetString(MessageDex.Skip(BitConverter.ToInt32(MessageDex, 0x08)).Take(BitConverter.ToInt32(MessageDex, 0x0C) - 0x17).ToArray()); //Relevant chunk specified in .bin file, UTF16 Encoding, 17 bytes at the end are a useless stamp (data.messagePokedex)
+            temp = temp.Replace(Encoding.Unicode.GetString(MessageDex.Skip(BitConverter.ToInt32(MessageDex, 0x08)).Take(0x10).ToArray()), "[name]"); //because this variable ends with 0x00 it messes with Split() later on, so I replace it here
+            temp = temp.Replace(Encoding.Unicode.GetString(new byte[] { 0x01, 0x00, 0x03, 0x01, 0x01, 0x00, 0x03, 0x00, 0x05, 0x00, 0x6D, 0x65, 0x67, 0x61, 0x4E, 0x61, 0x6D, 0x65, 0x00, 0x00 }), "[megaName]"); //same but this variable isn't declared on a fixed position so I copied it directly
+            string[] arr = temp.Split( (char)0x00); //split the single string in an array
+            arr = arr.Skip(Array.IndexOf(arr, "Opportunist")).ToArray(); //we only care for skills so I get rid of anything before Opportunist
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (BitConverter.ToChar(MessageDex, i) == '\0' && !(StrValue.EndsWith("\u0001ă\u0001\u0003\u0003慮敭") || StrValue.EndsWith("\u0001ă\u0001\u0003\u0005敭慧慎敭")))
-                {
-                    List.Add((StrValue != "") ? StrValue.Replace("\u0001ă\u0001\u0003\u0003慮敭\0", "[name]").Replace("\u0001ă\u0001\u0003\u0005敭慧慎敭\0", "[name]") : "-Placeholder-");
-                    StrValue = "";
-                }
-                else StrValue += BitConverter.ToChar(MessageDex, i);
+                if (String.IsNullOrEmpty(arr[i]))
+                    arr[i] = "-Placeholder-"; //make sure there is no empty strings just in case
             }
-            int a = List.IndexOf("Opportunist"), b = List.IndexOf("Rarely, attacks can deal\ngreater damage than usual."), c = List.IndexOf("Big Wave"), d = List.IndexOf("Increases damage done by\nany Water types in a combo.");
-            string[] s1 = List.Skip(a).Take(b - a).ToArray(), s2 = List.Skip(c).Take(d - c).ToArray(), Skills = new string[s1.Length + s2.Length];
-            string[] st1 = List.Skip(b).Take(b - a).ToArray(), st2 = List.Skip(d).Take(d - c).ToArray(), SkillsT = new string[st1.Length + st2.Length];
+            /* This code below separates Skills entries from Text entries while ignoring a few mega-skills entries
+             * Right now (1.4.19) the list of strings looks like that : [Skills1][Text for Skills1][Text for mega skills][Skills2][Text for Skills2]
+             * It shouldn't be a problem is more skills are added to [Skills2] (after all placeholders have been filled), but if another [Text for mega skills] is ever added this will need a 3rd string to concatenate
+             * Also, note that there is no [Mega Skills], so if I ever want to implement them the same way I did normal skills another resource file will be needed.
+             */
+            int a = Array.IndexOf(arr, "Opportunist"), b = Array.IndexOf(arr, "Rarely, attacks can deal\ngreater damage than usual."), c = Array.IndexOf(arr, "Big Wave"), d = Array.IndexOf(arr, "Increases damage done by\nany Water types in a combo.");
+            string[] s1 = arr.Skip(a).Take(b - a).ToArray(), s2 = arr.Skip(c).Take(d - c).ToArray(), Skills = new string[s1.Length + s2.Length];
+            string[] st1 = arr.Skip(b).Take(b - a).ToArray(), st2 = arr.Skip(d).Take(d - c).ToArray(), SkillsT = new string[st1.Length + st2.Length];
             s1.CopyTo(Skills, 0);
             s2.CopyTo(Skills, s1.Length);
             SkillsList = Skills;

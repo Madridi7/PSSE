@@ -391,9 +391,9 @@ namespace Pokemon_Shuffle_Save_Editor
             #region crystal meth
             /*this doesn't work*/
             //bool boool = (ModifierKeys == Keys.Control);
-            //Array.Copy(boool ? new byte[6] : new byte[] {0, 0, 0, 0, 0x3F, 0x48 }, 0, savedata, 0xB7FB, 6);
+            //Array.Copy(boool ? new byte[6] : new byte[] { 0, 0, 0, 0, 0x3F, 0x48 }, 0, savedata, 0xB7FB, 6);
             //string str = boool ? "Crystal hearts disabled." : "Crystal hearts unlocked : You have 7 stock hearts and win 700 coins each time you connect this month.";
-            //    MessageBox.Show(str + "\n\nWork In Progress, report if something bad happens.");
+            //MessageBox.Show(str + "\n\nWork In Progress, report if something bad happens.");
             #endregion
 
             #region Skill+-dropping stages research
