@@ -58,7 +58,6 @@ namespace Pokemon_Shuffle_Save_Editor
             string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin" };
             string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
             string blabla = (Directory.Exists(resourcedir) ? "A \"resources\" folder has been found" : "No resources folder found.\nCreate a new folder in the same directory as PSSE and name it exactly \"resources\".");
-
             if (Directory.Exists(resourcedir))
             {
                 string found = null;
