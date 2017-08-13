@@ -104,9 +104,10 @@
             this.PB_Team2 = new System.Windows.Forms.PictureBox();
             this.PB_Team3 = new System.Windows.Forms.PictureBox();
             this.PB_Team4 = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.TT_Skill = new System.Windows.Forms.ToolTip(this.components);
             this.GB_Party = new System.Windows.Forms.GroupBox();
             this.B_resources = new System.Windows.Forms.Button();
+            this.TT_Button = new System.Windows.Forms.ToolTip(this.components);
             this.GB_HighScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_override)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUP_EventScore)).BeginInit();
@@ -159,10 +160,10 @@
             // 
             // TB_FilePath
             // 
-            this.TB_FilePath.Location = new System.Drawing.Point(41, 12);
+            this.TB_FilePath.Location = new System.Drawing.Point(39, 12);
             this.TB_FilePath.Name = "TB_FilePath";
             this.TB_FilePath.ReadOnly = true;
-            this.TB_FilePath.Size = new System.Drawing.Size(213, 20);
+            this.TB_FilePath.Size = new System.Drawing.Size(215, 20);
             this.TB_FilePath.TabIndex = 0;
             this.TB_FilePath.TabStop = false;
             this.TB_FilePath.DoubleClick += new System.EventHandler(this.TB_Filepath_DoubleClick);
@@ -1151,14 +1152,13 @@
             this.PB_Team4.TabStop = false;
             this.PB_Team4.Click += new System.EventHandler(this.PB_Team_Click);
             // 
-            // toolTip1
+            // TT_Skill
             // 
-            this.toolTip1.AutoPopDelay = 10000;
-            this.toolTip1.InitialDelay = 500;
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Skill description";
+            this.TT_Skill.AutoPopDelay = 10000;
+            this.TT_Skill.InitialDelay = 500;
+            this.TT_Skill.IsBalloon = true;
+            this.TT_Skill.ReshowDelay = 100;
+            this.TT_Skill.ToolTipTitle = "Skill description";
             // 
             // GB_Party
             // 
@@ -1175,13 +1175,21 @@
             // 
             // B_resources
             // 
-            this.B_resources.Image = global::Pokemon_Shuffle_Save_Editor.Properties.Resources.valid;
+            this.B_resources.Image = global::Pokemon_Shuffle_Save_Editor.Properties.Resources.folder;
             this.B_resources.Location = new System.Drawing.Point(13, 12);
             this.B_resources.Name = "B_resources";
             this.B_resources.Size = new System.Drawing.Size(20, 20);
             this.B_resources.TabIndex = 33;
+            this.TT_Button.SetToolTip(this.B_resources, resources.GetString("B_resources.ToolTip"));
             this.B_resources.UseVisualStyleBackColor = true;
             this.B_resources.Click += new System.EventHandler(this.B_resources_Click);
+            // 
+            // TT_Button
+            // 
+            this.TT_Button.AutoPopDelay = 10000;
+            this.TT_Button.InitialDelay = 500;
+            this.TT_Button.ReshowDelay = 100;
+            this.TT_Button.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Main
             // 
@@ -1311,7 +1319,7 @@
         private System.Windows.Forms.Label L_Level;
         private System.Windows.Forms.PictureBox PB_override;
         private System.Windows.Forms.Label L_Skill;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip TT_Skill;
         private System.Windows.Forms.GroupBox GB_Party;
         private System.Windows.Forms.TableLayoutPanel TLP_Skills;
         private System.Windows.Forms.NumericUpDown NUP_Skill5;
@@ -1331,6 +1339,7 @@
         private System.Windows.Forms.NumericUpDown NUP_Skill1;
         private System.Windows.Forms.PictureBox PB_Skill;
         private System.Windows.Forms.Button B_resources;
+        private System.Windows.Forms.ToolTip TT_Button;
     }
 }
 

@@ -42,7 +42,7 @@
             this.Line = new System.Windows.Forms.Label();
             this.B_PokemonReset = new System.Windows.Forms.Button();
             this.B_StageReset = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.TT_Cheats = new System.Windows.Forms.ToolTip(this.components);
             this.B_MaxTalent = new System.Windows.Forms.Button();
             this.B_Test = new System.Windows.Forms.Button();
             this.B_PokathlonStep = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.B_LevelMax.Size = new System.Drawing.Size(138, 23);
             this.B_LevelMax.TabIndex = 1;
             this.B_LevelMax.Text = "All Owned Lv (Max)";
-            this.toolTip1.SetToolTip(this.B_LevelMax, resources.GetString("B_LevelMax.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_LevelMax, resources.GetString("B_LevelMax.ToolTip"));
             this.B_LevelMax.UseVisualStyleBackColor = true;
             this.B_LevelMax.Click += new System.EventHandler(this.B_LevelMax_Click);
             // 
@@ -67,7 +67,7 @@
             this.B_CaughtObtainables.Size = new System.Drawing.Size(138, 23);
             this.B_CaughtObtainables.TabIndex = 0;
             this.B_CaughtObtainables.Text = "Catch All Obtainables";
-            this.toolTip1.SetToolTip(this.B_CaughtObtainables, resources.GetString("B_CaughtObtainables.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_CaughtObtainables, resources.GetString("B_CaughtObtainables.ToolTip"));
             this.B_CaughtObtainables.UseVisualStyleBackColor = true;
             this.B_CaughtObtainables.Click += new System.EventHandler(this.B_CaughtObtainables_Click);
             // 
@@ -78,7 +78,7 @@
             this.B_MaxResources.Size = new System.Drawing.Size(138, 23);
             this.B_MaxResources.TabIndex = 7;
             this.B_MaxResources.Text = "(Maximum) Resources";
-            this.toolTip1.SetToolTip(this.B_MaxResources, "Will give you 99 stock hearts, 99.999 coins, 150 jewels, 99 of all \"in-battle\" it" +
+            this.TT_Cheats.SetToolTip(this.B_MaxResources, "Will give you 99 stock hearts, 99.999 coins, 150 jewels, 99 of all \"in-battle\" it" +
         "ems\r\n& 99 of all \"enhancements\" items.\r\n\r\nCtrl+Clic to set them all to 0.");
             this.B_MaxResources.UseVisualStyleBackColor = true;
             this.B_MaxResources.Click += new System.EventHandler(this.B_MaxResources_Click);
@@ -90,7 +90,7 @@
             this.B_AllCaughtStones.Size = new System.Drawing.Size(138, 23);
             this.B_AllCaughtStones.TabIndex = 3;
             this.B_AllCaughtStones.Text = "(All Caught) Megastones";
-            this.toolTip1.SetToolTip(this.B_AllCaughtStones, resources.GetString("B_AllCaughtStones.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_AllCaughtStones, resources.GetString("B_AllCaughtStones.ToolTip"));
             this.B_AllCaughtStones.UseVisualStyleBackColor = true;
             this.B_AllCaughtStones.Click += new System.EventHandler(this.B_AllCaughtStones_Click);
             // 
@@ -101,7 +101,7 @@
             this.B_MaxSpeedups.Size = new System.Drawing.Size(138, 23);
             this.B_MaxSpeedups.TabIndex = 4;
             this.B_MaxSpeedups.Text = "All Owned (Max) Speedup";
-            this.toolTip1.SetToolTip(this.B_MaxSpeedups, resources.GetString("B_MaxSpeedups.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_MaxSpeedups, resources.GetString("B_MaxSpeedups.ToolTip"));
             this.B_MaxSpeedups.UseVisualStyleBackColor = true;
             this.B_MaxSpeedups.Click += new System.EventHandler(this.B_MaxSpeedups_Click);
             // 
@@ -112,7 +112,7 @@
             this.B_AllCompleted.Size = new System.Drawing.Size(138, 23);
             this.B_AllCompleted.TabIndex = 5;
             this.B_AllCompleted.Text = "Complete All Stages";
-            this.toolTip1.SetToolTip(this.B_AllCompleted, resources.GetString("B_AllCompleted.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_AllCompleted, resources.GetString("B_AllCompleted.ToolTip"));
             this.B_AllCompleted.UseVisualStyleBackColor = true;
             this.B_AllCompleted.Click += new System.EventHandler(this.B_AllCompleted_Click);
             // 
@@ -123,7 +123,7 @@
             this.B_SRankCompleted.Size = new System.Drawing.Size(138, 23);
             this.B_SRankCompleted.TabIndex = 6;
             this.B_SRankCompleted.Text = "(S)-Rank All Completed";
-            this.toolTip1.SetToolTip(this.B_SRankCompleted, resources.GetString("B_SRankCompleted.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_SRankCompleted, resources.GetString("B_SRankCompleted.ToolTip"));
             this.B_SRankCompleted.UseVisualStyleBackColor = true;
             this.B_SRankCompleted.Click += new System.EventHandler(this.B_SRankCompleted_Click);
             // 
@@ -134,7 +134,7 @@
             this.B_StreetPassDelete.Size = new System.Drawing.Size(138, 23);
             this.B_StreetPassDelete.TabIndex = 10;
             this.B_StreetPassDelete.Text = "Edit StreetPass (reset)";
-            this.toolTip1.SetToolTip(this.B_StreetPassDelete, resources.GetString("B_StreetPassDelete.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_StreetPassDelete, resources.GetString("B_StreetPassDelete.ToolTip"));
             this.B_StreetPassDelete.UseVisualStyleBackColor = true;
             this.B_StreetPassDelete.Click += new System.EventHandler(this.B_StreetPassDelete_Click);
             // 
@@ -145,7 +145,7 @@
             this.B_MaxExcalationBattle.Size = new System.Drawing.Size(138, 23);
             this.B_MaxExcalationBattle.TabIndex = 8;
             this.B_MaxExcalationBattle.Text = "Escalation Battle (999)";
-            this.toolTip1.SetToolTip(this.B_MaxExcalationBattle, resources.GetString("B_MaxExcalationBattle.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_MaxExcalationBattle, resources.GetString("B_MaxExcalationBattle.ToolTip"));
             this.B_MaxExcalationBattle.UseVisualStyleBackColor = true;
             this.B_MaxExcalationBattle.Click += new System.EventHandler(this.B_MaxExcalationBattle_Click);
             // 
@@ -169,7 +169,7 @@
             this.B_PokemonReset.Size = new System.Drawing.Size(138, 23);
             this.B_PokemonReset.TabIndex = 100;
             this.B_PokemonReset.Text = "Reset Pokemon";
-            this.toolTip1.SetToolTip(this.B_PokemonReset, resources.GetString("B_PokemonReset.ToolTip"));
+            this.TT_Cheats.SetToolTip(this.B_PokemonReset, resources.GetString("B_PokemonReset.ToolTip"));
             this.B_PokemonReset.UseVisualStyleBackColor = true;
             this.B_PokemonReset.Click += new System.EventHandler(this.B_PokemonReset_Click);
             // 
@@ -181,20 +181,19 @@
             this.B_StageReset.Size = new System.Drawing.Size(138, 23);
             this.B_StageReset.TabIndex = 101;
             this.B_StageReset.Text = "Reset Stages";
-            this.toolTip1.SetToolTip(this.B_StageReset, "-Marks every Normal & Expert stages a uncompleted\r\n-Sets their rank to C & highsc" +
+            this.TT_Cheats.SetToolTip(this.B_StageReset, "-Marks every Normal & Expert stages a uncompleted\r\n-Sets their rank to C & highsc" +
         "ore to 0\r\n\r\n/!\\ Manually un-own any pokemon that should have been caught in one " +
         "of these levels.");
             this.B_StageReset.UseVisualStyleBackColor = true;
             this.B_StageReset.Click += new System.EventHandler(this.B_StageReset_Click);
             // 
-            // toolTip1
+            // TT_Cheats
             // 
-            this.toolTip1.AutoPopDelay = 10000;
-            this.toolTip1.InitialDelay = 500;
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Button description";
+            this.TT_Cheats.AutoPopDelay = 10000;
+            this.TT_Cheats.InitialDelay = 500;
+            this.TT_Cheats.IsBalloon = true;
+            this.TT_Cheats.ReshowDelay = 100;
+            this.TT_Cheats.ToolTipTitle = "Button description";
             // 
             // B_MaxTalent
             // 
@@ -203,7 +202,7 @@
             this.B_MaxTalent.Size = new System.Drawing.Size(138, 23);
             this.B_MaxTalent.TabIndex = 2;
             this.B_MaxTalent.Text = "All Owned Skill Lvl (5)";
-            this.toolTip1.SetToolTip(this.B_MaxTalent, "For every pokemon that you\'ve caught, sets their talent to lvl 5 with the proper " +
+            this.TT_Cheats.SetToolTip(this.B_MaxTalent, "For every pokemon that you\'ve caught, sets their talent to lvl 5 with the proper " +
         "amount of \"experience\" needed.\r\n\r\nCtrl + click to select which level you want to" +
         " set your pokemons\'s skills to.");
             this.B_MaxTalent.UseVisualStyleBackColor = true;
@@ -216,7 +215,7 @@
             this.B_Test.Size = new System.Drawing.Size(65, 23);
             this.B_Test.TabIndex = 51;
             this.B_Test.Text = "Test stuff";
-            this.toolTip1.SetToolTip(this.B_Test, "Used w/ B_Test_Click event for various stuff.\r\nYou shouldn\'t see this unless you " +
+            this.TT_Cheats.SetToolTip(this.B_Test, "Used w/ B_Test_Click event for various stuff.\r\nYou shouldn\'t see this unless you " +
         "specifically wanted to.\r\nIn case no one told you today : You\'re awesome !");
             this.B_Test.UseVisualStyleBackColor = true;
             this.B_Test.Visible = false;
@@ -229,7 +228,7 @@
             this.B_PokathlonStep.Size = new System.Drawing.Size(138, 23);
             this.B_PokathlonStep.TabIndex = 9;
             this.B_PokathlonStep.Text = "Edit Pokathlon (50th) ";
-            this.toolTip1.SetToolTip(this.B_PokathlonStep, "Sets your next Survival mode battle to be the 50th one, against\r\nMega Mewtwo Y an" +
+            this.TT_Cheats.SetToolTip(this.B_PokathlonStep, "Sets your next Survival mode battle to be the 50th one, against\r\nMega Mewtwo Y an" +
         "d with 99 moves left.\r\n\r\nCtrl + Click to select whichever step, opponent and mov" +
         "es you wish.");
             this.B_PokathlonStep.UseVisualStyleBackColor = true;
@@ -242,7 +241,7 @@
             this.B_MissionCards.Size = new System.Drawing.Size(138, 23);
             this.B_MissionCards.TabIndex = 11;
             this.B_MissionCards.Text = "Complete Mission cards";
-            this.toolTip1.SetToolTip(this.B_MissionCards, "Completes all cards missions. \r\nCtrl+clic to select which missions to complete an" +
+            this.TT_Cheats.SetToolTip(this.B_MissionCards, "Completes all cards missions. \r\nCtrl+clic to select which missions to complete an" +
         "d\r\nsee/choose active card.");
             this.B_MissionCards.UseVisualStyleBackColor = true;
             this.B_MissionCards.Click += new System.EventHandler(this.B_MissionCards_Click);
@@ -296,7 +295,7 @@
         private System.Windows.Forms.Label Line;
         private System.Windows.Forms.Button B_PokemonReset;
         private System.Windows.Forms.Button B_StageReset;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip TT_Cheats;
         private System.Windows.Forms.Button B_MaxTalent;
         private System.Windows.Forms.Button B_Test;
         private System.Windows.Forms.Button B_PokathlonStep;
