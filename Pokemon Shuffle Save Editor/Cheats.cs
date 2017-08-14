@@ -22,6 +22,10 @@ namespace Pokemon_Shuffle_Save_Editor
                 this.Close();
                 return true;
             }
+            if (keyData == (Keys.Enter | Keys.Control))
+            {
+                (this.ActiveControl as Button).PerformClick();
+            }
             return base.ProcessDialogKey(keyData);
         }
 
