@@ -15,14 +15,14 @@ namespace Pokemon_Shuffle_Save_Editor
             InitializeComponent();
         }
 
-        protected override bool ProcessDialogKey(Keys keyData)  //Allows quit when Esc is pressed
+        protected override bool ProcessDialogKey(Keys keyData)  
         {
-            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)//Allows quit when Esc is pressed
             {
                 this.Close();
                 return true;
             }
-            if (keyData == (Keys.Enter | Keys.Control))
+            if (keyData == (Keys.Enter | Keys.Control))//Makes Ctrl+Enter do the same thing as Ctrl+Click
             {
                 (this.ActiveControl as Button).PerformClick();
             }

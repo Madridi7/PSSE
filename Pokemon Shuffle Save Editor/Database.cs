@@ -15,11 +15,11 @@ namespace Pokemon_Shuffle_Save_Editor
         public byte[] MonAbility { get; private set; }
         public byte[] MonData { get; private set; }
         public byte[] MonLevel { get; private set; }
+        public byte[] MissionCard { get; private set; }
+        public byte[] MessageDex { get; private set; }
         public byte[] StagesEvent { get; private set; }
         public byte[] StagesExpert { get; private set; }
         public byte[] StagesMain { get; private set; }
-        public byte[] MissionCard { get; private set; }
-        public byte[] MessageDex { get; private set; }
 
         public bool[][] HasMega { get; private set; }   // [X][0] = X, [X][1] = Y
         public int[] Forms { get; private set; }
@@ -41,7 +41,36 @@ namespace Pokemon_Shuffle_Save_Editor
         #endregion Properties
 
         public Database(bool shwmsg = false)
-        {            
+        {
+            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin" };
+            string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
+            if (shwmsg)
+            {
+                string blabla = null;
+                List<string> found = new List<string>();
+                if (!Directory.Exists(resourcedir))
+                    blabla = "No resources folder found.\nCreate a new folder in the same directory as PSSE and name it exactly \"resources\".\n";
+                else
+                {
+                    blabla = "A \"resources\" folder has been found";
+                    foreach (string file in filenames)
+                        if (File.Exists(resourcedir + file)) { found.Add("\n\t" + file); }
+                    if (found != null)
+                    {
+                        blabla += ".\n\nFiles found :";
+                        found.Sort();
+                        foreach (string str in found)
+                            blabla += str;
+                        blabla += "\n";
+                    }
+                    else blabla += ", but it looks empty.\n";
+                }
+                blabla += ("\nClick OK to use " + ((found == null) ? "built-in files" : "those files") + ", or use Abort to, well, abort.");
+                var result = MessageBox.Show(blabla + "\nPlease click the Help button below for more informations.", "Resources scan", MessageBoxButtons.OKCancel, MessageBoxIcon.None, MessageBoxDefaultButton.Button1, 0, "https://github.com/supercarotte/PSSE/wiki/Extract-needed-resource-files-from-the-game.");
+                if (result != DialogResult.OK)
+                    return;
+            }
+
             //bin init
             MegaStone = Properties.Resources.megaStone;
             MissionCard = Properties.Resources.missionCard;
@@ -53,18 +82,12 @@ namespace Pokemon_Shuffle_Save_Editor
             StagesExpert = Properties.Resources.stageDataExtra;
             MessageDex = Properties.Resources.messagePokedex_US;
 
-            //resources override
-            byte[][] files = { MegaStone, MonData, StagesMain, StagesEvent, StagesExpert, MonLevel, MonAbility, MissionCard, MessageDex };
-            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin" };
-            string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
-            string blabla = (Directory.Exists(resourcedir) ? "A \"resources\" folder has been found" : "No resources folder found.\nCreate a new folder in the same directory as PSSE and name it exactly \"resources\".");
+            //resources override            
             if (Directory.Exists(resourcedir))
-            {
-                string found = null;
-                for (int i = 0; i < files.Length; i++)
+            {                
+                for (int i = 0; i < filenames.Length; i++)
                 {
                     if (File.Exists(resourcedir + filenames[i]))
-                    {
                         switch (i) //don't forget that part or resources files won't override Database files, add an entry if a file is added above
                         {
                             case 0:
@@ -101,14 +124,10 @@ namespace Pokemon_Shuffle_Save_Editor
                                 MessageDex = File.ReadAllBytes(resourcedir + filenames[i]);
                                 break;
                         }
-                        found += (filenames[i] + "\n\t");
-                    }
                 }
-                blabla += (found != null) ? ".\n\nFiles found :\n\t" + found : ", but it looks empty.";
+                
             }
-            if (shwmsg)
-                MessageBox.Show(blabla + "\nPlease check PSSE's Wiki on Github for more informations.");
-            else blabla = null;
+                
 
             //txt init
             SpeciesList = Properties.Resources.species.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);

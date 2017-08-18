@@ -559,8 +559,7 @@ namespace Pokemon_Shuffle_Save_Editor
         private void B_resources_Click(object sender, EventArgs e)
         {
             db = new Database(true);
-            if (loaded)
-                Parse();
+            if (loaded) { Parse(); }
         }
 
         private void UpdateProperty(object s, PropertyValueChangedEventArgs e)
