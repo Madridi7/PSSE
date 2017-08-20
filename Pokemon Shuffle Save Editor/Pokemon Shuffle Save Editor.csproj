@@ -138,17 +138,26 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\bin\megaStone.bin" />
+    <None Include="Resources\bin\megaStone1.bin" />
     <None Include="Resources\bin\messagePokedex_US.bin" />
+    <None Include="Resources\bin\messagePokedex_US1.bin" />
     <None Include="Resources\bin\MissionCard.bin" />
+    <None Include="Resources\bin\missionCard1.bin" />
+    <None Include="Resources\bin\pokeLoad.bin" />
     <None Include="Resources\bin\PokemonAbility.bin" />
+    <None Include="Resources\bin\pokemonAbility1.bin" />
     <None Include="Resources\bin\pokemonData.bin" />
+    <None Include="Resources\bin\pokemonData1.bin" />
     <None Include="Resources\bin\pokemonLevel.bin" />
     <None Include="Resources\bin\stageData.bin" />
+    <None Include="Resources\bin\stageData1.bin" />
     <None Include="Resources\bin\stageDataEvent.bin" />
+    <None Include="Resources\bin\stageDataEvent1.bin" />
     <None Include="Resources\bin\stageDataExtra.bin" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\bin\stageDataExtra1.bin" />
     <None Include="Resources\img\lollipop.png" />
     <None Include="Resources\img\folder.png" />
     <Content Include="Resources\img\MegaStone003.png" />

@@ -20,13 +20,15 @@ namespace Pokemon_Shuffle_Save_Editor
         public byte[] StagesEvent { get; private set; }
         public byte[] StagesExpert { get; private set; }
         public byte[] StagesMain { get; private set; }
+        public byte[] PokeLoad { get; private set; }
 
         public bool[][] HasMega { get; private set; }   // [X][0] = X, [X][1] = Y
         public int[] Forms { get; private set; }
-        public int[][] PokathlonRand { get; private set; }  // [step][0] = min, [step][1] = max
+        public List<int>[] Pokathlon { get; private set; }
+        //public int[][] PokathlonRand { get; private set; }  // [step][0] = min, [step][1] = max
         public bool[][] Missions { get; private set; }
         public string[] MonsList { get; private set; }
-        public string[] PokathlonList { get; private set; }
+        //public string[] PokathlonList { get; private set; }
         public string[] SpeciesList { get; private set; }
         public string[] SkillsList { get; private set; }
         public string[] SkillsTextList { get; private set; }
@@ -42,7 +44,7 @@ namespace Pokemon_Shuffle_Save_Editor
 
         public Database(bool shwmsg = false)
         {
-            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin" };
+            string[] filenames = { "megaStone.bin", "pokemonData.bin", "stageData.bin", "stageDataEvent.bin", "stageDataExtra.bin", "pokemonLevel.bin", "pokemonAbility.bin", "missionCard.bin", "messagePokedex_US.bin", "pokeLoad.bin" };
             string resourcedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + Path.DirectorySeparatorChar + "resources" + Path.DirectorySeparatorChar;
             if (shwmsg)
             {
@@ -81,6 +83,7 @@ namespace Pokemon_Shuffle_Save_Editor
             StagesEvent = Properties.Resources.stageDataEvent;
             StagesExpert = Properties.Resources.stageDataExtra;
             MessageDex = Properties.Resources.messagePokedex_US;
+            PokeLoad = Properties.Resources.pokeLoad;
 
             //resources override            
             if (Directory.Exists(resourcedir))
@@ -123,6 +126,12 @@ namespace Pokemon_Shuffle_Save_Editor
                             case 8:
                                 MessageDex = File.ReadAllBytes(resourcedir + filenames[i]);
                                 break;
+                            case 9:
+                                PokeLoad = File.ReadAllBytes(resourcedir + filenames[i]);
+                                break;
+                            default:
+                                MessageBox.Show("Error loading resources :\nfilename = " + (filenames[i] != null ? filenames[i] : "null") +"\ni = " + i);
+                                break;
                         }
                 }
                 
@@ -132,7 +141,7 @@ namespace Pokemon_Shuffle_Save_Editor
             //txt init
             SpeciesList = Properties.Resources.species.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
             MonsList = Properties.Resources.mons.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            PokathlonList = Properties.Resources.pokathlon.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            //PokathlonList = Properties.Resources.pokathlon.Split(new[] { Environment.NewLine, "\n" }, StringSplitOptions.RemoveEmptyEntries);
             MegaStartIndex = MonsList.ToList().IndexOf("Mega Venusaur");
             MonStopIndex = MonsList.ToList().IndexOf("---", 1);
 
@@ -187,14 +196,43 @@ namespace Pokemon_Shuffle_Save_Editor
                 Forms[spec]++;
             }
 
-            //pokathlon
-            PokathlonRand = new int[PokathlonList.Length / 2][];
-            for (int i = 0; i < PokathlonRand.Length; i++)
+            //Survival mode
+            int smEntry = BitConverter.ToInt32(PokeLoad, 0x4), smSkip = BitConverter.ToInt32(PokeLoad, 0x10), smTake = BitConverter.ToInt32(PokeLoad, 0x14);
+            Pokathlon = new List<int>[BitConverter.ToInt16(PokeLoad.Skip(smSkip + smTake - smEntry).Take(smEntry).ToArray(), 0) & 0x3FF]; //# of entries doesn't match # of steps since some are collided so I take the last entry and read its 'lowStep' value (should compare to 'highStep' but I don't want to overcomplicate thigns for now)
+            for (int i = 0; i < BitConverter.ToInt32(PokeLoad, 0); i++)
             {
-                PokathlonRand[i] = new int[2];
-                Int32.TryParse(PokathlonList[2 * i], out PokathlonRand[i][0]);
-                Int32.TryParse(PokathlonList[1 + 2 * i], out PokathlonRand[i][1]);
+                byte[] data = PokeLoad.Skip(smSkip + i * smEntry).Take(smEntry).ToArray();
+                int lowStep = BitConverter.ToInt16(data, 0) & 0x3FF, highStep = (BitConverter.ToInt16(data, 0x01) >> 2) & 0x3FF; //if highStep !=0 then data[] applies to all steps in the lowStep - highStep range
+                int min = (BitConverter.ToInt16(data, 0x02) >> 4) & 0xFFF, max = BitConverter.ToInt16(data, 0x04) & 0xFFF; //if max !=0 then all stages in min-max range are possibilities for corresponding step(s)
+                List<int> stagesList = Enumerable.Range(min, max != 0 ? max-min+1 : 1).ToList();
+                for (int j = 0x08; j < (data.Length - 3); j += 4) //weird pattern for excluded stages : each 32-bits block starting at 0x08 contains 3 10-bits long stages #
+                {
+                    int exception = 0;
+                    for (int w = 0; w < 3; w++)
+                    {
+                        exception = (BitConverter.ToInt32(data, j) >> (w * 10)) & 0x3FF;
+                        if (exception == 0)
+                            break;
+                        else if (stagesList.Contains(exception))
+                            stagesList.Remove(exception);
+                    }
+                    if (exception == 0)
+                        break;
+                }
+                foreach (int step in Enumerable.Range(lowStep, 1 + Math.Max(0, highStep - lowStep)))
+                    Pokathlon[step - 1] = stagesList;
             }
+
+            #region old Survival
+            //pokathlon
+            //PokathlonRand = new int[PokathlonList.Length / 2][];
+            //for (int i = 0; i < PokathlonRand.Length; i++)
+            //{
+            //    PokathlonRand[i] = new int[2];
+            //    Int32.TryParse(PokathlonList[2 * i], out PokathlonRand[i][0]);
+            //    Int32.TryParse(PokathlonList[1 + 2 * i], out PokathlonRand[i][1]);
+            //}
+            #endregion
 
             //missions
             Missions = new bool[BitConverter.ToInt32(MissionCard, 0)][];
@@ -218,11 +256,13 @@ namespace Pokemon_Shuffle_Save_Editor
                 if (String.IsNullOrEmpty(arr[i]))
                     arr[i] = "-Placeholder-"; //make sure there is no empty strings just in case
             }
+
             /* This code below separates Skills entries from Text entries while ignoring a few mega-skills entries
              * Right now (1.4.19) the list of strings looks like that : [Skills1][Text for Skills1][Text for mega skills][Skills2][Text for Skills2]
              * It shouldn't be a problem is more skills are added to [Skills2] (after all placeholders have been filled), but if another [Text for mega skills] is ever added this will need a 3rd string to concatenate
              * Also, note that there is no [Mega Skills], so if I ever want to implement them the same way I did normal skills another resource file will be needed.
              */
+
             int a = Array.IndexOf(arr, "Opportunist"), b = Array.IndexOf(arr, "Rarely, attacks can deal\ngreater damage than usual."), c = Array.IndexOf(arr, "Big Wave"), d = Array.IndexOf(arr, "Increases damage done by\nany Water types in a combo.");
             string[] s1 = arr.Skip(a).Take(b - a).ToArray(), s2 = arr.Skip(c).Take(d - c).ToArray(), Skills = new string[s1.Length + s2.Length];
             string[] st1 = arr.Skip(b).Take(b - a).ToArray(), st2 = arr.Skip(d).Take(d - c).ToArray(), SkillsT = new string[st1.Length + st2.Length];

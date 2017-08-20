@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using static Pokemon_Shuffle_Save_Editor.Main;
 using static Pokemon_Shuffle_Save_Editor.ToolFunctions;
@@ -7,6 +8,7 @@ namespace Pokemon_Shuffle_Save_Editor
 {
     public partial class Pokathlon_Popup : Form
     {
+        static Random rnd = new Random();
         public bool retEnabled
         {
             get { return CHK_Paused.Checked; }
@@ -24,16 +26,16 @@ namespace Pokemon_Shuffle_Save_Editor
             get { return (int)NUP_Opponent.Value; }
         }
 
-        public Pokathlon_Popup(int oValue, int mValue, int sValue, int oMin = 1, int mMin = 0, int sMin = 0, int oMax = 150, int mMax = 99, int sMax = 50)
-        {
+        public Pokathlon_Popup(int oValue, int mValue, int sValue, int oMin = 1, int mMin = 0, int sMin = 1, int oMax = 300, int mMax = 99, int sMax = 60)
+        {   //don't forget to change default values here if more levels are added to Survival Mode
             InitializeComponent();
             int j = 0;
-            int[] list = { oValue, mValue, sValue, oMin, mMin, sMin, oMax, mMax, sMax };
+            int[] list = { oMin, mMin, sMin, oMax, mMax, sMax,oValue, mValue, sValue };
             foreach (NumericUpDown nup in new[] { NUP_Opponent, NUP_Moves, NUP_Step })
             {
-                nup.Minimum = list[3 + j];
-                nup.Maximum = list[6 + j];
-                nup.Value = list[j];
+                nup.Minimum = list[j];
+                nup.Maximum = list[3 + j];
+                nup.Value = list[6 + j];
                 j++;
             }
             UpdateForm();
@@ -68,10 +70,11 @@ namespace Pokemon_Shuffle_Save_Editor
         }
 
         private void B_Random_Click(object sender, EventArgs e)
-        {
-            int min = (ModifierKeys == Keys.Control) ? (int)NUP_Opponent.Minimum : db.PokathlonRand[(int)NUP_Step.Value - 1][0];
-            int max = (ModifierKeys == Keys.Control) ? (int)NUP_Opponent.Maximum : db.PokathlonRand[(int)NUP_Step.Value - 1][1] + 1; //Random() never equals its max value, hence max +1
-            NUP_Opponent.Value = new Random().Next(min, max);
+        {   //Random() never equals its max value, hence max +1
+            NUP_Opponent.Value = (ModifierKeys == Keys.Control) ? rnd.Next((int)NUP_Opponent.Minimum, (int)NUP_Opponent.Maximum + 1) : db.Pokathlon[(int)NUP_Step.Value - 1][rnd.Next(db.Pokathlon[(int)NUP_Step.Value - 1].Count)];
+            //int min = (ModifierKeys == Keys.Control) ? (int)NUP_Opponent.Minimum : db.Pokathlon[(int)NUP_Step.Value - 1].Min();
+            //int max = (ModifierKeys == Keys.Control) ? (int)NUP_Opponent.Maximum : db.Pokathlon[(int)NUP_Step.Value - 1].Max(); 
+            //NUP_Opponent.Value = new Random().Next(min, max);
         }
     }
 }

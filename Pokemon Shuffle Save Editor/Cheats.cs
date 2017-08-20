@@ -299,11 +299,11 @@ namespace Pokemon_Shuffle_Save_Editor
 
         private void B_PokathlonStep_Click(object sender, EventArgs e)
         {
-            int step = 50, moves = 99, opponent = 150;    //default values
+            int step = 60, moves = 99, opponent = 300;    //default values
             bool enabled = true; //default values
             if (ModifierKeys == Keys.Control)
             {
-                using (var form = new Pokathlon_Popup(BitConverter.ToInt16(savedata, 0xB762) >> 6, (savedata[0xB768] & 0x7F), savedata[0xB760]))
+                using (var form = new Pokathlon_Popup(BitConverter.ToInt16(savedata, 0xB762) >> 6, (savedata[0xB768] & 0x7F), Math.Max(1, (int)savedata[0xB760])))
                 {
                     form.ShowDialog();
                     if (form.DialogResult == DialogResult.OK)

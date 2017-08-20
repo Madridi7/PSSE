@@ -128,13 +128,13 @@ Ctrl + Click to select which level you want to set your pokemons to.
 A pokemon will be set to its maximum instead if selected level is higher.</value>
   </data>
   <data name="B_CaughtObtainables.ToolTip" xml:space="preserve">
-    <value>Marks as caught every pokemon that has been released.
+    <value>Marks as caught most pokemons that have been released.
 
 /!\ Any pokemon that has only been released as an event stage, is normal type
 and has 30BP &amp; "Opportunist" talent will be skiped. Add it manually if needed.
 
 /!\ Event pokemons that are included in the resource files but planned to be 
-released at a further date will be included too. Uncatch them manually if needed.</value>
+released at a further date will be included too. Uncatch them manually if you want.</value>
   </data>
   <data name="B_AllCaughtStones.ToolTip" xml:space="preserve">
     <value>Gives you megastones for everything that you've caught and for which a megastone has been released.
@@ -152,11 +152,11 @@ Ctrl + click to select a number of speedups, if a pokemon cannot be fed this amo
 it'll be fed its maximum instead.</value>
   </data>
   <data name="B_AllCompleted.ToolTip" xml:space="preserve">
-    <value>All stages will be marked as completed, with the default C-rank and 0 highscore. Any 
-unredeemed reward for a stage (a.k.a megastones) will be redeemable by beating it.
+    <value>All stages will be marked as completed, with the default C-rank and 0 highscore. 
 
-/!\ Having all stages C-ranked with a 0 highscore isn't legit. Use the "S-Rank All Completed"
-code after using this one.
+/!\ Extra stages won't appear unless you collected enough S-ranks, but will still
+be considered beaten. Also, use the S-rank code after this because having C-ranks
+everywhere isn't legit.
 </value>
   </data>
   <data name="B_SRankCompleted.ToolTip" xml:space="preserve">
@@ -173,15 +173,15 @@ in "Streetpass encounters" menu. This is usefull if entering this menu crashes y
 Ctrl+clic to set your  desired number of streetpass encounters and decide if you want to
 wipe your streetpass tags or not.
 
-For information, you get 1 jewel for your 1st and every 100 streetpasses, as well as 1 heart
+FYI, you get 1 jewel for your 1st and every 100 streetpasses, as well as 1 heart
 for your 5th and every 10 streetpasses.
 </value>
   </data>
   <data name="B_MaxExcalationBattle.ToolTip" xml:space="preserve">
-    <value>Opens a popup to select your desired step (Ctrl + click sets step 999 by default).
+    <value>If there is one Excalation battle currently ongoing, this will set it to its 999th step.
+Beat it and you'll earn all possible rewards for this battle at once.
 
-Will set an active escalation battle to selected step (it'll not have been beaten yet).
-Beat it to get all rewards at once.
+Ctrl+clic to select which step you want to face.
 
 /!\ Should do nothing if there aren't any active escalation battle. If there ever is more
 than one active at the same time, only one should be affected.</value>

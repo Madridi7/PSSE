@@ -177,7 +177,6 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Button description";
             // 
             // CHK_Paused

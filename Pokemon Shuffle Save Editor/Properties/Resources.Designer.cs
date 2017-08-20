@@ -2032,6 +2032,16 @@ namespace Pokemon_Shuffle_Save_Editor.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] pokeLoad {
+            get {
+                object obj = ResourceManager.GetObject("pokeLoad", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pokemon_000 {

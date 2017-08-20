@@ -247,6 +247,21 @@ namespace Pokemon_Shuffle_Save_Editor
             Array.Copy(BitConverter.GetBytes(stage), 0, savedata, Completed.Ofset(ind, type), 2);
         }
 
+        //public static smItem GetPokathlon()
+        //{
+        //    return new smItem
+        //    {
+        //        Opponent = BitConverter.ToInt16(savedata, PokathlonOpponent.Ofset()) >> PokathlonOpponent.Shift(),
+        //        Moves = (savedata[PokathlonMoves.Ofset()] & 0x7F),
+        //        Step = savedata[PokathlonStep.Ofset()]
+        //    };
+        //}
+
+        //public static void SetOpponent(int opponent)
+        //{
+        //    Array.Copy(BitConverter.GetBytes((BitConverter.ToInt16(savedata, PokathlonOpponent.Ofset()) & ~(0x3FF << PokathlonOpponent.Shift())) | (opponent << PokathlonOpponent.Shift())), 0, savedata, PokathlonOpponent.Ofset(), 2);
+        //}
+
         public static Bitmap ChangeOpacity(Image img, float opacityvalue)
         {
             Bitmap bmp = new Bitmap(img.Width, img.Height); // Determining Width and Height of Source Image
@@ -401,7 +416,7 @@ namespace Pokemon_Shuffle_Save_Editor
         }
     }
     public static class Level2
-    {//"new" 1.3.25 offsets, register level if >= 15 (max 0x3F = 63), don't register lvl 15 mons that were leveled up before the update.
+    {//"new" 1.3.25 offsets, register level if >= 15 (max 0x3F = 63), doesn't register lvl 15 mons that were leveled up before the update.
         public static int Ofset(int ind)
         {
             return 0xA61B + ind * 6 / 8;
@@ -727,6 +742,42 @@ namespace Pokemon_Shuffle_Save_Editor
         }
     }
 
+    public static class PokathlonOpponent
+    {
+        public static int Ofset()
+        {
+            return 0xB762;
+        }
+
+        public static int Shift()
+        {
+            return 6;
+        }
+    }
+    public static class PokathlonMoves
+    {
+        public static int Ofset()
+        {
+            return 0xB768;
+        }
+
+        public static int Shift()
+        {
+            return 0;
+        }
+    }
+    public static class PokathlonStep
+    {
+        public static int Ofset()
+        {
+            return 0xB760;
+        }
+
+        public static int Shift()
+        {
+            return 0;
+        }
+    }
     #endregion Shifts&Ofsets
 
     #region Custom Objects
@@ -767,5 +818,11 @@ namespace Pokemon_Shuffle_Save_Editor
         public int Score { get; set; }
     }
 
+    public class smItem
+    {
+        public int Opponent { get; set; }
+        public int Step { get; set; }
+        public int Moves { get; set; }
+    }
     #endregion Custom Objects
 }

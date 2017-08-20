@@ -133,7 +133,7 @@
             this.B_StreetPassDelete.Name = "B_StreetPassDelete";
             this.B_StreetPassDelete.Size = new System.Drawing.Size(138, 23);
             this.B_StreetPassDelete.TabIndex = 10;
-            this.B_StreetPassDelete.Text = "Edit StreetPass (reset)";
+            this.B_StreetPassDelete.Text = "(Reset) StreetPass";
             this.TT_Cheats.SetToolTip(this.B_StreetPassDelete, resources.GetString("B_StreetPassDelete.ToolTip"));
             this.B_StreetPassDelete.UseVisualStyleBackColor = true;
             this.B_StreetPassDelete.Click += new System.EventHandler(this.B_StreetPassDelete_Click);
@@ -227,10 +227,10 @@
             this.B_PokathlonStep.Name = "B_PokathlonStep";
             this.B_PokathlonStep.Size = new System.Drawing.Size(138, 23);
             this.B_PokathlonStep.TabIndex = 9;
-            this.B_PokathlonStep.Text = "Edit Pokathlon (50th) ";
-            this.TT_Cheats.SetToolTip(this.B_PokathlonStep, "Sets your next Survival mode battle to be the 50th one, against\r\nMega Mewtwo Y an" +
-        "d with 99 moves left.\r\n\r\nCtrl + Click to select whichever step, opponent and mov" +
-        "es you wish.");
+            this.B_PokathlonStep.Text = "Activate Pokathlon (60th) ";
+            this.TT_Cheats.SetToolTip(this.B_PokathlonStep, "Click this and the next time you launch the game it\'ll have you \r\n\"resume\" Surviv" +
+        "al mode at the 60th battle with 99 moves left.\r\n\r\nCtrl + Click to select whichev" +
+        "er step, opponent and moves you wish.");
             this.B_PokathlonStep.UseVisualStyleBackColor = true;
             this.B_PokathlonStep.Click += new System.EventHandler(this.B_PokathlonStep_Click);
             // 
@@ -241,8 +241,8 @@
             this.B_MissionCards.Size = new System.Drawing.Size(138, 23);
             this.B_MissionCards.TabIndex = 11;
             this.B_MissionCards.Text = "Complete Mission cards";
-            this.TT_Cheats.SetToolTip(this.B_MissionCards, "Completes all cards missions. \r\nCtrl+clic to select which missions to complete an" +
-        "d\r\nsee/choose active card.");
+            this.TT_Cheats.SetToolTip(this.B_MissionCards, "Completes all cards missions. \r\n\r\nCtrl+clic to select which missions to complete " +
+        "and\r\nsee/choose active card.");
             this.B_MissionCards.UseVisualStyleBackColor = true;
             this.B_MissionCards.Click += new System.EventHandler(this.B_MissionCards_Click);
             // 

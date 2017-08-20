@@ -33,8 +33,6 @@ namespace Pokemon_Shuffle_Save_Editor
             CB_MonIndex.DropDownStyle = ComboBoxStyle.DropDown; //DropDownList is similar but user won't see what it types.
             CB_MonIndex.AutoCompleteSource = AutoCompleteSource.ListItems;
             CB_MonIndex.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-
-
             FormInit();
         }
 
